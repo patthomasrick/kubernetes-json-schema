@@ -18,10 +18,10 @@ jobs:
           python-version: "3.11"
 
       - name: Generate index.html
-        run: python kubernetes-json-schema/generate_index.py
+        run: python generate_index.py
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: kubernetes-json-schema/kubernetes-api
+          publish_dir: kubernetes-api
