@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 KUBERNETES_GIT_URL = "https://raw.githubusercontent.com/kubernetes/kubernetes"
 SCHEMA_REF_BASE_URL = "https://patthomasrick.github.io/kubernetes-json-schema"
 DOCKER_IMAGE_TAG = "patthomasrick/openapi2jsonschema:latest"
-EARLIEST_API_VERSION = "v1.29.0"
+EARLIEST_API_VERSION = "v1.28.0"
 LATEST_API_VERSION = "v2.0.0"
 
 
