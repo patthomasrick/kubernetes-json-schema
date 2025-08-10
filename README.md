@@ -1,86 +1,97 @@
 # Kubernetes JSON Schemas
 
-While exploring tooling for Kubernetes I had need for schemas to
-describe the definition files, and went looking for something that
-didn't require either `kubectl` or similar installed or even a working
-Kubernetes installation.
+## Modifications
 
-It turns out that the [OpenAPI](https://www.openapis.org/) specification
-contain this information, but not in a particularly usable format for tools
-which might just want a raw [JSON Schema](http://json-schema.org/).
+This repository is a fork of garethr/kubernetes-json-schema. It makes some modifications as listed below:
 
-This repository contains a set of schemas for most recent Kubernetes
-versions. For each specified Kubernetes versions you should find four
-different flavours:
+- Builds via Docker now since openapi2jsonschema has trouble installing with later versions of Python/PIP
+- Adds a `kubernetes-api` directory with schemas for all Kubernetes versions
+- Adds minor versions to the `kubernetes-api` directory, so you can get schemas for Kubernetes 1.14.0, 1.14, 1.13.0,
+  etc.
+- Improved build script that runs in Docker and builds in parallel
 
-* vX.Y.Z - URL referenced based on the specified GitHub repository
-* vX.Y.Z-standalone - de-referenced schemas, more useful as standalone documents
-* vX.Y.Z-local - relative references, useful to avoid the network dependency
-* vX.Y.Z-strict - prohibits properties not defined in the schema
+## Summary
 
-Note that the Kubernetes API allows additional properties to be submitted,
-but `kubectl` acts like the strict flavour above.
+While exploring tooling for Kubernetes I had need for schemas to describe the definition files, and went looking for
+something that didn't require either `kubectl` or similar installed or even a working Kubernetes installation.
 
+It turns out that the [OpenAPI](https://www.openapis.org/) specification contain this information, but not in a
+particularly usable format for tools which might just want a raw [JSON Schema](http://json-schema.org/).
+
+This repository contains a set of schemas for most recent Kubernetes versions. For each specified Kubernetes versions
+you should find four different flavours:
+
+- vX.Y.Z - URL referenced based on the specified GitHub repository
+- vX.Y - URL referenced based on the specified GitHub repository, tracking the latest patch version at time of run
+
+Note that the Kubernetes API allows additional properties to be submitted, but `kubectl` acts like the strict flavour
+above.
 
 ## kubernetesjsonschema.dev
 
-The schemas are now all available from [kubernetesjsonschema.dev](https://kubernetesjsonschema.dev), for instance
-the schema for v1 of the Pod object is Kubernetes 1.14.0 is available at: [kubernetesjsonschema.dev/v1.14.0-standalone/pod-v1.json](https://kubernetesjsonschema.dev/v1.14.0-standalone/pod-v1.json)
+The schemas are now all available from [kubernetesjsonschema.dev](https://kubernetesjsonschema.dev), for instance the
+schema for v1 of the Pod object is Kubernetes 1.14.0 is available at:
+[kubernetesjsonschema.dev/v1.14.0-standalone/pod-v1.json](https://kubernetesjsonschema.dev/v1.14.0-standalone/pod-v1.json)
 
 ## Example
 
 Here are the links to the `deployment` schemas for Kubernetes 1.14.0:
 
-* [v1.14.0/deployment.json](v1.14.0/deployment.json)
-* [v1.14.0-standalone/deployment.json](v1.14.0-standalone/deployment.json)
-* [v1.14.0-local/deployment.json](v1.14.0-local/deployment.json)
-* [v1.14.0-standalone-strict/deployment.json](v1.14.0-standalone-strict/deployment.json)
+- [v1.14.0/deployment.json](v1.14.0/deployment.json)
+- [v1.14.0-standalone/deployment.json](v1.14.0-standalone/deployment.json)
+- [v1.14.0-local/deployment.json](v1.14.0-local/deployment.json)
+- [v1.14.0-standalone-strict/deployment.json](v1.14.0-standalone-strict/deployment.json)
 
 ## Usage
 
-There are lots of use cases for these schemas, they are primarily useful as a
-low-level part of other developer workflow tools. But at a most basic level you can
-validate a Kubernetes definition.
+There are lots of use cases for these schemas, they are primarily useful as a low-level part of other developer workflow
+tools. But at a most basic level you can validate a Kubernetes definition.
 
-Here is a very simply example using the Python [jsonschema client](https://github.com/Julian/jsonschema) and an invalid deployment file:
+Here is a very simply example using the Python [jsonschema client](https://github.com/Julian/jsonschema) and an invalid
+deployment file:
 
-```
+```sh
 $ jsonschema -F "{error.message}" -i hello-nginx.json v1.14.0-standalone/deployment.json
 u'template' is a required property
 ```
 
+Or as a directive to YAML language server:
+
+```yaml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/patthomasrick/kubernetes-json-schema/refs/heads/master/kubernetes-api/v1.32/all.json
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+```
+
 ## Specific ideas
 
-As noted these schemas have lots of potential uses for development
-tools. Here are a few ideas, some of which I've been hacking on:
+As noted these schemas have lots of potential uses for development tools. Here are a few ideas, some of which I've been
+hacking on:
 
-* Demonstrating using with the more common YAML serialisation
-* Testing tools to show your Kubernetes configuration files are valid,
-  and against which versions of Kubernetes
-* Migration tools to check your config files are still valid against
-  master or beta releases
-* Integration with code editors, for instance via something like [Schema
-  Store](http://schemastore.org/json/)
-* Validation of Kubernetes configs generated by higher-level tools, like
-  Helm, Ksonnet or Puppet
-* Visual tools for crafting Kubernetes configurations
-* Tools to show changes between Kubernetes versions
-
+- Demonstrating using with the more common YAML serialisation
+- Testing tools to show your Kubernetes configuration files are valid, and against which versions of Kubernetes
+- Migration tools to check your config files are still valid against master or beta releases
+- Integration with code editors, for instance via something like [Schema Store](http://schemastore.org/json/)
+- Validation of Kubernetes configs generated by higher-level tools, like Helm, Ksonnet or Puppet
+- Visual tools for crafting Kubernetes configurations
+- Tools to show changes between Kubernetes versions
 
 ## Prior-art
 
-The discussion around wanting JSON Schemas for Kubernetes types has
-cropped up in a few places, but there are some useful comments on [this
-issue](https://github.com/kubernetes/kubernetes/issues/14987).
-[Joël Harkes](https://github.com/joelharkes) reached a [similar
-conclusion](https://github.com/jbeda/kubernetes-detached/tree/master/api/doc)
-to the approach I ended up taking.
-
+The discussion around wanting JSON Schemas for Kubernetes types has cropped up in a few places, but there are some
+useful comments on [this issue](https://github.com/kubernetes/kubernetes/issues/14987).
+[Joël Harkes](https://github.com/joelharkes) reached a
+[similar conclusion](https://github.com/jbeda/kubernetes-detached/tree/master/api/doc) to the approach I ended up
+taking.
 
 ## Building the schemas yourself
 
-The tooling for generating these schemas is [openapi2jsonschema](https://github.com/garethr/openapi2jsonschema). 
-It's not Kubernetes specific and should work with other OpenAPI
-APIs too. This should be useful if you're using a pre-release or otherwise
-modified version of Kubernetes, or something like OpenShift which extends the
-standard APIs with additional types.
+The tooling for generating these schemas is [openapi2jsonschema](https://github.com/garethr/openapi2jsonschema). It's
+not Kubernetes specific and should work with other OpenAPI APIs too. This should be useful if you're using a pre-release
+or otherwise modified version of Kubernetes, or something like OpenShift which extends the standard APIs with additional
+types.
+
+I (@patthomasrick) build a multiarch docker image for this tool, available here:
+https://hub.docker.com/repository/docker/patthomasrick/openapi2jsonschema/general.
