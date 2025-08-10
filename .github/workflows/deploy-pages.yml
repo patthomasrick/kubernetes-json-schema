@@ -17,11 +17,14 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate index.html
-        run: python generate_index.py
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "kubernetes-api"
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: kubernetes-api
+        id: deployment
+        uses: actions/deploy-pages@v4
