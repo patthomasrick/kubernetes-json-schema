@@ -53,7 +53,6 @@ def get_kubernetes_api_versions() -> List[str]:
 
 def openapi2jsonschema(*args: str):
     """Runs the openapi2jsonschema command in a Docker container."""
-
     cmd = [
         "docker",
         "run",
@@ -62,6 +61,8 @@ def openapi2jsonschema(*args: str):
         f"{os.getcwd()}:/workdir",
         "-w",
         "/workdir",
+        "-u",
+        f"{os.getuid()}:{os.getgid()}",
         DOCKER_IMAGE_TAG,
         "openapi2jsonschema",
     ] + list(args)
@@ -162,7 +163,7 @@ def main():
                 out_path.mkdir(parents=True, exist_ok=True)
 
             out_path_version = out_path / version
-            if out_path_version.exists():
+            if out_path_version.exists() and version not in {"master"}:
                 logger.warning(f"Output path {out_path_version} already exists. Skipping version {version}.")
                 continue
 
