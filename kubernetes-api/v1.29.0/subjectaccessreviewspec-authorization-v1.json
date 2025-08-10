@@ -16,7 +16,10 @@
         ]
       },
       "description": "Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.",
-      "type": "object"
+      "type": [
+        "object",
+        "null"
+      ]
     },
     "groups": {
       "description": "Groups is the groups you're testing for.",
@@ -32,11 +35,11 @@
       ]
     },
     "nonResourceAttributes": {
-      "$ref": "https://kubernetesjsonschema.dev/v1.29.0/_definitions.json#/definitions/io.k8s.api.authorization.v1.NonResourceAttributes",
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.api.authorization.v1.NonResourceAttributes",
       "description": "NonResourceAttributes describes information for a non-resource access request"
     },
     "resourceAttributes": {
-      "$ref": "https://kubernetesjsonschema.dev/v1.29.0/_definitions.json#/definitions/io.k8s.api.authorization.v1.ResourceAttributes",
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.api.authorization.v1.ResourceAttributes",
       "description": "ResourceAuthorizationAttributes describes information for a resource access request"
     },
     "uid": {

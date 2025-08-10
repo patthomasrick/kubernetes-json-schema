@@ -11,6 +11,9 @@
     },
     "apiVersion": {
       "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+      "enum": [
+        "events.k8s.io/v1"
+      ],
       "type": [
         "string",
         "null"
@@ -19,33 +22,39 @@
     "deprecatedCount": {
       "description": "deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.",
       "format": "int32",
-      "type": "integer"
+      "type": [
+        "integer",
+        "null"
+      ]
     },
     "deprecatedFirstTimestamp": {
-      "$ref": "https://kubernetesjsonschema.dev/v1.29.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
       "description": "deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type."
     },
     "deprecatedLastTimestamp": {
-      "$ref": "https://kubernetesjsonschema.dev/v1.29.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
       "description": "deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type."
     },
     "deprecatedSource": {
-      "$ref": "https://kubernetesjsonschema.dev/v1.29.0/_definitions.json#/definitions/io.k8s.api.core.v1.EventSource",
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.api.core.v1.EventSource",
       "description": "deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type."
     },
     "eventTime": {
-      "$ref": "https://kubernetesjsonschema.dev/v1.29.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime",
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime",
       "description": "eventTime is the time when this Event was first observed. It is required."
     },
     "kind": {
       "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+      "enum": [
+        "Event"
+      ],
       "type": [
         "string",
         "null"
       ]
     },
     "metadata": {
-      "$ref": "https://kubernetesjsonschema.dev/v1.29.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
     },
     "note": {
@@ -63,11 +72,11 @@
       ]
     },
     "regarding": {
-      "$ref": "https://kubernetesjsonschema.dev/v1.29.0/_definitions.json#/definitions/io.k8s.api.core.v1.ObjectReference",
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.api.core.v1.ObjectReference",
       "description": "regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object."
     },
     "related": {
-      "$ref": "https://kubernetesjsonschema.dev/v1.29.0/_definitions.json#/definitions/io.k8s.api.core.v1.ObjectReference",
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.api.core.v1.ObjectReference",
       "description": "related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object."
     },
     "reportingController": {
@@ -85,7 +94,7 @@
       ]
     },
     "series": {
-      "$ref": "https://kubernetesjsonschema.dev/v1.29.0/_definitions.json#/definitions/io.k8s.api.events.v1.EventSeries",
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.api.events.v1.EventSeries",
       "description": "series is data about the Event series this event represents or nil if it's a singleton Event."
     },
     "type": {

@@ -12,9 +12,9 @@ logging.basicConfig(level=logging.DEBUG, format="%(asctime)s [%(levelname)s] %(m
 logger = logging.getLogger(__name__)
 
 
-KUBERNETES_GIT_URL = "{KUBERNETES_GIT_URL}"
-SCHEMA_REF_BASE_URL = "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api"
-DOCKER_IMAGE_TAG = "openapi2jsonschema:latest"
+KUBERNETES_GIT_URL = "https://raw.githubusercontent.com/kubernetes/kubernetes"
+SCHEMA_REF_BASE_URL = "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master"
+DOCKER_IMAGE_TAG = "patthomasrick/openapi2jsonschema:latest"
 EARLIEST_API_VERSION = "v1.29.0"
 LATEST_API_VERSION = "v1.30.0"
 
@@ -49,36 +49,6 @@ def get_kubernetes_api_versions() -> List[str]:
     logging.debug(f"Kubernetes API versions: {tag_refs}")
 
     return tag_refs
-
-
-def build_openapi2jsonschema_image() -> str:
-    """Builds the Docker image for openapi2jsonschema, if it does not already exist."""
-
-    # Check if the image already exists
-    try:
-        result = subprocess.run(
-            ["docker", "images", "-q", DOCKER_IMAGE_TAG],
-            check=True,
-            capture_output=True,
-            text=True,
-        )
-        if result.stdout.strip():
-            logger.info(f"Docker image {DOCKER_IMAGE_TAG} already exists. Skipping build.")
-            return DOCKER_IMAGE_TAG
-    except subprocess.CalledProcessError as e:
-        logger.warning(f"Failed to check for existing Docker image: {e}")
-
-    cwd = os.getcwd()
-    docker_dir = os.path.join(cwd, "docker-openapi2jsonschema")
-    if not os.path.isdir(docker_dir):
-        raise RuntimeError(f"Directory {docker_dir} does not exist")
-    os.chdir(docker_dir)
-    try:
-        subprocess.run(["docker", "build", "-t", DOCKER_IMAGE_TAG, "."], check=True)
-    finally:
-        os.chdir(cwd)
-
-    return DOCKER_IMAGE_TAG
 
 
 def openapi2jsonschema(*args: str):
@@ -128,8 +98,6 @@ def version_to_path(v: str) -> Path:
 def main():
     """Main function to build JSON schemas for Kubernetes versions."""
 
-    build_openapi2jsonschema_image()
-
     versions = get_kubernetes_api_versions()
     versions = [
         v
@@ -141,6 +109,8 @@ def main():
     versions.sort(key=lambda v: list(map(int, v.strip("v").split("."))))
     logger.info(f"Filtered Kubernetes API versions: {versions}")
 
+    versions += ["master"]
+
     with ThreadPoolExecutor(max_workers=4) as tpe:
         futures = []
         for version in versions:
@@ -149,40 +119,39 @@ def main():
                 out_path.mkdir(parents=True, exist_ok=True)
 
             schema = f"{KUBERNETES_GIT_URL}/{version}/api/openapi-spec/swagger.json"
-            prefix = f"{SCHEMA_REF_BASE_URL}/{str(out_path)}/_definitions.json"
-            futures.append(
-                tpe.submit(
-                    openapi2jsonschema,
-                    "-o",
-                    f"{str(out_path)}/{version}-standalone-strict",
-                    "--expanded",
-                    "--kubernetes",
-                    "--stand-alone",
-                    "--strict",
-                    schema,
-                )
-            )
-            futures.append(
-                tpe.submit(
-                    openapi2jsonschema,
-                    "-o",
-                    f"{str(out_path)}/{version}-standalone",
-                    "--expanded",
-                    "--kubernetes",
-                    "--stand-alone",
-                    schema,
-                )
-            )
-            futures.append(
-                tpe.submit(
-                    openapi2jsonschema,
-                    "-o",
-                    f"{str(out_path)}/{version}-local",
-                    "--expanded",
-                    "--kubernetes",
-                    schema,
-                )
-            )
+            # futures.append(
+            #     tpe.submit(
+            #         openapi2jsonschema,
+            #         "-o",
+            #         f"{str(out_path)}/{version}-standalone-strict",
+            #         "--expanded",
+            #         "--kubernetes",
+            #         "--stand-alone",
+            #         "--strict",
+            #         schema,
+            #     )
+            # )
+            # futures.append(
+            #     tpe.submit(
+            #         openapi2jsonschema,
+            #         "-o",
+            #         f"{str(out_path)}/{version}-standalone",
+            #         "--expanded",
+            #         "--kubernetes",
+            #         "--stand-alone",
+            #         schema,
+            #     )
+            # )
+            # futures.append(
+            #     tpe.submit(
+            #         openapi2jsonschema,
+            #         "-o",
+            #         f"{str(out_path)}/{version}-local",
+            #         "--expanded",
+            #         "--kubernetes",
+            #         schema,
+            #     )
+            # )
             futures.append(
                 tpe.submit(
                     openapi2jsonschema,
@@ -191,59 +160,58 @@ def main():
                     "--expanded",
                     "--kubernetes",
                     "--prefix",
-                    prefix,
+                    f"{SCHEMA_REF_BASE_URL}/{str(out_path)}/{version}/_definitions.json",
                     schema,
                 )
             )
 
-        for version in versions:
-            out_path = version_to_path(version)
-            if not out_path.exists():
-                out_path.mkdir(parents=True, exist_ok=True)
+        # for version in versions:
+        #     out_path = version_to_path(version)
+        #     if not out_path.exists():
+        #         out_path.mkdir(parents=True, exist_ok=True)
 
-            schema = f"{KUBERNETES_GIT_URL}/{version}/api/openapi-spec/swagger.json"
-            prefix = f"{SCHEMA_REF_BASE_URL}/{str(out_path)}/_definitions.json"
-            futures.append(
-                tpe.submit(
-                    openapi2jsonschema,
-                    "-o",
-                    f"{str(out_path)}/{version}-standalone-strict",
-                    "--kubernetes",
-                    "--stand-alone",
-                    "--strict",
-                    schema,
-                )
-            )
-            futures.append(
-                tpe.submit(
-                    openapi2jsonschema,
-                    "-o",
-                    f"{str(out_path)}/{version}-standalone",
-                    "--kubernetes",
-                    "--stand-alone",
-                    schema,
-                )
-            )
-            futures.append(
-                tpe.submit(
-                    openapi2jsonschema,
-                    "-o",
-                    f"{str(out_path)}/{version}-local",
-                    "--kubernetes",
-                    schema,
-                )
-            )
-            futures.append(
-                tpe.submit(
-                    openapi2jsonschema,
-                    "-o",
-                    f"{str(out_path)}/{version}",
-                    "--kubernetes",
-                    "--prefix",
-                    prefix,
-                    schema,
-                )
-            )
+        #     schema = f"{KUBERNETES_GIT_URL}/{version}/api/openapi-spec/swagger.json"
+        #     # futures.append(
+        #     #     tpe.submit(
+        #     #         openapi2jsonschema,
+        #     #         "-o",
+        #     #         f"{str(out_path)}/{version}-standalone-strict",
+        #     #         "--kubernetes",
+        #     #         "--stand-alone",
+        #     #         "--strict",
+        #     #         schema,
+        #     #     )
+        #     # )
+        #     # futures.append(
+        #     #     tpe.submit(
+        #     #         openapi2jsonschema,
+        #     #         "-o",
+        #     #         f"{str(out_path)}/{version}-standalone",
+        #     #         "--kubernetes",
+        #     #         "--stand-alone",
+        #     #         schema,
+        #     #     )
+        #     # )
+        #     # futures.append(
+        #     #     tpe.submit(
+        #     #         openapi2jsonschema,
+        #     #         "-o",
+        #     #         f"{str(out_path)}/{version}-local",
+        #     #         "--kubernetes",
+        #     #         schema,
+        #     #     )
+        #     # )
+        #     futures.append(
+        #         tpe.submit(
+        #             openapi2jsonschema,
+        #             "-o",
+        #             f"{str(out_path)}/{version}",
+        #             "--kubernetes",
+        #             "--prefix",
+        #             f"{SCHEMA_REF_BASE_URL}/{str(out_path)}/{version}/_definitions.json",
+        #             schema,
+        #         )
+        #     )
 
         for future in as_completed(futures):
             try:

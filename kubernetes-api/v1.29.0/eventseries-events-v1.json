@@ -5,10 +5,13 @@
     "count": {
       "description": "count is the number of occurrences in this series up to the last heartbeat time.",
       "format": "int32",
-      "type": "integer"
+      "type": [
+        "integer",
+        "null"
+      ]
     },
     "lastObservedTime": {
-      "$ref": "https://kubernetesjsonschema.dev/v1.29.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime",
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime",
       "description": "lastObservedTime is the time when last Event from the series was seen before last heartbeat."
     }
   },
