@@ -16,7 +16,7 @@
     "items": {
       "description": "items is a collection of ClusterTrustBundle objects",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.3/_definitions.json#/definitions/io.k8s.api.certificates.v1alpha1.ClusterTrustBundle"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.3/_definitions.json#/definitions/io.k8s.api.certificates.v1alpha1.ClusterTrustBundle"
       },
       "type": [
         "array",
@@ -34,7 +34,7 @@
       ]
     },
     "metadata": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
       "description": "metadata contains the list metadata."
     }
   },

@@ -4,7 +4,7 @@
   "description": "NamespaceCondition contains details about state of namespace.",
   "properties": {
     "lastTransitionTime": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
       "description": "Last time the condition transitioned from one status to another."
     },
     "message": {

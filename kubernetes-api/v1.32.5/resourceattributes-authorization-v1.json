@@ -4,7 +4,7 @@
   "description": "ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface",
   "properties": {
     "fieldSelector": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.5/_definitions.json#/definitions/io.k8s.api.authorization.v1.FieldSelectorAttributes",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.5/_definitions.json#/definitions/io.k8s.api.authorization.v1.FieldSelectorAttributes",
       "description": "fieldSelector describes the limitation on access based on field.  It can only limit access, not broaden it.\n\nThis field  is alpha-level. To use this field, you must enable the `AuthorizeWithSelectors` feature gate (disabled by default)."
     },
     "group": {
@@ -15,7 +15,7 @@
       ]
     },
     "labelSelector": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.5/_definitions.json#/definitions/io.k8s.api.authorization.v1.LabelSelectorAttributes",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.5/_definitions.json#/definitions/io.k8s.api.authorization.v1.LabelSelectorAttributes",
       "description": "labelSelector describes the limitation on access based on labels.  It can only limit access, not broaden it.\n\nThis field  is alpha-level. To use this field, you must enable the `AuthorizeWithSelectors` feature gate (disabled by default)."
     },
     "name": {

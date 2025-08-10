@@ -42,7 +42,7 @@
     "selectors": {
       "description": "Selectors define criteria which must be satisfied by a specific device in order for that device to be considered for this request. All selectors must be satisfied for a device to be considered.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.1/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceSelector"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.1/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceSelector"
       },
       "type": [
         "array",

@@ -20,7 +20,7 @@
     "ports": {
       "description": "ports provides information about the ports exposed by this LoadBalancer.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.4/_definitions.json#/definitions/io.k8s.api.networking.v1.IngressPortStatus"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.4/_definitions.json#/definitions/io.k8s.api.networking.v1.IngressPortStatus"
       },
       "type": [
         "array",

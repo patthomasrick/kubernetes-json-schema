@@ -24,11 +24,11 @@
       ]
     },
     "metadata": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
     },
     "template": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodTemplateSpec",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodTemplateSpec",
       "description": "Template defines the pods that will be created from this pod template. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
     }
   },

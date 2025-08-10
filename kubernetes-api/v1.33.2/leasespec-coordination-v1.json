@@ -4,7 +4,7 @@
   "description": "LeaseSpec is a specification of a Lease.",
   "properties": {
     "acquireTime": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.2/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.2/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime",
       "description": "acquireTime is a time when the current lease was acquired."
     },
     "holderIdentity": {
@@ -38,7 +38,7 @@
       ]
     },
     "renewTime": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.2/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.2/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime",
       "description": "renewTime is a time when the current holder of a lease has last updated the lease."
     },
     "strategy": {

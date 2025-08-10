@@ -6,7 +6,7 @@
     "instances": {
       "description": "The list of all individual resources instances currently available.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.11/_definitions.json#/definitions/io.k8s.api.resource.v1alpha2.NamedResourcesInstance"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.11/_definitions.json#/definitions/io.k8s.api.resource.v1alpha2.NamedResourcesInstance"
       },
       "type": [
         "array",

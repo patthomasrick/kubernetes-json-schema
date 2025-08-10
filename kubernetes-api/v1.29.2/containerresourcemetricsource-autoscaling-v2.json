@@ -18,7 +18,7 @@
       ]
     },
     "target": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.2/_definitions.json#/definitions/io.k8s.api.autoscaling.v2.MetricTarget",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.2/_definitions.json#/definitions/io.k8s.api.autoscaling.v2.MetricTarget",
       "description": "target specifies the target value for the given metric"
     }
   },

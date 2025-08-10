@@ -4,7 +4,7 @@
   "description": "NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil. This API is deprecated since 1.22",
   "properties": {
     "configMap": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.14/_definitions.json#/definitions/io.k8s.api.core.v1.ConfigMapNodeConfigSource",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.14/_definitions.json#/definitions/io.k8s.api.core.v1.ConfigMapNodeConfigSource",
       "description": "ConfigMap is a reference to a Node's ConfigMap"
     }
   },

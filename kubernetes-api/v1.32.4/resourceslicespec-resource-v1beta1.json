@@ -13,7 +13,7 @@
     "devices": {
       "description": "Devices lists some or all of the devices in this pool.\n\nMust not have more than 128 entries.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.4/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.Device"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.4/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.Device"
       },
       "type": [
         "array",
@@ -36,11 +36,11 @@
       ]
     },
     "nodeSelector": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.4/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelector",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.4/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelector",
       "description": "NodeSelector defines which nodes have access to the resources in the pool, when that pool is not limited to a single node.\n\nMust use exactly one term.\n\nExactly one of NodeName, NodeSelector and AllNodes must be set."
     },
     "pool": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.4/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourcePool",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.4/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourcePool",
       "description": "Pool describes the pool that this ResourceSlice belongs to."
     }
   },

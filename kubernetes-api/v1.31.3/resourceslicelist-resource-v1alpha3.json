@@ -16,7 +16,7 @@
     "items": {
       "description": "Items is the list of resource ResourceSlices.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.3/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.ResourceSlice"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.3/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.ResourceSlice"
       },
       "type": [
         "array",
@@ -34,7 +34,7 @@
       ]
     },
     "metadata": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
       "description": "Standard list metadata"
     }
   },

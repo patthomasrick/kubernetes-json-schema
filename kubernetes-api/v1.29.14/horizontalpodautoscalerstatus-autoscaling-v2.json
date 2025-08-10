@@ -6,7 +6,7 @@
     "conditions": {
       "description": "conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.14/_definitions.json#/definitions/io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerCondition"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.14/_definitions.json#/definitions/io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerCondition"
       },
       "type": [
         "array",
@@ -22,7 +22,7 @@
     "currentMetrics": {
       "description": "currentMetrics is the last read state of the metrics used by this autoscaler.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.14/_definitions.json#/definitions/io.k8s.api.autoscaling.v2.MetricStatus"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.14/_definitions.json#/definitions/io.k8s.api.autoscaling.v2.MetricStatus"
       },
       "type": [
         "array",
@@ -47,7 +47,7 @@
       ]
     },
     "lastScaleTime": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.14/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.14/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
       "description": "lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed."
     },
     "observedGeneration": {

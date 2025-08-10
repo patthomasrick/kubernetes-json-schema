@@ -24,13 +24,13 @@
       ]
     },
     "metadata": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata."
     },
     "webhooks": {
       "description": "Webhooks is a list of webhooks and the affected resources and operations.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.3/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1.MutatingWebhook"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.3/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1.MutatingWebhook"
       },
       "type": [
         "array",

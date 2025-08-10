@@ -6,7 +6,7 @@
     "conditions": {
       "description": "`conditions` is the current state of \"request-priority\".",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.4/_definitions.json#/definitions/io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationCondition"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.4/_definitions.json#/definitions/io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationCondition"
       },
       "type": [
         "array",

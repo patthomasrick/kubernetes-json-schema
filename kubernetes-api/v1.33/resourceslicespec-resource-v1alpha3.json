@@ -13,7 +13,7 @@
     "devices": {
       "description": "Devices lists some or all of the devices in this pool.\n\nMust not have more than 128 entries.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.3/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.Device"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.3/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.Device"
       },
       "type": [
         "array",
@@ -36,7 +36,7 @@
       ]
     },
     "nodeSelector": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.3/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelector",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.3/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelector",
       "description": "NodeSelector defines which nodes have access to the resources in the pool, when that pool is not limited to a single node.\n\nMust use exactly one term.\n\nExactly one of NodeName, NodeSelector, AllNodes, and PerDeviceNodeSelection must be set."
     },
     "perDeviceNodeSelection": {
@@ -47,13 +47,13 @@
       ]
     },
     "pool": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.3/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.ResourcePool",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.3/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.ResourcePool",
       "description": "Pool describes the pool that this ResourceSlice belongs to."
     },
     "sharedCounters": {
       "description": "SharedCounters defines a list of counter sets, each of which has a name and a list of counters available.\n\nThe names of the SharedCounters must be unique in the ResourceSlice.\n\nThe maximum number of SharedCounters is 32.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.3/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.CounterSet"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.3/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.CounterSet"
       },
       "type": [
         "array",

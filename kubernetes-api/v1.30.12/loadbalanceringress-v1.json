@@ -27,7 +27,7 @@
     "ports": {
       "description": "Ports is a list of records of service ports If used, every port defined in the service should have an entry in it",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.12/_definitions.json#/definitions/io.k8s.api.core.v1.PortStatus"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.12/_definitions.json#/definitions/io.k8s.api.core.v1.PortStatus"
       },
       "type": [
         "array",

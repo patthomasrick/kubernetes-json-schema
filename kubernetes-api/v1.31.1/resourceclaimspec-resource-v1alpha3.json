@@ -11,7 +11,7 @@
       ]
     },
     "devices": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.1/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceClaim",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.1/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceClaim",
       "description": "Devices defines how to request devices."
     }
   },

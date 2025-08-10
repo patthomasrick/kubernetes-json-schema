@@ -25,7 +25,7 @@
       ]
     },
     "targetRef": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.2/_definitions.json#/definitions/io.k8s.api.core.v1.ObjectReference",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.2/_definitions.json#/definitions/io.k8s.api.core.v1.ObjectReference",
       "description": "Reference to object providing the endpoint."
     }
   },

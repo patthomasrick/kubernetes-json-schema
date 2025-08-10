@@ -6,7 +6,7 @@
     "additionalPrinterColumns": {
       "description": "additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If no columns are specified, a single column displaying the age of the custom resource is used.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.4/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceColumnDefinition"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.4/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceColumnDefinition"
       },
       "type": [
         "array",
@@ -35,7 +35,7 @@
       ]
     },
     "schema": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.4/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceValidation",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.4/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceValidation",
       "description": "schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource."
     },
     "served": {
@@ -53,7 +53,7 @@
       ]
     },
     "subresources": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.4/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceSubresources",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.4/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceSubresources",
       "description": "subresources specify what subresources this version of the defined custom resource have."
     }
   },

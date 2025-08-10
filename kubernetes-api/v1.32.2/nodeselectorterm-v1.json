@@ -6,7 +6,7 @@
     "matchExpressions": {
       "description": "A list of node selector requirements by node's labels.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.2/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelectorRequirement"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.2/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelectorRequirement"
       },
       "type": [
         "array",
@@ -17,7 +17,7 @@
     "matchFields": {
       "description": "A list of node selector requirements by node's fields.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.2/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelectorRequirement"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.2/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelectorRequirement"
       },
       "type": [
         "array",

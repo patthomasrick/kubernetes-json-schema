@@ -13,7 +13,7 @@
     "conditions": {
       "description": "The latest available observations of the storageVersion's state.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.11/_definitions.json#/definitions/io.k8s.api.apiserverinternal.v1alpha1.StorageVersionCondition"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.11/_definitions.json#/definitions/io.k8s.api.apiserverinternal.v1alpha1.StorageVersionCondition"
       },
       "type": [
         "array",
@@ -27,7 +27,7 @@
     "storageVersions": {
       "description": "The reported versions per API server instance.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.11/_definitions.json#/definitions/io.k8s.api.apiserverinternal.v1alpha1.ServerStorageVersion"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.11/_definitions.json#/definitions/io.k8s.api.apiserverinternal.v1alpha1.ServerStorageVersion"
       },
       "type": [
         "array",

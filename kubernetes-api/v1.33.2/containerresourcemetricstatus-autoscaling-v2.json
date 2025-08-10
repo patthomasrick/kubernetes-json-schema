@@ -11,7 +11,7 @@
       ]
     },
     "current": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.2/_definitions.json#/definitions/io.k8s.api.autoscaling.v2.MetricValueStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.2/_definitions.json#/definitions/io.k8s.api.autoscaling.v2.MetricValueStatus",
       "description": "current contains the current value for the given metric"
     },
     "name": {

@@ -4,7 +4,7 @@
   "description": "DeviceClassConfiguration is used in DeviceClass.",
   "properties": {
     "opaque": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.0/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.OpaqueDeviceConfiguration",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.0/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.OpaqueDeviceConfiguration",
       "description": "Opaque provides driver-specific configuration parameters."
     }
   },

@@ -13,9 +13,9 @@ logger = logging.getLogger(__name__)
 
 
 KUBERNETES_GIT_URL = "https://raw.githubusercontent.com/kubernetes/kubernetes"
-SCHEMA_REF_BASE_URL = "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master"
+SCHEMA_REF_BASE_URL = "https://patthomasrick.github.io/kubernetes-json-schema"
 DOCKER_IMAGE_TAG = "patthomasrick/openapi2jsonschema:latest"
-EARLIEST_API_VERSION = "v1.28.0"
+EARLIEST_API_VERSION = "v1.29.0"
 LATEST_API_VERSION = "v2.0.0"
 
 
@@ -155,7 +155,7 @@ def main():
 
     versions += ["master"]
 
-    with ThreadPoolExecutor(max_workers=4) as tpe:
+    with ThreadPoolExecutor() as tpe:
         futures = []
         for version in versions:
             out_path = version_to_path(version)
@@ -210,7 +210,7 @@ def main():
                     "--expanded",
                     "--kubernetes",
                     "--prefix",
-                    f"{SCHEMA_REF_BASE_URL}/{str(out_path)}/{version}/_definitions.json",
+                    f"{SCHEMA_REF_BASE_URL}/{version}/_definitions.json",
                     schema,
                 )
             )

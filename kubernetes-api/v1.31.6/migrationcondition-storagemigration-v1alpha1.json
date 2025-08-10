@@ -4,7 +4,7 @@
   "description": "Describes the state of a migration at a certain point.",
   "properties": {
     "lastUpdateTime": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
       "description": "The last time this condition was updated."
     },
     "message": {

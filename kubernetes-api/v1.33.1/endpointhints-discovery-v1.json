@@ -6,7 +6,7 @@
     "forNodes": {
       "description": "forNodes indicates the node(s) this endpoint should be consumed by when using topology aware routing. May contain a maximum of 8 entries. This is an Alpha feature and is only used when the PreferSameTrafficDistribution feature gate is enabled.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.1/_definitions.json#/definitions/io.k8s.api.discovery.v1.ForNode"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.1/_definitions.json#/definitions/io.k8s.api.discovery.v1.ForNode"
       },
       "type": [
         "array",
@@ -17,7 +17,7 @@
     "forZones": {
       "description": "forZones indicates the zone(s) this endpoint should be consumed by when using topology aware routing. May contain a maximum of 8 entries.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.1/_definitions.json#/definitions/io.k8s.api.discovery.v1.ForZone"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.1/_definitions.json#/definitions/io.k8s.api.discovery.v1.ForZone"
       },
       "type": [
         "array",

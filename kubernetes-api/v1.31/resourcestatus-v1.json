@@ -12,7 +12,7 @@
     "resources": {
       "description": "List of unique Resources health. Each element in the list contains an unique resource ID and resource health. At a minimum, ResourceID must uniquely identify the Resource allocated to the Pod on the Node for the lifetime of a Pod. See ResourceID type for it's definition.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.11/_definitions.json#/definitions/io.k8s.api.core.v1.ResourceHealth"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.11/_definitions.json#/definitions/io.k8s.api.core.v1.ResourceHealth"
       },
       "type": [
         "array",

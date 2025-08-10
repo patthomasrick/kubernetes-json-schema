@@ -4,7 +4,7 @@
   "description": "FlowSchemaCondition describes conditions for a FlowSchema.",
   "properties": {
     "lastTransitionTime": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.4/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.4/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
       "description": "`lastTransitionTime` is the last time the condition transitioned from one status to another."
     },
     "message": {

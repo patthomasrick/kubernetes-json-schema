@@ -5,7 +5,7 @@
   "properties": {
     "attributes": {
       "additionalProperties": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.4/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceAttribute"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.4/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceAttribute"
       },
       "description": "Attributes defines the set of attributes for this device. The name of each attribute must be unique in that set.\n\nThe maximum number of attributes and capacities combined is 32.",
       "type": [
@@ -15,7 +15,7 @@
     },
     "capacity": {
       "additionalProperties": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.4/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.4/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
       },
       "description": "Capacity defines the set of capacities for this device. The name of each capacity must be unique in that set.\n\nThe maximum number of attributes and capacities combined is 32.",
       "type": [

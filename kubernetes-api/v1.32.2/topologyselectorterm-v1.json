@@ -6,7 +6,7 @@
     "matchLabelExpressions": {
       "description": "A list of topology selector requirements by labels.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.2/_definitions.json#/definitions/io.k8s.api.core.v1.TopologySelectorLabelRequirement"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.2/_definitions.json#/definitions/io.k8s.api.core.v1.TopologySelectorLabelRequirement"
       },
       "type": [
         "array",

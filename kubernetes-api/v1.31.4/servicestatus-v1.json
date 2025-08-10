@@ -6,7 +6,7 @@
     "conditions": {
       "description": "Current service state",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.4/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Condition"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.4/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Condition"
       },
       "type": [
         "array",
@@ -20,7 +20,7 @@
       "x-kubernetes-patch-strategy": "merge"
     },
     "loadBalancer": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.4/_definitions.json#/definitions/io.k8s.api.core.v1.LoadBalancerStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.4/_definitions.json#/definitions/io.k8s.api.core.v1.LoadBalancerStatus",
       "description": "LoadBalancer contains the current status of the load-balancer, if one is present."
     }
   },

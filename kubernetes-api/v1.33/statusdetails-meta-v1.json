@@ -6,7 +6,7 @@
     "causes": {
       "description": "The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusCause"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusCause"
       },
       "type": [
         "array",

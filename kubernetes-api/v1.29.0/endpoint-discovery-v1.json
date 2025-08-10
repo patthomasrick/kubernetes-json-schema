@@ -18,7 +18,7 @@
       "x-kubernetes-list-type": "set"
     },
     "conditions": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.api.discovery.v1.EndpointConditions",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.0/_definitions.json#/definitions/io.k8s.api.discovery.v1.EndpointConditions",
       "description": "conditions contains information about the current status of the endpoint."
     },
     "deprecatedTopology": {
@@ -35,7 +35,7 @@
       ]
     },
     "hints": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.api.discovery.v1.EndpointHints",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.0/_definitions.json#/definitions/io.k8s.api.discovery.v1.EndpointHints",
       "description": "hints contains information associated with how an endpoint should be consumed."
     },
     "hostname": {
@@ -53,7 +53,7 @@
       ]
     },
     "targetRef": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.0/_definitions.json#/definitions/io.k8s.api.core.v1.ObjectReference",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.0/_definitions.json#/definitions/io.k8s.api.core.v1.ObjectReference",
       "description": "targetRef is a reference to a Kubernetes object that represents this endpoint."
     },
     "zone": {

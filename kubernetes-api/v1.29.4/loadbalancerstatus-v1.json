@@ -6,7 +6,7 @@
     "ingress": {
       "description": "Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.4/_definitions.json#/definitions/io.k8s.api.core.v1.LoadBalancerIngress"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.4/_definitions.json#/definitions/io.k8s.api.core.v1.LoadBalancerIngress"
       },
       "type": [
         "array",

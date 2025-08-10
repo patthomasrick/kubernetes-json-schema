@@ -4,7 +4,7 @@
   "description": "TokenRequestStatus is the result of a token request.",
   "properties": {
     "expirationTimestamp": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.0/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
       "description": "ExpirationTimestamp is the time of expiration of the returned token."
     },
     "token": {

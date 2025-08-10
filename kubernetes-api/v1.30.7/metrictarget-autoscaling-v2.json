@@ -12,7 +12,7 @@
       ]
     },
     "averageValue": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
       "description": "averageValue is the target value of the average of the metric across all relevant pods (as a quantity)"
     },
     "type": {
@@ -23,7 +23,7 @@
       ]
     },
     "value": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
       "description": "value is the target value of the metric (as a quantity)."
     }
   },

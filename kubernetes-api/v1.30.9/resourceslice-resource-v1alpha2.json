@@ -31,11 +31,11 @@
       ]
     },
     "metadata": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.9/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.9/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "Standard object metadata"
     },
     "namedResources": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.9/_definitions.json#/definitions/io.k8s.api.resource.v1alpha2.NamedResourcesResources",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.9/_definitions.json#/definitions/io.k8s.api.resource.v1alpha2.NamedResourcesResources",
       "description": "NamedResources describes available resources using the named resources model."
     },
     "nodeName": {

@@ -16,7 +16,7 @@
     "items": {
       "description": "Items is the list of node resource capacity objects.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.14/_definitions.json#/definitions/io.k8s.api.resource.v1alpha2.ResourceSlice"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.14/_definitions.json#/definitions/io.k8s.api.resource.v1alpha2.ResourceSlice"
       },
       "type": [
         "array",
@@ -34,7 +34,7 @@
       ]
     },
     "metadata": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.14/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.14/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
       "description": "Standard list metadata"
     }
   },

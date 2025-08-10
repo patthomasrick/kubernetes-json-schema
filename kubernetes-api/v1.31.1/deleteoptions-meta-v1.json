@@ -112,7 +112,7 @@
       ]
     },
     "preconditions": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.1/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Preconditions",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.1/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Preconditions",
       "description": "Must be fulfilled before a deletion is carried out. If not possible, a 409 Conflict status will be returned."
     },
     "propagationPolicy": {

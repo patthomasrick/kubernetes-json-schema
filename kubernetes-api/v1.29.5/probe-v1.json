@@ -4,7 +4,7 @@
   "description": "Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.",
   "properties": {
     "exec": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.5/_definitions.json#/definitions/io.k8s.api.core.v1.ExecAction",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.5/_definitions.json#/definitions/io.k8s.api.core.v1.ExecAction",
       "description": "Exec specifies the action to take."
     },
     "failureThreshold": {
@@ -16,11 +16,11 @@
       ]
     },
     "grpc": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.5/_definitions.json#/definitions/io.k8s.api.core.v1.GRPCAction",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.5/_definitions.json#/definitions/io.k8s.api.core.v1.GRPCAction",
       "description": "GRPC specifies an action involving a GRPC port."
     },
     "httpGet": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.5/_definitions.json#/definitions/io.k8s.api.core.v1.HTTPGetAction",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.5/_definitions.json#/definitions/io.k8s.api.core.v1.HTTPGetAction",
       "description": "HTTPGet specifies the http request to perform."
     },
     "initialDelaySeconds": {
@@ -48,7 +48,7 @@
       ]
     },
     "tcpSocket": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.5/_definitions.json#/definitions/io.k8s.api.core.v1.TCPSocketAction",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.5/_definitions.json#/definitions/io.k8s.api.core.v1.TCPSocketAction",
       "description": "TCPSocket specifies an action involving a TCP port."
     },
     "terminationGracePeriodSeconds": {

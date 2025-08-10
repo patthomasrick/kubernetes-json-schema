@@ -4,7 +4,7 @@
   "description": "TopologySpreadConstraint specifies how to spread matching pods among the given topology.",
   "properties": {
     "labelSelector": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector",
       "description": "LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain."
     },
     "matchLabelKeys": {

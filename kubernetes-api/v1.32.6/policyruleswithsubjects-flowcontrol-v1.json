@@ -6,7 +6,7 @@
     "nonResourceRules": {
       "description": "`nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the target non-resource URL.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.6/_definitions.json#/definitions/io.k8s.api.flowcontrol.v1.NonResourcePolicyRule"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.6/_definitions.json#/definitions/io.k8s.api.flowcontrol.v1.NonResourcePolicyRule"
       },
       "type": [
         "array",
@@ -17,7 +17,7 @@
     "resourceRules": {
       "description": "`resourceRules` is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.6/_definitions.json#/definitions/io.k8s.api.flowcontrol.v1.ResourcePolicyRule"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.6/_definitions.json#/definitions/io.k8s.api.flowcontrol.v1.ResourcePolicyRule"
       },
       "type": [
         "array",
@@ -28,7 +28,7 @@
     "subjects": {
       "description": "subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required.",
       "items": {
-        "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.6/_definitions.json#/definitions/io.k8s.api.flowcontrol.v1.Subject"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.32.6/_definitions.json#/definitions/io.k8s.api.flowcontrol.v1.Subject"
       },
       "type": [
         "array",

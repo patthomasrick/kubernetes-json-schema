@@ -12,7 +12,7 @@
       ]
     },
     "lastObservedTime": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.29.15/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.29.15/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime",
       "description": "lastObservedTime is the time when last Event from the series was seen before last heartbeat."
     }
   },

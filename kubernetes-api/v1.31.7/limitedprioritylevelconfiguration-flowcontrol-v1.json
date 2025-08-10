@@ -20,7 +20,7 @@
       ]
     },
     "limitResponse": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.31.7/_definitions.json#/definitions/io.k8s.api.flowcontrol.v1.LimitResponse",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.7/_definitions.json#/definitions/io.k8s.api.flowcontrol.v1.LimitResponse",
       "description": "`limitResponse` indicates what to do with requests that can not be executed right now"
     },
     "nominalConcurrencyShares": {

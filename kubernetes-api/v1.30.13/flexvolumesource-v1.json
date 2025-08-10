@@ -38,7 +38,7 @@
       ]
     },
     "secretRef": {
-      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.13/_definitions.json#/definitions/io.k8s.api.core.v1.LocalObjectReference",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.30.13/_definitions.json#/definitions/io.k8s.api.core.v1.LocalObjectReference",
       "description": "secretRef is Optional: secretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts."
     }
   },
