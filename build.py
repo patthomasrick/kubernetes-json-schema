@@ -79,18 +79,17 @@ def openapi2jsonschema(*args: str):
         if file.endswith(".json"):
             file_path = os.path.join(output_dir, file)
             try:
-                with (
-                    open(file_path, "r") as infile,
-                    open(f"{file_path}.sorted", "w") as outfile,
-                ):
-                    subprocess.run(
+                with open(file_path, "r") as infile:
+                    result = subprocess.run(
                         ["jq", "--sort-keys", "."],
                         stdin=infile,
-                        stdout=outfile,
+                        stdout=subprocess.PIPE,
                         check=True,
+                        text=True,
                     )
-                    num_sorted += 1
-                os.replace(f"{file_path}.sorted", file_path)
+                with open(file_path, "w") as outfile:
+                    outfile.write(result.stdout)
+                num_sorted += 1
             except subprocess.CalledProcessError as e:
                 logger.error(f"jq failed to sort {file}: {e}")
 
