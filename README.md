@@ -2,13 +2,17 @@
 
 ## Modifications
 
-This repository is a fork of garethr/kubernetes-json-schema. It makes some modifications as listed below:
+This repository is a fork of [garethr/kubernetes-json-schema](https://github.com/garethr/kubernetes-json-schema) and
+builds off of the work of others. The main purpose is to rebuild JSON schemas for newer versions of the Kubernetes API.
+
+It makes some modifications as listed below:
 
 - Builds via Docker now since openapi2jsonschema has trouble installing with later versions of Python/PIP
 - Adds a `kubernetes-api` directory with schemas for all Kubernetes versions
 - Adds minor versions to the `kubernetes-api` directory, so you can get schemas for Kubernetes 1.14.0, 1.14, 1.13.0,
   etc.
 - Improved build script that runs in Docker and builds in parallel
+- Automatic builds of schemas to Github pages: <https://patthomasrick.github.io/kubernetes-json-schema/>
 
 ## Summary
 
@@ -27,20 +31,11 @@ you should find four different flavours:
 Note that the Kubernetes API allows additional properties to be submitted, but `kubectl` acts like the strict flavour
 above.
 
-## kubernetesjsonschema.dev
-
-The schemas are now all available from [kubernetesjsonschema.dev](https://kubernetesjsonschema.dev), for instance the
-schema for v1 of the Pod object is Kubernetes 1.14.0 is available at:
-[kubernetesjsonschema.dev/v1.14.0-standalone/pod-v1.json](https://kubernetesjsonschema.dev/v1.14.0-standalone/pod-v1.json)
-
 ## Example
 
-Here are the links to the `deployment` schemas for Kubernetes 1.14.0:
+Here are the links to the `deployment` schemas for Kubernetes v1.33.3:
 
-- [v1.14.0/deployment.json](v1.14.0/deployment.json)
-- [v1.14.0-standalone/deployment.json](v1.14.0-standalone/deployment.json)
-- [v1.14.0-local/deployment.json](v1.14.0-local/deployment.json)
-- [v1.14.0-standalone-strict/deployment.json](v1.14.0-standalone-strict/deployment.json)
+- [v1.33.3/deployment-apps-v1.json](kubernetes-api/v1.33.3/deployment-apps-v1.json)
 
 ## Usage
 
@@ -58,7 +53,17 @@ u'template' is a required property
 Or as a directive to YAML language server:
 
 ```yaml
-# yaml-language-server: $schema=https://raw.githubusercontent.com/patthomasrick/kubernetes-json-schema/refs/heads/master/kubernetes-api/v1.32/all.json
+# yaml-language-server: $schema=https://patthomasrick.github.io/kubernetes-json-schema/v1.32/all.json
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+```
+
+You can also use the most specific schema for the type you are using, for instance:
+
+```yaml
+# yaml-language-server: $schema=https://patthomasrick.github.io/kubernetes-json-schema/v1.32/deployment-apps-v1.json
 apiVersion: apps/v1
 kind: Deployment
 metadata:
