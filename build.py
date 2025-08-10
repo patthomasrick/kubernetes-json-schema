@@ -62,7 +62,7 @@ def openapi2jsonschema(*args: str):
         f"{os.getcwd()}:/workdir",
         "-w",
         "/workdir",
-        "openapi2jsonschema:latest",
+        DOCKER_IMAGE_TAG,
         "openapi2jsonschema",
     ] + list(args)
     try:
