@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "IngressStatus describe the current state of the Ingress.",
+  "properties": {
+    "loadBalancer": {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.14.0/_definitions.json#/definitions/io.k8s.api.core.v1.LoadBalancerStatus",
+      "description": "LoadBalancer contains the current status of the load-balancer."
+    }
+  },
+  "type": "object"
+}

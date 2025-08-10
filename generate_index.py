@@ -1,18 +1,28 @@
 import os
+import re
+from typing import List, TextIO, Tuple
 
 API_DIR = "kubernetes-api"
 INDEX_PATH = os.path.join(API_DIR, "index.html")
 
 
-def list_versions():
-    versions = sorted(
-        d for d in os.listdir(API_DIR) if os.path.isdir(os.path.join(API_DIR, d)) and not d.startswith(".")
-    )
+def version_sort_key(version: str) -> Tuple[int, ...]:
+    try:
+        parts = version.lstrip("v").split(".")
+        parts = [int(part) for part in parts]
+        return tuple(parts)
+    except Exception:
+        return (0, 0, 0)
+
+
+def list_versions() -> List[str]:
+    versions = [d for d in os.listdir(API_DIR) if os.path.isdir(os.path.join(API_DIR, d)) and not d.startswith(".")]
+    versions.sort(key=version_sort_key)
     versions.reverse()
     return versions
 
 
-def list_schema_files(version):
+def list_schema_files(version: str) -> List[str]:
     version_dir = os.path.join(API_DIR, version)
     if not os.path.isdir(version_dir):
         return []
@@ -21,7 +31,54 @@ def list_schema_files(version):
     )
 
 
-def main():
+def classify_versions(versions: List[str]) -> Tuple[List[str], List[str], List[str]]:
+    latest: List[str] = []
+    minors: List[str] = []
+    patches: List[str] = []
+    for v in versions:
+        if v == "master":
+            latest.append(v)
+        elif re.match(r"^v\d+\.\d+$", v):
+            minors.append(v)
+        elif re.match(r"^v\d+\.\d+\.\d+$", v):
+            patches.append(v)
+        # else: ignore anything else
+    return latest, minors, patches
+
+
+def write_section(f: TextIO, section_title: str, versions: List[str]) -> None:
+    if not versions:
+        return
+    section_id = section_title.replace(" ", "")
+    f.write(f'  <h2 class="mt-5">{section_title}</h2>\n')
+    f.write(f'  <div class="accordion mb-4" id="schemasAccordion-{section_id}">\n')
+    for idx, version in enumerate(versions):
+        schema_files = list_schema_files(version)
+        file_count = len(schema_files)
+        collapse_id = f"{section_id}Collapse{idx}"
+        heading_id = f"{section_id}Heading{idx}"
+        f.write(f'''    <div class="accordion-item">
+      <h2 class="accordion-header" id="{heading_id}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}">
+          {version} ({file_count} file{"s" if file_count != 1 else ""})
+        </button>
+      </h2>
+      <div id="{collapse_id}" class="accordion-collapse collapse" aria-labelledby="{heading_id}" data-bs-parent="#schemasAccordion-{section_id}">
+        <div class="accordion-body">
+''')
+        if schema_files:
+            f.write('          <ul class="list-group list-group-flush">\n')
+            for schema in schema_files:
+                schema_path = f"{version}/{schema}"
+                f.write(f'            <li class="list-group-item"><a href="{schema_path}">{schema}</a></li>\n')
+            f.write("          </ul>\n")
+        else:
+            f.write("          <em>No schemas found.</em>\n")
+        f.write("        </div>\n      </div>\n    </div>\n")
+    f.write("  </div>\n")
+
+
+def main() -> None:
     with open(INDEX_PATH, "w") as f:
         f.write("""<!DOCTYPE html>
 <html lang="en">
@@ -35,32 +92,13 @@ def main():
 <div class="container my-5">
   <h1 class="mb-4">Kubernetes JSON Schemas</h1>
   <p class="lead">This page indexes all available Kubernetes JSON schemas by version. Click a version to see its schema files.</p>
-  <div class="accordion" id="schemasAccordion">
 """)
-        for idx, version in enumerate(list_versions()):
-            schema_files = list_schema_files(version)
-            collapse_id = f"collapse{idx}"
-            heading_id = f"heading{idx}"
-            f.write(f'''  <div class="accordion-item">
-    <h2 class="accordion-header" id="{heading_id}">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}">
-        {version}
-      </button>
-    </h2>
-    <div id="{collapse_id}" class="accordion-collapse collapse" aria-labelledby="{heading_id}" data-bs-parent="#schemasAccordion">
-      <div class="accordion-body">
-''')
-            if schema_files:
-                f.write('        <ul class="list-group list-group-flush">\n')
-                for schema in schema_files:
-                    schema_path = f"{version}/{schema}"
-                    f.write(f'          <li class="list-group-item"><a href="{schema_path}">{schema}</a></li>\n')
-                f.write("        </ul>\n")
-            else:
-                f.write("        <em>No schemas found.</em>\n")
-            f.write("      </div>\n    </div>\n  </div>\n")
-        f.write("""  </div>
-  <hr class="mt-5">
+        versions = list_versions()
+        latest, minors, patches = classify_versions(versions)
+        write_section(f, "Latest (master)", latest)
+        write_section(f, "Minor Versions", minors)
+        write_section(f, "Patch Versions", patches)
+        f.write("""  <hr class="mt-5">
   <small class="text-muted">Generated by <code>generate_index.py</code></small>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>

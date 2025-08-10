@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 KUBERNETES_GIT_URL = "https://raw.githubusercontent.com/kubernetes/kubernetes"
 SCHEMA_REF_BASE_URL = "https://patthomasrick.github.io/kubernetes-json-schema"
 DOCKER_IMAGE_TAG = "patthomasrick/openapi2jsonschema:latest"
-EARLIEST_API_VERSION = "v1.28.0"
+EARLIEST_API_VERSION = "v1.7.0"
 LATEST_API_VERSION = "v2.0.0"
 
 
@@ -154,6 +154,12 @@ def main():
     logger.info(f"Filtered Kubernetes API versions: {versions}")
 
     versions += ["master"]
+
+    # Remove existing master directory if it exists
+    master_path = version_to_path("master") / "master"
+    if master_path.exists():
+        logger.info(f"Removing existing master directory: {master_path}")
+        subprocess.run(["rm", "-rf", str(master_path)], check=True)
 
     with ThreadPoolExecutor() as tpe:
         futures = []

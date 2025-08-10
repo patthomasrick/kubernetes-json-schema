@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "A null or empty node selector term matches no objects.",
+  "properties": {
+    "matchExpressions": {
+      "description": "Required. A list of node selector requirements. The requirements are ANDed.",
+      "items": {
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.4/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelectorRequirement"
+      },
+      "type": [
+        "array",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "matchExpressions"
+  ],
+  "type": "object"
+}

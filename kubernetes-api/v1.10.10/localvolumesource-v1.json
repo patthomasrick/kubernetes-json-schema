@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "Local represents directly-attached storage with node affinity",
+  "properties": {
+    "path": {
+      "description": "The full path to the volume on the node For alpha, this path must be a directory Once block as a source is supported, then this path can point to a block device",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "path"
+  ],
+  "type": "object"
+}

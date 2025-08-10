@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "ContainerState holds a possible state of container. Only one of its members may be specified. If none of them is specified, the default one is ContainerStateWaiting.",
+  "properties": {
+    "running": {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.13.7/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStateRunning",
+      "description": "Details about a running container"
+    },
+    "terminated": {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.13.7/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStateTerminated",
+      "description": "Details about a terminated container"
+    },
+    "waiting": {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.13.7/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStateWaiting",
+      "description": "Details about a waiting container"
+    }
+  },
+  "type": "object"
+}

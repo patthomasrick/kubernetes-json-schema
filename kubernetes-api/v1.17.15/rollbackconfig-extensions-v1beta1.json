@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "DEPRECATED.",
+  "properties": {
+    "revision": {
+      "description": "The revision to rollback to. If set to 0, rollback to the last revision.",
+      "format": "int64",
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

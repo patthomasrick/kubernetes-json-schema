@@ -1,0 +1,2506 @@
+{
+  "oneOf": [
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1alpha1.Initializer"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1alpha1.InitializerConfiguration"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1alpha1.InitializerConfigurationList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1alpha1.Rule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1beta1.MutatingWebhookConfiguration"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1beta1.MutatingWebhookConfigurationList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1beta1.RuleWithOperations"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1beta1.ServiceReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1beta1.ValidatingWebhookConfiguration"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1beta1.ValidatingWebhookConfigurationList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1beta1.Webhook"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.admissionregistration.v1beta1.WebhookClientConfig"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.ControllerRevision"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.ControllerRevisionList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.DaemonSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.DaemonSetCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.DaemonSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.DaemonSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.DaemonSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.DaemonSetUpdateStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.Deployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.DeploymentCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.DeploymentList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.DeploymentSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.DeploymentStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.DeploymentStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.ReplicaSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.ReplicaSetCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.ReplicaSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.ReplicaSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.ReplicaSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.RollingUpdateDaemonSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.RollingUpdateDeployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.RollingUpdateStatefulSetStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.StatefulSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.StatefulSetCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.StatefulSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.StatefulSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.StatefulSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1.StatefulSetUpdateStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.ControllerRevision"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.ControllerRevisionList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.Deployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.DeploymentCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.DeploymentList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.DeploymentRollback"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.DeploymentSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.DeploymentStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.DeploymentStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.RollbackConfig"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.RollingUpdateDeployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.RollingUpdateStatefulSetStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.Scale"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.ScaleSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.ScaleStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.StatefulSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.StatefulSetCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.StatefulSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.StatefulSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.StatefulSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta1.StatefulSetUpdateStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.ControllerRevision"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.ControllerRevisionList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.DaemonSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.DaemonSetCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.DaemonSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.DaemonSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.DaemonSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.DaemonSetUpdateStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.Deployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.DeploymentCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.DeploymentList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.DeploymentSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.DeploymentStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.DeploymentStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.ReplicaSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.ReplicaSetCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.ReplicaSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.ReplicaSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.ReplicaSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.RollingUpdateDaemonSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.RollingUpdateDeployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.RollingUpdateStatefulSetStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.Scale"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.ScaleSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.ScaleStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.StatefulSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.StatefulSetCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.StatefulSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.StatefulSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.StatefulSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.apps.v1beta2.StatefulSetUpdateStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authentication.v1.TokenReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authentication.v1.TokenReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authentication.v1.TokenReviewStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authentication.v1.UserInfo"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authentication.v1beta1.TokenReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authentication.v1beta1.TokenReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authentication.v1beta1.TokenReviewStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authentication.v1beta1.UserInfo"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.NonResourceAttributes"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.NonResourceRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.ResourceAttributes"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.ResourceRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.SelfSubjectAccessReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.SelfSubjectRulesReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.SelfSubjectRulesReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.SubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.SubjectAccessReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.SubjectAccessReviewStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1.SubjectRulesReviewStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.LocalSubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.NonResourceAttributes"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.NonResourceRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.ResourceAttributes"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.ResourceRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.SelfSubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.SelfSubjectAccessReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.SelfSubjectRulesReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.SelfSubjectRulesReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.SubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.SubjectAccessReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.SubjectAccessReviewStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.authorization.v1beta1.SubjectRulesReviewStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v1.CrossVersionObjectReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v1.HorizontalPodAutoscaler"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v1.Scale"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v1.ScaleSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v1.ScaleStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.CrossVersionObjectReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.ExternalMetricSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.ExternalMetricStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.HorizontalPodAutoscaler"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.HorizontalPodAutoscalerCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.HorizontalPodAutoscalerList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.HorizontalPodAutoscalerSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.HorizontalPodAutoscalerStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.MetricSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.MetricStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.ObjectMetricSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.ObjectMetricStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.PodsMetricSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.PodsMetricStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.ResourceMetricSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.autoscaling.v2beta1.ResourceMetricStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v1.Job"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v1.JobCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v1.JobList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v1.JobSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v1.JobStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v1beta1.CronJob"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v1beta1.CronJobList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v1beta1.CronJobSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v1beta1.CronJobStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v1beta1.JobTemplateSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v2alpha1.CronJob"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v2alpha1.CronJobList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v2alpha1.CronJobSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v2alpha1.CronJobStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.batch.v2alpha1.JobTemplateSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.CertificateSigningRequest"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.CertificateSigningRequestCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.CertificateSigningRequestList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.CertificateSigningRequestSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.CertificateSigningRequestStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.AWSElasticBlockStoreVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Affinity"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.AttachedVolume"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.AzureDiskVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.AzureFilePersistentVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.AzureFileVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Binding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.CSIPersistentVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Capabilities"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.CephFSPersistentVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.CephFSVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.CinderVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ClientIPConfig"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ComponentCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ComponentStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ComponentStatusList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ConfigMap"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ConfigMapEnvSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ConfigMapKeySelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ConfigMapList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ConfigMapProjection"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ConfigMapVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Container"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerImage"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerPort"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerState"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStateRunning"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStateTerminated"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStateWaiting"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.DaemonEndpoint"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.DownwardAPIProjection"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.DownwardAPIVolumeFile"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.DownwardAPIVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.EmptyDirVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.EndpointAddress"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.EndpointPort"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.EndpointSubset"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Endpoints"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.EndpointsList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.EnvFromSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.EnvVar"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.EnvVarSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Event"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.EventList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.EventSeries"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.EventSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ExecAction"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.FCVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.FlexPersistentVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.FlexVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.FlockerVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.GCEPersistentDiskVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.GitRepoVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.GlusterfsVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.HTTPGetAction"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.HTTPHeader"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Handler"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.HostAlias"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.HostPathVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ISCSIPersistentVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ISCSIVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.KeyToPath"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Lifecycle"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.LimitRange"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.LimitRangeItem"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.LimitRangeList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.LimitRangeSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.LoadBalancerIngress"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.LoadBalancerStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.LocalObjectReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.LocalVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NFSVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Namespace"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NamespaceList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NamespaceSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NamespaceStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Node"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeAddress"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeAffinity"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeConfigSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeDaemonEndpoints"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelectorRequirement"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSelectorTerm"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSystemInfo"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ObjectFieldSelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ObjectReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PersistentVolume"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PersistentVolumeClaim"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PersistentVolumeClaimCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PersistentVolumeClaimList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PersistentVolumeClaimSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PersistentVolumeClaimStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PersistentVolumeClaimVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PersistentVolumeList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PersistentVolumeSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PersistentVolumeStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PhotonPersistentDiskVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Pod"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodAffinity"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodAffinityTerm"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodAntiAffinity"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodDNSConfig"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodDNSConfigOption"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodSecurityContext"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodTemplate"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodTemplateList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PortworxVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.PreferredSchedulingTerm"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Probe"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ProjectedVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.QuobyteVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.RBDPersistentVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.RBDVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ReplicationController"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ReplicationControllerCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ReplicationControllerList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ReplicationControllerSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ReplicationControllerStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ResourceFieldSelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ResourceQuota"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ResourceQuotaList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ResourceQuotaSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ResourceQuotaStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ResourceRequirements"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.SELinuxOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ScaleIOPersistentVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ScaleIOVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Secret"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.SecretEnvSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.SecretKeySelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.SecretList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.SecretProjection"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.SecretReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.SecretVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.SecurityContext"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Service"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ServiceAccount"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ServiceAccountList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ServiceList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ServicePort"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ServiceSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.ServiceStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.SessionAffinityConfig"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.StorageOSPersistentVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.StorageOSVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.TCPSocketAction"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Taint"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Toleration"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.Volume"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.VolumeDevice"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.VolumeMount"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.VolumeNodeAffinity"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.VolumeProjection"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.VsphereVirtualDiskVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.core.v1.WeightedPodAffinityTerm"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.events.v1beta1.Event"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.events.v1beta1.EventList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.events.v1beta1.EventSeries"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.AllowedFlexVolume"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.AllowedHostPath"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DaemonSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DaemonSetCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DaemonSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DaemonSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DaemonSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DaemonSetUpdateStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.Deployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DeploymentCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DeploymentList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DeploymentRollback"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DeploymentSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DeploymentStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.DeploymentStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.FSGroupStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.HTTPIngressPath"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.HTTPIngressRuleValue"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.HostPortRange"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.IDRange"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.IPBlock"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.Ingress"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.IngressBackend"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.IngressList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.IngressRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.IngressSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.IngressStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.IngressTLS"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicyEgressRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicyIngressRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicyList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicyPeer"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicyPort"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicySpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.PodSecurityPolicy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.PodSecurityPolicyList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.PodSecurityPolicySpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.ReplicaSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.ReplicaSetCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.ReplicaSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.ReplicaSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.ReplicaSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.RollbackConfig"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.RollingUpdateDaemonSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.RollingUpdateDeployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.RunAsUserStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.SELinuxStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.Scale"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.ScaleSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.ScaleStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.extensions.v1beta1.SupplementalGroupsStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.networking.v1.IPBlock"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.networking.v1.NetworkPolicy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.networking.v1.NetworkPolicyEgressRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.networking.v1.NetworkPolicyIngressRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.networking.v1.NetworkPolicyList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.networking.v1.NetworkPolicyPeer"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.networking.v1.NetworkPolicyPort"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.networking.v1.NetworkPolicySpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.AllowedFlexVolume"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.AllowedHostPath"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.Eviction"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.FSGroupStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.HostPortRange"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.IDRange"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.PodDisruptionBudget"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.PodDisruptionBudgetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.PodDisruptionBudgetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.PodDisruptionBudgetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.PodSecurityPolicy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.PodSecurityPolicyList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.PodSecurityPolicySpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.RunAsUserStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.SELinuxStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.policy.v1beta1.SupplementalGroupsStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.AggregationRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.ClusterRole"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.ClusterRoleBinding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.ClusterRoleBindingList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.ClusterRoleList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.PolicyRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.Role"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.RoleBinding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.RoleBindingList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.RoleList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.RoleRef"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1.Subject"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.AggregationRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.ClusterRole"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.ClusterRoleBinding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.ClusterRoleBindingList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.ClusterRoleList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.PolicyRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.Role"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.RoleBinding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.RoleBindingList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.RoleList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.RoleRef"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1alpha1.Subject"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.AggregationRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.ClusterRole"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.ClusterRoleBinding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.ClusterRoleBindingList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.ClusterRoleList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.PolicyRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.Role"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.RoleBinding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.RoleBindingList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.RoleList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.RoleRef"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.rbac.v1beta1.Subject"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.PriorityClass"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.PriorityClassList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.settings.v1alpha1.PodPreset"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.settings.v1alpha1.PodPresetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.settings.v1alpha1.PodPresetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1.StorageClass"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1.StorageClassList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1alpha1.VolumeAttachment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1alpha1.VolumeAttachmentList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1alpha1.VolumeAttachmentSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1alpha1.VolumeAttachmentSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1alpha1.VolumeAttachmentStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1alpha1.VolumeError"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1beta1.StorageClass"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1beta1.StorageClassList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1beta1.VolumeAttachment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1beta1.VolumeAttachmentList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1beta1.VolumeAttachmentSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1beta1.VolumeAttachmentSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1beta1.VolumeAttachmentStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.api.storage.v1beta1.VolumeError"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinitionCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinitionList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinitionNames"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinitionSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinitionStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceSubresourceScale"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceSubresourceStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceSubresources"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceValidation"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.ExternalDocumentation"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.JSON"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.JSONSchemaProps"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.JSONSchemaPropsOrArray"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.JSONSchemaPropsOrBool"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.JSONSchemaPropsOrStringArray"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.APIGroup"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.APIGroupList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.APIResource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.APIResourceList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.APIVersions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.DeleteOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.GroupVersionForDiscovery"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Initializer"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Initializers"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.OwnerReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Patch"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Preconditions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Status"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusCause"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.WatchEvent"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.runtime.RawExtension"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.version.Info"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIService"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIServiceCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIServiceList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIServiceSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIServiceStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.ServiceReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIService"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIServiceCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIServiceList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIServiceSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIServiceStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.ServiceReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.AWSElasticBlockStoreVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Affinity"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.AttachedVolume"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.AzureDiskVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.AzureFileVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Binding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Capabilities"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.CephFSVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.CinderVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ComponentCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ComponentStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ComponentStatusList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ConfigMap"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ConfigMapEnvSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ConfigMapKeySelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ConfigMapList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ConfigMapProjection"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ConfigMapVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Container"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ContainerImage"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ContainerPort"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ContainerState"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ContainerStateRunning"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ContainerStateTerminated"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ContainerStateWaiting"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ContainerStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.DaemonEndpoint"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.DownwardAPIProjection"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.DownwardAPIVolumeFile"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.DownwardAPIVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.EmptyDirVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.EndpointAddress"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.EndpointPort"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.EndpointSubset"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Endpoints"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.EndpointsList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.EnvFromSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.EnvVar"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.EnvVarSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Event"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.EventList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.EventSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ExecAction"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.FCVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.FlexVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.FlockerVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.GCEPersistentDiskVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.GitRepoVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.GlusterfsVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.HTTPGetAction"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.HTTPHeader"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Handler"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.HostAlias"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.HostPathVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ISCSIVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.KeyToPath"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Lifecycle"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.LimitRange"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.LimitRangeItem"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.LimitRangeList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.LimitRangeSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.LoadBalancerIngress"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.LoadBalancerStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.LocalObjectReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.LocalVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NFSVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Namespace"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NamespaceList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NamespaceSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NamespaceStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Node"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeAddress"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeAffinity"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeDaemonEndpoints"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeSelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeSelectorRequirement"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeSelectorTerm"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.NodeSystemInfo"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ObjectFieldSelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ObjectReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PersistentVolume"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PersistentVolumeClaim"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PersistentVolumeClaimList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PersistentVolumeClaimSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PersistentVolumeClaimStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PersistentVolumeClaimVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PersistentVolumeList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PersistentVolumeSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PersistentVolumeStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PhotonPersistentDiskVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Pod"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PodAffinity"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PodAffinityTerm"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PodAntiAffinity"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PodCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PodList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PodSecurityContext"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PodSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PodStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PodTemplate"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PodTemplateList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PodTemplateSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PortworxVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.PreferredSchedulingTerm"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Probe"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ProjectedVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.QuobyteVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.RBDVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ReplicationController"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ReplicationControllerCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ReplicationControllerList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ReplicationControllerSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ReplicationControllerStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ResourceFieldSelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ResourceQuota"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ResourceQuotaList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ResourceQuotaSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ResourceQuotaStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ResourceRequirements"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.SELinuxOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ScaleIOVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Secret"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.SecretEnvSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.SecretKeySelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.SecretList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.SecretProjection"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.SecretVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.SecurityContext"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Service"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ServiceAccount"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ServiceAccountList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ServiceList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ServicePort"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ServiceSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.ServiceStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.StorageOSPersistentVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.StorageOSVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.TCPSocketAction"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Taint"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Toleration"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.Volume"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.VolumeMount"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.VolumeProjection"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.VsphereVirtualDiskVolumeSource"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.api.v1.WeightedPodAffinityTerm"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.Initializer"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.InitializerConfiguration"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.InitializerConfigurationList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.Rule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.ControllerRevision"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.ControllerRevisionList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.Deployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentRollback"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.RollbackConfig"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.RollingUpdateDeployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.RollingUpdateStatefulSetStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.Scale"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.ScaleSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.ScaleStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.StatefulSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.StatefulSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.StatefulSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.StatefulSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.apps.v1beta1.StatefulSetUpdateStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authentication.v1.TokenReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authentication.v1.TokenReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authentication.v1.TokenReviewStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authentication.v1.UserInfo"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authentication.v1beta1.TokenReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authentication.v1beta1.TokenReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authentication.v1beta1.TokenReviewStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authentication.v1beta1.UserInfo"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1.LocalSubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1.NonResourceAttributes"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1.ResourceAttributes"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1.SelfSubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1.SelfSubjectAccessReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1.SubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1.SubjectAccessReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1.SubjectAccessReviewStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1beta1.LocalSubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1beta1.NonResourceAttributes"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1beta1.ResourceAttributes"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1beta1.SelfSubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1beta1.SelfSubjectAccessReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1beta1.SubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1beta1.SubjectAccessReviewSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.authorization.v1beta1.SubjectAccessReviewStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.autoscaling.v1.CrossVersionObjectReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.autoscaling.v1.HorizontalPodAutoscaler"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.autoscaling.v1.HorizontalPodAutoscalerList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.autoscaling.v1.HorizontalPodAutoscalerSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.autoscaling.v1.HorizontalPodAutoscalerStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.autoscaling.v1.Scale"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.autoscaling.v1.ScaleSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.autoscaling.v1.ScaleStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.batch.v1.Job"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.batch.v1.JobCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.batch.v1.JobList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.batch.v1.JobSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.batch.v1.JobStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.batch.v2alpha1.CronJob"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.batch.v2alpha1.CronJobList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.batch.v2alpha1.CronJobSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.batch.v2alpha1.CronJobStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.batch.v2alpha1.JobTemplateSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.certificates.v1beta1.CertificateSigningRequest"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.certificates.v1beta1.CertificateSigningRequestCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.certificates.v1beta1.CertificateSigningRequestList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.certificates.v1beta1.CertificateSigningRequestSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.certificates.v1beta1.CertificateSigningRequestStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DaemonSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DaemonSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DaemonSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DaemonSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DaemonSetUpdateStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.Deployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentRollback"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentStrategy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.FSGroupStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.HTTPIngressPath"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.HTTPIngressRuleValue"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.HostPortRange"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IDRange"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.Ingress"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressBackend"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressTLS"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicyIngressRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicyList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicyPeer"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicyPort"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicySpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.PodSecurityPolicy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.PodSecurityPolicyList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.PodSecurityPolicySpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ReplicaSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ReplicaSetCondition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ReplicaSetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ReplicaSetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ReplicaSetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.RollbackConfig"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.RollingUpdateDaemonSet"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.RollingUpdateDeployment"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.RunAsUserStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.SELinuxStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.Scale"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ScaleSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ScaleStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.extensions.v1beta1.SupplementalGroupsStrategyOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicyIngressRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicyList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicyPeer"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicyPort"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicySpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.policy.v1beta1.Eviction"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.policy.v1beta1.PodDisruptionBudget"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.policy.v1beta1.PodDisruptionBudgetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.policy.v1beta1.PodDisruptionBudgetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.policy.v1beta1.PodDisruptionBudgetStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.ClusterRole"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.ClusterRoleBinding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.ClusterRoleBindingList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.ClusterRoleList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.PolicyRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.Role"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.RoleBinding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.RoleBindingList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.RoleList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.RoleRef"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.Subject"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1beta1.ClusterRole"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1beta1.ClusterRoleBinding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1beta1.ClusterRoleBindingList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1beta1.ClusterRoleList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1beta1.PolicyRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1beta1.Role"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1beta1.RoleBinding"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1beta1.RoleBindingList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1beta1.RoleList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1beta1.RoleRef"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.rbac.v1beta1.Subject"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.settings.v1alpha1.PodPreset"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.settings.v1alpha1.PodPresetList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.settings.v1alpha1.PodPresetSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.storage.v1.StorageClass"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.storage.v1.StorageClassList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.storage.v1beta1.StorageClass"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.10.6/_definitions.json#/definitions/io.k8s.kubernetes.pkg.apis.storage.v1beta1.StorageClassList"
+    }
+  ]
+}

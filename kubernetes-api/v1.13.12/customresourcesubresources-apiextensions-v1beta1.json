@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "CustomResourceSubresources defines the status and scale subresources for CustomResources.",
+  "properties": {
+    "scale": {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.13.12/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceSubresourceScale",
+      "description": "Scale denotes the scale subresource for CustomResources"
+    },
+    "status": {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.13.12/_definitions.json#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceSubresourceStatus",
+      "description": "Status denotes the status subresource for CustomResources"
+    }
+  },
+  "type": "object"
+}
