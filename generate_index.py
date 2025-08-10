@@ -5,7 +5,11 @@ INDEX_PATH = os.path.join(API_DIR, "index.html")
 
 
 def list_versions():
-    return sorted(d for d in os.listdir(API_DIR) if os.path.isdir(os.path.join(API_DIR, d)) and not d.startswith("."))
+    versions = sorted(
+        d for d in os.listdir(API_DIR) if os.path.isdir(os.path.join(API_DIR, d)) and not d.startswith(".")
+    )
+    versions.reverse()
+    return versions
 
 
 def list_schema_files(version):
