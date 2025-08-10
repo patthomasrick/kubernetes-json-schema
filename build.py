@@ -79,8 +79,16 @@ def openapi2jsonschema(*args: str):
         if file.endswith(".json"):
             file_path = os.path.join(output_dir, file)
             try:
-                with open(file_path, "r") as infile, open(f"{file_path}.sorted", "w") as outfile:
-                    subprocess.run(["jq", "--sort-keys", "."], stdin=infile, stdout=outfile, check=True)
+                with (
+                    open(file_path, "r") as infile,
+                    open(f"{file_path}.sorted", "w") as outfile,
+                ):
+                    subprocess.run(
+                        ["jq", "--sort-keys", "."],
+                        stdin=infile,
+                        stdout=outfile,
+                        check=True,
+                    )
                     num_sorted += 1
                 os.replace(f"{file_path}.sorted", file_path)
             except subprocess.CalledProcessError as e:
@@ -123,7 +131,10 @@ def copy_latest_patch_versions_to_minor(versions: List[str]):
         if minor_version_path.exists():
             subprocess.run(["rm", "-rf", str(minor_version_path)], check=True)
 
-        subprocess.run(["cp", "-r", str(latest_patch_path) + "/", str(minor_version_path) + "/"], check=True)
+        subprocess.run(
+            ["cp", "-r", str(latest_patch_path) + "/", str(minor_version_path) + "/"],
+            check=True,
+        )
 
         logger.info(f"Copied latest patch version {latest_patch} to minor version {minor_version}")
 

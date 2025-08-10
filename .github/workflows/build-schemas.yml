@@ -1,0 +1,46 @@
+name: Build Kubernetes JSON Schemas
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every Sunday
+    - cron: "0 0 * * 0"
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Pull openapi2jsonschema Docker image
+        run: docker pull patthomasrick/openapi2jsonschema:latest
+
+      - name: Run build.py
+        run: |
+          cd kubernetes-json-schema
+          python build.py
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update schemas [automated]"
+          branch: auto/build-schemas
+          create_branch: true
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/build-schemas
+          title: "Automated schema update"
+          body: "This PR was created automatically by the build workflow."
+          base: master
