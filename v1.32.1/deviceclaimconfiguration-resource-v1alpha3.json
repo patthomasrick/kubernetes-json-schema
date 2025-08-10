@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "DeviceClaimConfiguration is used for configuration parameters in DeviceClaim.",
+  "properties": {
+    "opaque": {
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.32.1/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.OpaqueDeviceConfiguration",
+      "description": "Opaque provides driver-specific configuration parameters."
+    },
+    "requests": {
+      "description": "Requests lists the names of requests where the configuration applies. If empty, it applies to all requests.",
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "type": [
+        "array",
+        "null"
+      ],
+      "x-kubernetes-list-type": "atomic"
+    }
+  },
+  "type": "object"
+}
