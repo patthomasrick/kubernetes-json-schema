@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "AzureFile represents an Azure File Service mount on the host and bind mount to the pod.",
   "properties": {
     "readOnly": {

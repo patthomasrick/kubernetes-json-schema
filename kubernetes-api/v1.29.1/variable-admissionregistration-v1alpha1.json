@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Variable is the definition of a variable that is used for composition.",
   "properties": {
     "expression": {

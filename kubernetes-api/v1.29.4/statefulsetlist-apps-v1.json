@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "StatefulSetList is a collection of StatefulSets.",
   "properties": {
     "apiVersion": {

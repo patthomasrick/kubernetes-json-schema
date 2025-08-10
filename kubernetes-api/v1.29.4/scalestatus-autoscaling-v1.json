@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ScaleStatus represents the current status of a scale subresource.",
   "properties": {
     "replicas": {

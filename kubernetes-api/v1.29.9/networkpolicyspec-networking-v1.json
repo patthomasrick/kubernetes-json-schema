@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "NetworkPolicySpec provides the specification of a NetworkPolicy",
   "properties": {
     "egress": {

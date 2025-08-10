@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Scale represents a scaling request for a resource.",
   "properties": {
     "apiVersion": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ContainerStatus contains details for the current status of this container.",
   "properties": {
     "allocatedResources": {

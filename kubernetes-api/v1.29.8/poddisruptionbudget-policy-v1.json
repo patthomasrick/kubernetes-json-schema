@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods",
   "properties": {
     "apiVersion": {

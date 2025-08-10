@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "NodeCondition contains condition information for a node.",
   "properties": {
     "lastHeartbeatTime": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "UserSubject holds detailed information for user-kind subject.",
   "properties": {
     "name": {

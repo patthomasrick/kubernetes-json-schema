@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CronJobSpec describes how the job execution will look like and when it will actually run.",
   "properties": {
     "concurrencyPolicy": {

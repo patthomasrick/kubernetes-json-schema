@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CustomResourceSubresourceScale defines how to serve the scale subresource for CustomResources.",
   "properties": {
     "labelSelectorPath": {

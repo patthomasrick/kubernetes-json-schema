@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CustomResourceDefinitionNames indicates the names to serve this CustomResourceDefinition",
   "properties": {
     "categories": {

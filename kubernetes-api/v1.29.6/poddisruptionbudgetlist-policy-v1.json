@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "PodDisruptionBudgetList is a collection of PodDisruptionBudgets.",
   "properties": {
     "apiVersion": {

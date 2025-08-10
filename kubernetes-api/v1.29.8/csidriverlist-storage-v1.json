@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CSIDriverList is a collection of CSIDriver objects.",
   "properties": {
     "apiVersion": {

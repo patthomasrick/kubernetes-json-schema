@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "NodeList is the whole list of all Nodes which have been registered with master.",
   "properties": {
     "apiVersion": {

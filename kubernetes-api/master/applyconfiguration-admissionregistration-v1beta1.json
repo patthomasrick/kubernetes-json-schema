@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ApplyConfiguration defines the desired configuration values of an object.",
   "properties": {
     "expression": {

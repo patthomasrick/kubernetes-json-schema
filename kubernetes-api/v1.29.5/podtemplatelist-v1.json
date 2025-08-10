@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "PodTemplateList is a list of PodTemplates.",
   "properties": {
     "apiVersion": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "NetworkPolicy describes what network traffic is allowed for a set of Pods",
   "properties": {
     "apiVersion": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "EndpointAddress is a tuple that describes single IP address.",
   "properties": {
     "hostname": {

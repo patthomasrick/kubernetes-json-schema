@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ObjectFieldSelector selects an APIVersioned field of an object.",
   "properties": {
     "apiVersion": {

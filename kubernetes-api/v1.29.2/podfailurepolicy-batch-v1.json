@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "PodFailurePolicy describes how failed pods influence the backoffLimit.",
   "properties": {
     "rules": {

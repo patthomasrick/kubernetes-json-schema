@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "VolumeAttachmentSpec is the specification of a VolumeAttachment request.",
   "properties": {
     "attacher": {

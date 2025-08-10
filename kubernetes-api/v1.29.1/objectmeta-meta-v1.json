@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.",
   "properties": {
     "annotations": {

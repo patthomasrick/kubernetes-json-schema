@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "PriorityLevelConfigurationCondition defines the condition of priority level.",
   "properties": {
     "lastTransitionTime": {

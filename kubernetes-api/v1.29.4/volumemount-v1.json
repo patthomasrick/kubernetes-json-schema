@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "VolumeMount describes a mounting of a Volume within a container.",
   "properties": {
     "mountPath": {

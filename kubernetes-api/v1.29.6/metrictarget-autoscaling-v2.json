@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "MetricTarget defines the target value, average value, or average utilization of a specific metric",
   "properties": {
     "averageUtilization": {

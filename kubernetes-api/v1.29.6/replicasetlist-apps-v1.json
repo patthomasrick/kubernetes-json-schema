@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ReplicaSetList is a collection of ReplicaSets.",
   "properties": {
     "apiVersion": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "StructuredResourceHandle is the in-tree representation of the allocation result.",
   "properties": {
     "nodeName": {

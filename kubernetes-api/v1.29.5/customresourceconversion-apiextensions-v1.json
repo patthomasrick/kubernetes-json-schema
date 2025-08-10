@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CustomResourceConversion describes how to convert different versions of a CR.",
   "properties": {
     "strategy": {

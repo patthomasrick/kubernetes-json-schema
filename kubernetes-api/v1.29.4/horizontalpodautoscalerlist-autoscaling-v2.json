@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.",
   "properties": {
     "apiVersion": {

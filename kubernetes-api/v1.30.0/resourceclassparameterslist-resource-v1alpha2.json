@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ResourceClassParametersList is a collection of ResourceClassParameters.",
   "properties": {
     "apiVersion": {

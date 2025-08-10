@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "HPAScalingPolicy is a single policy which must hold true for a specified past interval.",
   "properties": {
     "periodSeconds": {

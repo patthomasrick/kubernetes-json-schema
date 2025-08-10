@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ParamRef describes how to locate the params to be used as input to expressions of rules applied by a policy binding.",
   "properties": {
     "name": {

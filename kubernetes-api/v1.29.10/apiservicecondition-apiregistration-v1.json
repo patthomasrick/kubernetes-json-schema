@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "APIServiceCondition describes the state of an APIService at a particular point",
   "properties": {
     "lastTransitionTime": {

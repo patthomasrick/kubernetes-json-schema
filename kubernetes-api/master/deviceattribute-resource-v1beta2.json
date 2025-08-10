@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "DeviceAttribute must have exactly one field set.",
   "properties": {
     "bool": {

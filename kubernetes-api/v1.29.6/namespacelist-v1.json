@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "NamespaceList is a list of Namespaces.",
   "properties": {
     "apiVersion": {

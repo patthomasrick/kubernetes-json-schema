@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "MutatingWebhook describes an admission webhook and the resources and operations it applies to.",
   "properties": {
     "admissionReviewVersions": {

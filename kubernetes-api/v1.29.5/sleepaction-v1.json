@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "SleepAction describes a \"sleep\" action.",
   "properties": {
     "seconds": {

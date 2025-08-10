@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "DaemonSetUpdateStrategy is a struct used to control the update strategy for a DaemonSet.",
   "properties": {
     "rollingUpdate": {

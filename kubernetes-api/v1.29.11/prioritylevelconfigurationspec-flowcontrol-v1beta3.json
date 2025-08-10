@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "PriorityLevelConfigurationSpec specifies the configuration of a priority level.",
   "properties": {
     "exempt": {

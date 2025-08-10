@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ScaleSpec describes the attributes of a scale subresource.",
   "properties": {
     "replicas": {

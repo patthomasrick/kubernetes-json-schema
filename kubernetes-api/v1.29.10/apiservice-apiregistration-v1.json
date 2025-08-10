@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "APIService represents a server for a particular GroupVersion. Name must be \"version.group\".",
   "properties": {
     "apiVersion": {

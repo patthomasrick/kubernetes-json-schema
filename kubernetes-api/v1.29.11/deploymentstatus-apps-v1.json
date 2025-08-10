@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "DeploymentStatus is the most recently observed status of the Deployment.",
   "properties": {
     "availableReplicas": {

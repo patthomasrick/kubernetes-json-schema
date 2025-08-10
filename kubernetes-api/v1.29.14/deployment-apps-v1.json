@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Deployment enables declarative updates for Pods and ReplicaSets.",
   "properties": {
     "apiVersion": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "TokenRequest requests a token for a given service account.",
   "properties": {
     "apiVersion": {

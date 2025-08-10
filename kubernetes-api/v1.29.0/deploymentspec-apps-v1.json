@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
   "properties": {
     "minReadySeconds": {

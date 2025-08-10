@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CronJobStatus represents the current state of a cron job.",
   "properties": {
     "active": {

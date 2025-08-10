@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.",
   "properties": {
     "apiGroup": {

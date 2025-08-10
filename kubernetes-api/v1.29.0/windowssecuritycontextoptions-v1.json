@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "WindowsSecurityContextOptions contain Windows-specific options and credentials.",
   "properties": {
     "gmsaCredentialSpec": {

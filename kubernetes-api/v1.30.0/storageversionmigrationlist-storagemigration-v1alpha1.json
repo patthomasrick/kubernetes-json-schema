@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "StorageVersionMigrationList is a collection of storage version migrations.",
   "properties": {
     "apiVersion": {

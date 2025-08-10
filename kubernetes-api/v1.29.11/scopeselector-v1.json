@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "A scope selector represents the AND of the selectors represented by the scoped-resource selector requirements.",
   "properties": {
     "matchExpressions": {

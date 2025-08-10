@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Represents storage that is managed by an external CSI volume driver (Beta feature)",
   "properties": {
     "controllerExpandSecretRef": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "StatefulSetOrdinals describes the policy used for replica ordinal assignment in this StatefulSet.",
   "properties": {
     "start": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Endpoint represents a single logical \"backend\" implementing a service.",
   "properties": {
     "addresses": {

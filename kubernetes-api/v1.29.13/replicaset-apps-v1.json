@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ReplicaSet ensures that a specified number of pod replicas are running at any given time.",
   "properties": {
     "apiVersion": {

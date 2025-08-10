@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.",
   "properties": {
     "nameservers": {

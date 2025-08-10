@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "JobSpec describes how the job execution will look like.",
   "properties": {
     "activeDeadlineSeconds": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "AuditAnnotation describes how to produce an audit annotation for an API request.",
   "properties": {
     "key": {

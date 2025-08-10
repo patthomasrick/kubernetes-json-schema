@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.",
   "properties": {
     "apiVersion": {

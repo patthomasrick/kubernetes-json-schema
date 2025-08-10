@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "NodeConfigStatus describes the status of the config assigned by Node.Spec.ConfigSource.",
   "properties": {
     "active": {

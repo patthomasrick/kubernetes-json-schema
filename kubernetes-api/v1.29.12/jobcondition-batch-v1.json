@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "JobCondition describes current state of a job.",
   "properties": {
     "lastProbeTime": {

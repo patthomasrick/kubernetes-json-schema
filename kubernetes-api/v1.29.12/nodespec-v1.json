@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "NodeSpec describes the attributes that a node is created with.",
   "properties": {
     "configSource": {

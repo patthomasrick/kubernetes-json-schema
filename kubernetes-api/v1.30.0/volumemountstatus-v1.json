@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "VolumeMountStatus shows status of volume mounts.",
   "properties": {
     "mountPath": {

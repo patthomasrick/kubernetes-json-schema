@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "IngressSpec describes the Ingress the user wishes to exist.",
   "properties": {
     "defaultBackend": {

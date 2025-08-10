@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "DriverRequests describes all resources that are needed from one particular driver.",
   "properties": {
     "driverName": {

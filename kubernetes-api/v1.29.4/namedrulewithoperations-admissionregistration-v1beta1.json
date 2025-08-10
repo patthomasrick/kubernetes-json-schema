@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "NamedRuleWithOperations is a tuple of Operations and Resources with ResourceNames.",
   "properties": {
     "apiGroups": {

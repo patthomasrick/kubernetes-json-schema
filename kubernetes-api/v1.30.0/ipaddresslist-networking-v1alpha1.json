@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "IPAddressList contains a list of IPAddress.",
   "properties": {
     "apiVersion": {

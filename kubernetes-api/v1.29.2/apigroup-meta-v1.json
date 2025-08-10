@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "APIGroup contains the name, the supported versions, and the preferred version of a group.",
   "properties": {
     "apiVersion": {

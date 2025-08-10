@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Volume represents a named volume in a pod that may be accessed by any container in the pod.",
   "properties": {
     "awsElasticBlockStore": {

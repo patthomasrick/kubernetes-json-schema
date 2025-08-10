@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ResourceQuotaSpec defines the desired hard limits to enforce for Quota.",
   "properties": {
     "hard": {

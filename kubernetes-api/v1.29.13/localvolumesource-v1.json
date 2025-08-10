@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Local represents directly-attached storage with node affinity (Beta feature)",
   "properties": {
     "fsType": {

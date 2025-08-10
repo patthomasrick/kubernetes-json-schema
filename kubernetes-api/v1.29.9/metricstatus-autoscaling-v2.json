@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "MetricStatus describes the last-read state of a single metric.",
   "properties": {
     "containerResource": {

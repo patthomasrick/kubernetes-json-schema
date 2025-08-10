@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "PodFailurePolicyOnPodConditionsPattern describes a pattern for matching an actual pod condition type.",
   "properties": {
     "status": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Job represents the configuration of a single job.",
   "properties": {
     "apiVersion": {

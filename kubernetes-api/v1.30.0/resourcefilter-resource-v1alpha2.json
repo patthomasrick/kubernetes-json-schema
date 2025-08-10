@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ResourceFilter is a filter for resources from one particular driver.",
   "properties": {
     "driverName": {

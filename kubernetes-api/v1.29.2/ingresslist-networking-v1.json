@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "IngressList is a collection of Ingress.",
   "properties": {
     "apiVersion": {

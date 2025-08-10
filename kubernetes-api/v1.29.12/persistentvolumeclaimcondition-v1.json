@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "PersistentVolumeClaimCondition contains details about state of pvc",
   "properties": {
     "lastProbeTime": {

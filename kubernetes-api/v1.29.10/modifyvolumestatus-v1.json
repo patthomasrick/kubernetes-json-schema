@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ModifyVolumeStatus represents the status object of ControllerModifyVolume operation",
   "properties": {
     "status": {

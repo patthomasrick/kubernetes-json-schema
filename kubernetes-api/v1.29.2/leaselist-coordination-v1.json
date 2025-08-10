@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "LeaseList is a list of Lease objects.",
   "properties": {
     "apiVersion": {

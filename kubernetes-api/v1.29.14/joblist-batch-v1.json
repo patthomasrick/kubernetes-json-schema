@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "JobList is a collection of jobs.",
   "properties": {
     "apiVersion": {

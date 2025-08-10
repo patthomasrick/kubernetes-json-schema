@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ReplicationControllerStatus represents the current status of a replication controller.",
   "properties": {
     "availableReplicas": {

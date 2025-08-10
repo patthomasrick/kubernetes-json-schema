@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ConfigMap holds configuration data for pods to consume.",
   "properties": {
     "apiVersion": {

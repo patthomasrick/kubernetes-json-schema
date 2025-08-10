@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "VolumeError captures an error encountered during a volume operation.",
   "properties": {
     "message": {

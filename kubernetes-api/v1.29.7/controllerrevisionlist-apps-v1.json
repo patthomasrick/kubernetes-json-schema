@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ControllerRevisionList is a resource containing a list of ControllerRevision objects.",
   "properties": {
     "apiVersion": {

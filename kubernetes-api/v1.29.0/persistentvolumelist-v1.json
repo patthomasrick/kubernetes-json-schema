@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "PersistentVolumeList is a list of PersistentVolume items.",
   "properties": {
     "apiVersion": {

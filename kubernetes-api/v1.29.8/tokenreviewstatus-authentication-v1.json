@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "TokenReviewStatus is the result of the token authentication request.",
   "properties": {
     "audiences": {

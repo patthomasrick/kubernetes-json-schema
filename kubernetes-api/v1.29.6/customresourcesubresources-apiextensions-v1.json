@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CustomResourceSubresources defines the status and scale subresources for CustomResources.",
   "properties": {
     "scale": {

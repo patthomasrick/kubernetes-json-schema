@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "NonResourceRule holds information that describes a rule for the non-resource",
   "properties": {
     "nonResourceURLs": {

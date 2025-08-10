@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "SubjectAccessReview checks whether or not a user or group can perform an action.",
   "properties": {
     "apiVersion": {

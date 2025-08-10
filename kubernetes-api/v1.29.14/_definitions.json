@@ -1,6 +1,7 @@
 {
   "definitions": {
     "io.k8s.api.admissionregistration.v1.MatchCondition": {
+      "additionalProperties": false,
       "description": "MatchCondition represents a condition which must by fulfilled for a request to be sent to a webhook.",
       "properties": {
         "expression": {
@@ -19,6 +20,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1.MutatingWebhook": {
+      "additionalProperties": false,
       "description": "MutatingWebhook describes an admission webhook and the resources and operations it applies to.",
       "properties": {
         "admissionReviewVersions": {
@@ -95,6 +97,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1.MutatingWebhookConfiguration": {
+      "additionalProperties": false,
       "description": "MutatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and may change the object.",
       "properties": {
         "apiVersion": {
@@ -135,6 +138,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1.MutatingWebhookConfigurationList": {
+      "additionalProperties": false,
       "description": "MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.",
       "properties": {
         "apiVersion": {
@@ -176,6 +180,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1.RuleWithOperations": {
+      "additionalProperties": false,
       "description": "RuleWithOperations is a tuple of Operations and Resources. It is recommended to make sure that all the tuple expansions are valid.",
       "properties": {
         "apiGroups": {
@@ -218,6 +223,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1.ServiceReference": {
+      "additionalProperties": false,
       "description": "ServiceReference holds a reference to Service.legacy.k8s.io",
       "properties": {
         "name": {
@@ -245,6 +251,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1.ValidatingWebhook": {
+      "additionalProperties": false,
       "description": "ValidatingWebhook describes an admission webhook and the resources and operations it applies to.",
       "properties": {
         "admissionReviewVersions": {
@@ -317,6 +324,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1.ValidatingWebhookConfiguration": {
+      "additionalProperties": false,
       "description": "ValidatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and object without changing it.",
       "properties": {
         "apiVersion": {
@@ -357,6 +365,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1.ValidatingWebhookConfigurationList": {
+      "additionalProperties": false,
       "description": "ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.",
       "properties": {
         "apiVersion": {
@@ -398,6 +407,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1.WebhookClientConfig": {
+      "additionalProperties": false,
       "description": "WebhookClientConfig contains the information to make a TLS connection with the webhook",
       "properties": {
         "caBundle": {
@@ -417,6 +427,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1alpha1.AuditAnnotation": {
+      "additionalProperties": false,
       "description": "AuditAnnotation describes how to produce an audit annotation for an API request.",
       "properties": {
         "key": {
@@ -435,6 +446,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1alpha1.ExpressionWarning": {
+      "additionalProperties": false,
       "description": "ExpressionWarning is a warning information that targets a specific expression.",
       "properties": {
         "fieldRef": {
@@ -453,6 +465,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1alpha1.MatchCondition": {
+      "additionalProperties": false,
       "properties": {
         "expression": {
           "description": "Expression represents the expression which will be evaluated by CEL. Must evaluate to bool. CEL expressions have access to the contents of the AdmissionRequest and Authorizer, organized into CEL variables:\n\n'object' - The object from the incoming request. The value is null for DELETE requests. 'oldObject' - The existing object. The value is null for CREATE requests. 'request' - Attributes of the admission request(/pkg/apis/admission/types.go#AdmissionRequest). 'authorizer' - A CEL Authorizer. May be used to perform authorization checks for the principal (user or service account) of the request.\n  See https://pkg.go.dev/k8s.io/apiserver/pkg/cel/library#Authz\n'authorizer.requestResource' - A CEL ResourceCheck constructed from the 'authorizer' and configured with the\n  request resource.\nDocumentation on CEL: https://kubernetes.io/docs/reference/using-api/cel/\n\nRequired.",
@@ -470,6 +483,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1alpha1.MatchResources": {
+      "additionalProperties": false,
       "description": "MatchResources decides whether to run the admission control policy on an object based on whether it meets the match criteria. The exclude rules take precedence over include rules (if a resource matches both, it is excluded)",
       "properties": {
         "excludeResourceRules": {
@@ -505,6 +519,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.admissionregistration.v1alpha1.NamedRuleWithOperations": {
+      "additionalProperties": false,
       "description": "NamedRuleWithOperations is a tuple of Operations and Resources with ResourceNames.",
       "properties": {
         "apiGroups": {
@@ -556,6 +571,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.admissionregistration.v1alpha1.ParamKind": {
+      "additionalProperties": false,
       "description": "ParamKind is a tuple of Group Kind and Version.",
       "properties": {
         "apiVersion": {
@@ -571,6 +587,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.admissionregistration.v1alpha1.ParamRef": {
+      "additionalProperties": false,
       "description": "ParamRef describes how to locate the params to be used as input to expressions of rules applied by a policy binding.",
       "properties": {
         "name": {
@@ -594,6 +611,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.admissionregistration.v1alpha1.TypeChecking": {
+      "additionalProperties": false,
       "description": "TypeChecking contains results of type checking the expressions in the ValidatingAdmissionPolicy",
       "properties": {
         "expressionWarnings": {
@@ -608,6 +626,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicy": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicy describes the definition of an admission validation policy that accepts or rejects an object without changing it.",
       "properties": {
         "apiVersion": {
@@ -647,6 +666,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicyBinding": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicyBinding binds the ValidatingAdmissionPolicy with paramerized resources. ValidatingAdmissionPolicyBinding and parameter CRDs together define how cluster administrators configure policies for clusters.\n\nFor a given admission request, each binding will cause its policy to be evaluated N times, where N is 1 for policies/bindings that don't use params, otherwise N is the number of parameters selected by the binding.\n\nThe CEL expressions of a policy must have a computed CEL cost below the maximum CEL budget. Each evaluation of the policy is given an independent CEL cost budget. Adding/removing policies, bindings, or params can not affect whether a given (policy, binding, param) combination is within its own CEL budget.",
       "properties": {
         "apiVersion": {
@@ -682,6 +702,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingList": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicyBindingList is a list of ValidatingAdmissionPolicyBinding.",
       "properties": {
         "apiVersion": {
@@ -723,6 +744,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingSpec": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicyBindingSpec is the specification of the ValidatingAdmissionPolicyBinding.",
       "properties": {
         "matchResources": {
@@ -749,6 +771,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicyList": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicyList is a list of ValidatingAdmissionPolicy.",
       "properties": {
         "apiVersion": {
@@ -790,6 +813,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicySpec": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicySpec is the specification of the desired behavior of the AdmissionPolicy.",
       "properties": {
         "auditAnnotations": {
@@ -850,6 +874,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicyStatus": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicyStatus represents the status of a ValidatingAdmissionPolicy.",
       "properties": {
         "conditions": {
@@ -876,6 +901,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1alpha1.Validation": {
+      "additionalProperties": false,
       "description": "Validation specifies the CEL expression which is used to apply the validation.",
       "properties": {
         "expression": {
@@ -901,6 +927,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1alpha1.Variable": {
+      "additionalProperties": false,
       "description": "Variable is the definition of a variable that is used for composition.",
       "properties": {
         "expression": {
@@ -919,6 +946,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1beta1.AuditAnnotation": {
+      "additionalProperties": false,
       "description": "AuditAnnotation describes how to produce an audit annotation for an API request.",
       "properties": {
         "key": {
@@ -937,6 +965,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1beta1.ExpressionWarning": {
+      "additionalProperties": false,
       "description": "ExpressionWarning is a warning information that targets a specific expression.",
       "properties": {
         "fieldRef": {
@@ -955,6 +984,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1beta1.MatchCondition": {
+      "additionalProperties": false,
       "description": "MatchCondition represents a condition which must be fulfilled for a request to be sent to a webhook.",
       "properties": {
         "expression": {
@@ -973,6 +1003,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1beta1.MatchResources": {
+      "additionalProperties": false,
       "description": "MatchResources decides whether to run the admission control policy on an object based on whether it meets the match criteria. The exclude rules take precedence over include rules (if a resource matches both, it is excluded)",
       "properties": {
         "excludeResourceRules": {
@@ -1008,6 +1039,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.admissionregistration.v1beta1.NamedRuleWithOperations": {
+      "additionalProperties": false,
       "description": "NamedRuleWithOperations is a tuple of Operations and Resources with ResourceNames.",
       "properties": {
         "apiGroups": {
@@ -1059,6 +1091,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.admissionregistration.v1beta1.ParamKind": {
+      "additionalProperties": false,
       "description": "ParamKind is a tuple of Group Kind and Version.",
       "properties": {
         "apiVersion": {
@@ -1074,6 +1107,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.admissionregistration.v1beta1.ParamRef": {
+      "additionalProperties": false,
       "description": "ParamRef describes how to locate the params to be used as input to expressions of rules applied by a policy binding.",
       "properties": {
         "name": {
@@ -1097,6 +1131,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.admissionregistration.v1beta1.TypeChecking": {
+      "additionalProperties": false,
       "description": "TypeChecking contains results of type checking the expressions in the ValidatingAdmissionPolicy",
       "properties": {
         "expressionWarnings": {
@@ -1111,6 +1146,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1beta1.ValidatingAdmissionPolicy": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicy describes the definition of an admission validation policy that accepts or rejects an object without changing it.",
       "properties": {
         "apiVersion": {
@@ -1150,6 +1186,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1beta1.ValidatingAdmissionPolicyBinding": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicyBinding binds the ValidatingAdmissionPolicy with paramerized resources. ValidatingAdmissionPolicyBinding and parameter CRDs together define how cluster administrators configure policies for clusters.\n\nFor a given admission request, each binding will cause its policy to be evaluated N times, where N is 1 for policies/bindings that don't use params, otherwise N is the number of parameters selected by the binding.\n\nThe CEL expressions of a policy must have a computed CEL cost below the maximum CEL budget. Each evaluation of the policy is given an independent CEL cost budget. Adding/removing policies, bindings, or params can not affect whether a given (policy, binding, param) combination is within its own CEL budget.",
       "properties": {
         "apiVersion": {
@@ -1185,6 +1222,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1beta1.ValidatingAdmissionPolicyBindingList": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicyBindingList is a list of ValidatingAdmissionPolicyBinding.",
       "properties": {
         "apiVersion": {
@@ -1226,6 +1264,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1beta1.ValidatingAdmissionPolicyBindingSpec": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicyBindingSpec is the specification of the ValidatingAdmissionPolicyBinding.",
       "properties": {
         "matchResources": {
@@ -1252,6 +1291,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1beta1.ValidatingAdmissionPolicyList": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicyList is a list of ValidatingAdmissionPolicy.",
       "properties": {
         "apiVersion": {
@@ -1293,6 +1333,7 @@
       ]
     },
     "io.k8s.api.admissionregistration.v1beta1.ValidatingAdmissionPolicySpec": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicySpec is the specification of the desired behavior of the AdmissionPolicy.",
       "properties": {
         "auditAnnotations": {
@@ -1353,6 +1394,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1beta1.ValidatingAdmissionPolicyStatus": {
+      "additionalProperties": false,
       "description": "ValidatingAdmissionPolicyStatus represents the status of an admission validation policy.",
       "properties": {
         "conditions": {
@@ -1379,6 +1421,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1beta1.Validation": {
+      "additionalProperties": false,
       "description": "Validation specifies the CEL expression which is used to apply the validation.",
       "properties": {
         "expression": {
@@ -1404,6 +1447,7 @@
       "type": "object"
     },
     "io.k8s.api.admissionregistration.v1beta1.Variable": {
+      "additionalProperties": false,
       "description": "Variable is the definition of a variable that is used for composition. A variable is defined as a named expression.",
       "properties": {
         "expression": {
@@ -1423,6 +1467,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.apiserverinternal.v1alpha1.ServerStorageVersion": {
+      "additionalProperties": false,
       "description": "An API server instance reports the version it can decode and the version it encodes objects to when persisting objects in the backend.",
       "properties": {
         "apiServerID": {
@@ -1453,6 +1498,7 @@
       "type": "object"
     },
     "io.k8s.api.apiserverinternal.v1alpha1.StorageVersion": {
+      "additionalProperties": false,
       "description": "Storage version of a specific resource.",
       "properties": {
         "apiVersion": {
@@ -1496,6 +1542,7 @@
       ]
     },
     "io.k8s.api.apiserverinternal.v1alpha1.StorageVersionCondition": {
+      "additionalProperties": false,
       "description": "Describes the state of the storageVersion at a certain point.",
       "properties": {
         "lastTransitionTime": {
@@ -1532,6 +1579,7 @@
       "type": "object"
     },
     "io.k8s.api.apiserverinternal.v1alpha1.StorageVersionList": {
+      "additionalProperties": false,
       "description": "A list of StorageVersions.",
       "properties": {
         "apiVersion": {
@@ -1577,6 +1625,7 @@
       "type": "object"
     },
     "io.k8s.api.apiserverinternal.v1alpha1.StorageVersionStatus": {
+      "additionalProperties": false,
       "description": "API server instances report the versions they can decode and the version they encode objects to when persisting objects in the backend.",
       "properties": {
         "commonEncodingVersion": {
@@ -1609,6 +1658,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.ControllerRevision": {
+      "additionalProperties": false,
       "description": "ControllerRevision implements an immutable snapshot of state data. Clients are responsible for serializing and deserializing the objects that contain their internal state. Once a ControllerRevision has been successfully created, it can not be updated. The API Server will fail validation of all requests that attempt to mutate the Data field. ControllerRevisions may, however, be deleted. Note that, due to its use by both the DaemonSet and StatefulSet controllers for update and rollback, this object is beta. However, it may be subject to name and representation changes in future releases, and clients should not depend on its stability. It is primarily for internal use by controllers.",
       "properties": {
         "apiVersion": {
@@ -1652,6 +1702,7 @@
       ]
     },
     "io.k8s.api.apps.v1.ControllerRevisionList": {
+      "additionalProperties": false,
       "description": "ControllerRevisionList is a resource containing a list of ControllerRevision objects.",
       "properties": {
         "apiVersion": {
@@ -1693,6 +1744,7 @@
       ]
     },
     "io.k8s.api.apps.v1.DaemonSet": {
+      "additionalProperties": false,
       "description": "DaemonSet represents the configuration of a daemon set.",
       "properties": {
         "apiVersion": {
@@ -1732,6 +1784,7 @@
       ]
     },
     "io.k8s.api.apps.v1.DaemonSetCondition": {
+      "additionalProperties": false,
       "description": "DaemonSetCondition describes the state of a DaemonSet at a certain point.",
       "properties": {
         "lastTransitionTime": {
@@ -1762,6 +1815,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.DaemonSetList": {
+      "additionalProperties": false,
       "description": "DaemonSetList is a collection of daemon sets.",
       "properties": {
         "apiVersion": {
@@ -1803,6 +1857,7 @@
       ]
     },
     "io.k8s.api.apps.v1.DaemonSetSpec": {
+      "additionalProperties": false,
       "description": "DaemonSetSpec is the specification of a daemon set.",
       "properties": {
         "minReadySeconds": {
@@ -1835,6 +1890,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.DaemonSetStatus": {
+      "additionalProperties": false,
       "description": "DaemonSetStatus represents the current status of a daemon set.",
       "properties": {
         "collisionCount": {
@@ -1901,6 +1957,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.DaemonSetUpdateStrategy": {
+      "additionalProperties": false,
       "description": "DaemonSetUpdateStrategy is a struct used to control the update strategy for a DaemonSet.",
       "properties": {
         "rollingUpdate": {
@@ -1915,6 +1972,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.Deployment": {
+      "additionalProperties": false,
       "description": "Deployment enables declarative updates for Pods and ReplicaSets.",
       "properties": {
         "apiVersion": {
@@ -1954,6 +2012,7 @@
       ]
     },
     "io.k8s.api.apps.v1.DeploymentCondition": {
+      "additionalProperties": false,
       "description": "DeploymentCondition describes the state of a deployment at a certain point.",
       "properties": {
         "lastTransitionTime": {
@@ -1988,6 +2047,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.DeploymentList": {
+      "additionalProperties": false,
       "description": "DeploymentList is a list of Deployments.",
       "properties": {
         "apiVersion": {
@@ -2029,6 +2089,7 @@
       ]
     },
     "io.k8s.api.apps.v1.DeploymentSpec": {
+      "additionalProperties": false,
       "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
       "properties": {
         "minReadySeconds": {
@@ -2076,6 +2137,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.DeploymentStatus": {
+      "additionalProperties": false,
       "description": "DeploymentStatus is the most recently observed status of the Deployment.",
       "properties": {
         "availableReplicas": {
@@ -2126,6 +2188,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.DeploymentStrategy": {
+      "additionalProperties": false,
       "description": "DeploymentStrategy describes how to replace existing pods with new ones.",
       "properties": {
         "rollingUpdate": {
@@ -2140,6 +2203,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.ReplicaSet": {
+      "additionalProperties": false,
       "description": "ReplicaSet ensures that a specified number of pod replicas are running at any given time.",
       "properties": {
         "apiVersion": {
@@ -2179,6 +2243,7 @@
       ]
     },
     "io.k8s.api.apps.v1.ReplicaSetCondition": {
+      "additionalProperties": false,
       "description": "ReplicaSetCondition describes the state of a replica set at a certain point.",
       "properties": {
         "lastTransitionTime": {
@@ -2209,6 +2274,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.ReplicaSetList": {
+      "additionalProperties": false,
       "description": "ReplicaSetList is a collection of ReplicaSets.",
       "properties": {
         "apiVersion": {
@@ -2250,6 +2316,7 @@
       ]
     },
     "io.k8s.api.apps.v1.ReplicaSetSpec": {
+      "additionalProperties": false,
       "description": "ReplicaSetSpec is the specification of a ReplicaSet.",
       "properties": {
         "minReadySeconds": {
@@ -2277,6 +2344,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.ReplicaSetStatus": {
+      "additionalProperties": false,
       "description": "ReplicaSetStatus represents the current status of a ReplicaSet.",
       "properties": {
         "availableReplicas": {
@@ -2320,6 +2388,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.RollingUpdateDaemonSet": {
+      "additionalProperties": false,
       "description": "Spec to control the desired behavior of daemon set rolling update.",
       "properties": {
         "maxSurge": {
@@ -2334,6 +2403,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.RollingUpdateDeployment": {
+      "additionalProperties": false,
       "description": "Spec to control the desired behavior of rolling update.",
       "properties": {
         "maxSurge": {
@@ -2348,6 +2418,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.RollingUpdateStatefulSetStrategy": {
+      "additionalProperties": false,
       "description": "RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.",
       "properties": {
         "maxUnavailable": {
@@ -2363,6 +2434,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.StatefulSet": {
+      "additionalProperties": false,
       "description": "StatefulSet represents a set of pods with consistent identities. Identities are defined as:\n  - Network: A single stable DNS and hostname.\n  - Storage: As many VolumeClaims as requested.\n\nThe StatefulSet guarantees that a given network identity will always map to the same storage identity.",
       "properties": {
         "apiVersion": {
@@ -2402,6 +2474,7 @@
       ]
     },
     "io.k8s.api.apps.v1.StatefulSetCondition": {
+      "additionalProperties": false,
       "description": "StatefulSetCondition describes the state of a statefulset at a certain point.",
       "properties": {
         "lastTransitionTime": {
@@ -2432,6 +2505,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.StatefulSetList": {
+      "additionalProperties": false,
       "description": "StatefulSetList is a collection of StatefulSets.",
       "properties": {
         "apiVersion": {
@@ -2473,6 +2547,7 @@
       ]
     },
     "io.k8s.api.apps.v1.StatefulSetOrdinals": {
+      "additionalProperties": false,
       "description": "StatefulSetOrdinals describes the policy used for replica ordinal assignment in this StatefulSet.",
       "properties": {
         "start": {
@@ -2484,6 +2559,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.StatefulSetPersistentVolumeClaimRetentionPolicy": {
+      "additionalProperties": false,
       "description": "StatefulSetPersistentVolumeClaimRetentionPolicy describes the policy used for PVCs created from the StatefulSet VolumeClaimTemplates.",
       "properties": {
         "whenDeleted": {
@@ -2498,6 +2574,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.StatefulSetSpec": {
+      "additionalProperties": false,
       "description": "A StatefulSetSpec is the specification of a StatefulSet.",
       "properties": {
         "minReadySeconds": {
@@ -2559,6 +2636,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.StatefulSetStatus": {
+      "additionalProperties": false,
       "description": "StatefulSetStatus represents the current state of a StatefulSet.",
       "properties": {
         "availableReplicas": {
@@ -2620,6 +2698,7 @@
       "type": "object"
     },
     "io.k8s.api.apps.v1.StatefulSetUpdateStrategy": {
+      "additionalProperties": false,
       "description": "StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to perform updates. It includes any additional parameters necessary to perform the update for the indicated strategy.",
       "properties": {
         "rollingUpdate": {
@@ -2634,6 +2713,7 @@
       "type": "object"
     },
     "io.k8s.api.authentication.v1.BoundObjectReference": {
+      "additionalProperties": false,
       "description": "BoundObjectReference is a reference to an object that a token is bound to.",
       "properties": {
         "apiVersion": {
@@ -2656,6 +2736,7 @@
       "type": "object"
     },
     "io.k8s.api.authentication.v1.SelfSubjectReview": {
+      "additionalProperties": false,
       "description": "SelfSubjectReview contains the user information that the kube-apiserver has about the user making this request. When using impersonation, users will receive the user info of the user being impersonated.  If impersonation or request header authentication is used, any extra keys will have their case ignored and returned as lowercase.",
       "properties": {
         "apiVersion": {
@@ -2691,6 +2772,7 @@
       ]
     },
     "io.k8s.api.authentication.v1.SelfSubjectReviewStatus": {
+      "additionalProperties": false,
       "description": "SelfSubjectReviewStatus is filled by the kube-apiserver and sent back to a user.",
       "properties": {
         "userInfo": {
@@ -2701,6 +2783,7 @@
       "type": "object"
     },
     "io.k8s.api.authentication.v1.TokenRequest": {
+      "additionalProperties": false,
       "description": "TokenRequest requests a token for a given service account.",
       "properties": {
         "apiVersion": {
@@ -2743,6 +2826,7 @@
       ]
     },
     "io.k8s.api.authentication.v1.TokenRequestSpec": {
+      "additionalProperties": false,
       "description": "TokenRequestSpec contains client provided parameters of a token request.",
       "properties": {
         "audiences": {
@@ -2768,6 +2852,7 @@
       "type": "object"
     },
     "io.k8s.api.authentication.v1.TokenRequestStatus": {
+      "additionalProperties": false,
       "description": "TokenRequestStatus is the result of a token request.",
       "properties": {
         "expirationTimestamp": {
@@ -2786,6 +2871,7 @@
       "type": "object"
     },
     "io.k8s.api.authentication.v1.TokenReview": {
+      "additionalProperties": false,
       "description": "TokenReview attempts to authenticate a token to a known user. Note: TokenReview requests may be cached by the webhook token authenticator plugin in the kube-apiserver.",
       "properties": {
         "apiVersion": {
@@ -2828,6 +2914,7 @@
       ]
     },
     "io.k8s.api.authentication.v1.TokenReviewSpec": {
+      "additionalProperties": false,
       "description": "TokenReviewSpec is a description of the token authentication request.",
       "properties": {
         "audiences": {
@@ -2845,6 +2932,7 @@
       "type": "object"
     },
     "io.k8s.api.authentication.v1.TokenReviewStatus": {
+      "additionalProperties": false,
       "description": "TokenReviewStatus is the result of the token authentication request.",
       "properties": {
         "audiences": {
@@ -2870,6 +2958,7 @@
       "type": "object"
     },
     "io.k8s.api.authentication.v1.UserInfo": {
+      "additionalProperties": false,
       "description": "UserInfo holds the information about the user needed to implement the user.Info interface.",
       "properties": {
         "extra": {
@@ -2901,6 +2990,7 @@
       "type": "object"
     },
     "io.k8s.api.authentication.v1alpha1.SelfSubjectReview": {
+      "additionalProperties": false,
       "description": "SelfSubjectReview contains the user information that the kube-apiserver has about the user making this request. When using impersonation, users will receive the user info of the user being impersonated.  If impersonation or request header authentication is used, any extra keys will have their case ignored and returned as lowercase.",
       "properties": {
         "apiVersion": {
@@ -2936,6 +3026,7 @@
       ]
     },
     "io.k8s.api.authentication.v1alpha1.SelfSubjectReviewStatus": {
+      "additionalProperties": false,
       "description": "SelfSubjectReviewStatus is filled by the kube-apiserver and sent back to a user.",
       "properties": {
         "userInfo": {
@@ -2946,6 +3037,7 @@
       "type": "object"
     },
     "io.k8s.api.authentication.v1beta1.SelfSubjectReview": {
+      "additionalProperties": false,
       "description": "SelfSubjectReview contains the user information that the kube-apiserver has about the user making this request. When using impersonation, users will receive the user info of the user being impersonated.  If impersonation or request header authentication is used, any extra keys will have their case ignored and returned as lowercase.",
       "properties": {
         "apiVersion": {
@@ -2981,6 +3073,7 @@
       ]
     },
     "io.k8s.api.authentication.v1beta1.SelfSubjectReviewStatus": {
+      "additionalProperties": false,
       "description": "SelfSubjectReviewStatus is filled by the kube-apiserver and sent back to a user.",
       "properties": {
         "userInfo": {
@@ -2991,6 +3084,7 @@
       "type": "object"
     },
     "io.k8s.api.authorization.v1.LocalSubjectAccessReview": {
+      "additionalProperties": false,
       "description": "LocalSubjectAccessReview checks whether or not a user or group can perform an action in a given namespace. Having a namespace scoped resource makes it much easier to grant namespace scoped policy that includes permissions checking.",
       "properties": {
         "apiVersion": {
@@ -3033,6 +3127,7 @@
       ]
     },
     "io.k8s.api.authorization.v1.NonResourceAttributes": {
+      "additionalProperties": false,
       "description": "NonResourceAttributes includes the authorization attributes available for non-resource requests to the Authorizer interface",
       "properties": {
         "path": {
@@ -3047,6 +3142,7 @@
       "type": "object"
     },
     "io.k8s.api.authorization.v1.NonResourceRule": {
+      "additionalProperties": false,
       "description": "NonResourceRule holds information that describes a rule for the non-resource",
       "properties": {
         "nonResourceURLs": {
@@ -3070,6 +3166,7 @@
       "type": "object"
     },
     "io.k8s.api.authorization.v1.ResourceAttributes": {
+      "additionalProperties": false,
       "description": "ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface",
       "properties": {
         "group": {
@@ -3104,6 +3201,7 @@
       "type": "object"
     },
     "io.k8s.api.authorization.v1.ResourceRule": {
+      "additionalProperties": false,
       "description": "ResourceRule is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.",
       "properties": {
         "apiGroups": {
@@ -3141,6 +3239,7 @@
       "type": "object"
     },
     "io.k8s.api.authorization.v1.SelfSubjectAccessReview": {
+      "additionalProperties": false,
       "description": "SelfSubjectAccessReview checks whether or the current user can perform an action.  Not filling in a spec.namespace means \"in all namespaces\".  Self is a special case, because users should always be able to check whether they can perform an action",
       "properties": {
         "apiVersion": {
@@ -3183,6 +3282,7 @@
       ]
     },
     "io.k8s.api.authorization.v1.SelfSubjectAccessReviewSpec": {
+      "additionalProperties": false,
       "description": "SelfSubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set",
       "properties": {
         "nonResourceAttributes": {
@@ -3197,6 +3297,7 @@
       "type": "object"
     },
     "io.k8s.api.authorization.v1.SelfSubjectRulesReview": {
+      "additionalProperties": false,
       "description": "SelfSubjectRulesReview enumerates the set of actions the current user can perform within a namespace. The returned list of actions may be incomplete depending on the server's authorization mode, and any errors experienced during the evaluation. SelfSubjectRulesReview should be used by UIs to show/hide actions, or to quickly let an end user reason about their permissions. It should NOT Be used by external systems to drive authorization decisions as this raises confused deputy, cache lifetime/revocation, and correctness concerns. SubjectAccessReview, and LocalAccessReview are the correct way to defer authorization decisions to the API server.",
       "properties": {
         "apiVersion": {
@@ -3239,6 +3340,7 @@
       ]
     },
     "io.k8s.api.authorization.v1.SelfSubjectRulesReviewSpec": {
+      "additionalProperties": false,
       "description": "SelfSubjectRulesReviewSpec defines the specification for SelfSubjectRulesReview.",
       "properties": {
         "namespace": {
@@ -3249,6 +3351,7 @@
       "type": "object"
     },
     "io.k8s.api.authorization.v1.SubjectAccessReview": {
+      "additionalProperties": false,
       "description": "SubjectAccessReview checks whether or not a user or group can perform an action.",
       "properties": {
         "apiVersion": {
@@ -3291,6 +3394,7 @@
       ]
     },
     "io.k8s.api.authorization.v1.SubjectAccessReviewSpec": {
+      "additionalProperties": false,
       "description": "SubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set",
       "properties": {
         "extra": {
@@ -3330,6 +3434,7 @@
       "type": "object"
     },
     "io.k8s.api.authorization.v1.SubjectAccessReviewStatus": {
+      "additionalProperties": false,
       "description": "SubjectAccessReviewStatus",
       "properties": {
         "allowed": {
@@ -3355,6 +3460,7 @@
       "type": "object"
     },
     "io.k8s.api.authorization.v1.SubjectRulesReviewStatus": {
+      "additionalProperties": false,
       "description": "SubjectRulesReviewStatus contains the result of a rules check. This check can be incomplete depending on the set of authorizers the server is configured with and any errors experienced during evaluation. Because authorization rules are additive, if a rule appears in a list it's safe to assume the subject has that permission, even if that list is incomplete.",
       "properties": {
         "evaluationError": {
@@ -3388,6 +3494,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v1.CrossVersionObjectReference": {
+      "additionalProperties": false,
       "description": "CrossVersionObjectReference contains enough information to let you identify the referred resource.",
       "properties": {
         "apiVersion": {
@@ -3411,6 +3518,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.autoscaling.v1.HorizontalPodAutoscaler": {
+      "additionalProperties": false,
       "description": "configuration of a horizontal pod autoscaler.",
       "properties": {
         "apiVersion": {
@@ -3450,6 +3558,7 @@
       ]
     },
     "io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerList": {
+      "additionalProperties": false,
       "description": "list of horizontal pod autoscaler objects.",
       "properties": {
         "apiVersion": {
@@ -3491,6 +3600,7 @@
       ]
     },
     "io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerSpec": {
+      "additionalProperties": false,
       "description": "specification of a horizontal pod autoscaler.",
       "properties": {
         "maxReplicas": {
@@ -3520,6 +3630,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerStatus": {
+      "additionalProperties": false,
       "description": "current status of a horizontal pod autoscaler",
       "properties": {
         "currentCPUUtilizationPercentage": {
@@ -3554,6 +3665,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v1.Scale": {
+      "additionalProperties": false,
       "description": "Scale represents a scaling request for a resource.",
       "properties": {
         "apiVersion": {
@@ -3593,6 +3705,7 @@
       ]
     },
     "io.k8s.api.autoscaling.v1.ScaleSpec": {
+      "additionalProperties": false,
       "description": "ScaleSpec describes the attributes of a scale subresource.",
       "properties": {
         "replicas": {
@@ -3604,6 +3717,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v1.ScaleStatus": {
+      "additionalProperties": false,
       "description": "ScaleStatus represents the current status of a scale subresource.",
       "properties": {
         "replicas": {
@@ -3622,6 +3736,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.ContainerResourceMetricSource": {
+      "additionalProperties": false,
       "description": "ContainerResourceMetricSource indicates how to scale on a resource metric known to Kubernetes, as specified in requests and limits, describing each pod in the current scale target (e.g. CPU or memory).  The values will be averaged together before being compared to the target.  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the \"pods\" source.  Only one \"target\" type should be set.",
       "properties": {
         "container": {
@@ -3645,6 +3760,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.ContainerResourceMetricStatus": {
+      "additionalProperties": false,
       "description": "ContainerResourceMetricStatus indicates the current value of a resource metric known to Kubernetes, as specified in requests and limits, describing a single container in each pod in the current scale target (e.g. CPU or memory).  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the \"pods\" source.",
       "properties": {
         "container": {
@@ -3668,6 +3784,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.CrossVersionObjectReference": {
+      "additionalProperties": false,
       "description": "CrossVersionObjectReference contains enough information to let you identify the referred resource.",
       "properties": {
         "apiVersion": {
@@ -3690,6 +3807,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.ExternalMetricSource": {
+      "additionalProperties": false,
       "description": "ExternalMetricSource indicates how to scale on a metric not associated with any Kubernetes object (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).",
       "properties": {
         "metric": {
@@ -3708,6 +3826,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.ExternalMetricStatus": {
+      "additionalProperties": false,
       "description": "ExternalMetricStatus indicates the current value of a global metric not associated with any Kubernetes object.",
       "properties": {
         "current": {
@@ -3726,6 +3845,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.HPAScalingPolicy": {
+      "additionalProperties": false,
       "description": "HPAScalingPolicy is a single policy which must hold true for a specified past interval.",
       "properties": {
         "periodSeconds": {
@@ -3751,6 +3871,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.HPAScalingRules": {
+      "additionalProperties": false,
       "description": "HPAScalingRules configures the scaling behavior for one direction. These Rules are applied after calculating DesiredReplicas from metrics for the HPA. They can limit the scaling velocity by specifying scaling policies. They can prevent flapping by specifying the stabilization window, so that the number of replicas is not set instantly, instead, the safest value from the stabilization window is chosen.",
       "properties": {
         "policies": {
@@ -3774,6 +3895,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.HorizontalPodAutoscaler": {
+      "additionalProperties": false,
       "description": "HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, which automatically manages the replica count of any resource implementing the scale subresource based on the metrics specified.",
       "properties": {
         "apiVersion": {
@@ -3813,6 +3935,7 @@
       ]
     },
     "io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerBehavior": {
+      "additionalProperties": false,
       "description": "HorizontalPodAutoscalerBehavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively).",
       "properties": {
         "scaleDown": {
@@ -3827,6 +3950,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerCondition": {
+      "additionalProperties": false,
       "description": "HorizontalPodAutoscalerCondition describes the state of a HorizontalPodAutoscaler at a certain point.",
       "properties": {
         "lastTransitionTime": {
@@ -3857,6 +3981,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerList": {
+      "additionalProperties": false,
       "description": "HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.",
       "properties": {
         "apiVersion": {
@@ -3898,6 +4023,7 @@
       ]
     },
     "io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerSpec": {
+      "additionalProperties": false,
       "description": "HorizontalPodAutoscalerSpec describes the desired functionality of the HorizontalPodAutoscaler.",
       "properties": {
         "behavior": {
@@ -3934,6 +4060,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.HorizontalPodAutoscalerStatus": {
+      "additionalProperties": false,
       "description": "HorizontalPodAutoscalerStatus describes the current status of a horizontal pod autoscaler.",
       "properties": {
         "conditions": {
@@ -3983,6 +4110,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.MetricIdentifier": {
+      "additionalProperties": false,
       "description": "MetricIdentifier defines the name and optionally selector for a metric",
       "properties": {
         "name": {
@@ -4000,6 +4128,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.MetricSpec": {
+      "additionalProperties": false,
       "description": "MetricSpec specifies how to scale based on a single metric (only `type` and one other matching field should be set at once).",
       "properties": {
         "containerResource": {
@@ -4033,6 +4162,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.MetricStatus": {
+      "additionalProperties": false,
       "description": "MetricStatus describes the last-read state of a single metric.",
       "properties": {
         "containerResource": {
@@ -4066,6 +4196,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.MetricTarget": {
+      "additionalProperties": false,
       "description": "MetricTarget defines the target value, average value, or average utilization of a specific metric",
       "properties": {
         "averageUtilization": {
@@ -4092,6 +4223,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.MetricValueStatus": {
+      "additionalProperties": false,
       "description": "MetricValueStatus holds the current value for a metric",
       "properties": {
         "averageUtilization": {
@@ -4111,6 +4243,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.ObjectMetricSource": {
+      "additionalProperties": false,
       "description": "ObjectMetricSource indicates how to scale on a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).",
       "properties": {
         "describedObject": {
@@ -4134,6 +4267,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.ObjectMetricStatus": {
+      "additionalProperties": false,
       "description": "ObjectMetricStatus indicates the current value of a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).",
       "properties": {
         "current": {
@@ -4157,6 +4291,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.PodsMetricSource": {
+      "additionalProperties": false,
       "description": "PodsMetricSource indicates how to scale on a metric describing each pod in the current scale target (for example, transactions-processed-per-second). The values will be averaged together before being compared to the target value.",
       "properties": {
         "metric": {
@@ -4175,6 +4310,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.PodsMetricStatus": {
+      "additionalProperties": false,
       "description": "PodsMetricStatus indicates the current value of a metric describing each pod in the current scale target (for example, transactions-processed-per-second).",
       "properties": {
         "current": {
@@ -4193,6 +4329,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.ResourceMetricSource": {
+      "additionalProperties": false,
       "description": "ResourceMetricSource indicates how to scale on a resource metric known to Kubernetes, as specified in requests and limits, describing each pod in the current scale target (e.g. CPU or memory).  The values will be averaged together before being compared to the target.  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the \"pods\" source.  Only one \"target\" type should be set.",
       "properties": {
         "name": {
@@ -4211,6 +4348,7 @@
       "type": "object"
     },
     "io.k8s.api.autoscaling.v2.ResourceMetricStatus": {
+      "additionalProperties": false,
       "description": "ResourceMetricStatus indicates the current value of a resource metric known to Kubernetes, as specified in requests and limits, describing each pod in the current scale target (e.g. CPU or memory).  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the \"pods\" source.",
       "properties": {
         "current": {
@@ -4229,6 +4367,7 @@
       "type": "object"
     },
     "io.k8s.api.batch.v1.CronJob": {
+      "additionalProperties": false,
       "description": "CronJob represents the configuration of a single cron job.",
       "properties": {
         "apiVersion": {
@@ -4268,6 +4407,7 @@
       ]
     },
     "io.k8s.api.batch.v1.CronJobList": {
+      "additionalProperties": false,
       "description": "CronJobList is a collection of cron jobs.",
       "properties": {
         "apiVersion": {
@@ -4309,6 +4449,7 @@
       ]
     },
     "io.k8s.api.batch.v1.CronJobSpec": {
+      "additionalProperties": false,
       "description": "CronJobSpec describes how the job execution will look like and when it will actually run.",
       "properties": {
         "concurrencyPolicy": {
@@ -4354,6 +4495,7 @@
       "type": "object"
     },
     "io.k8s.api.batch.v1.CronJobStatus": {
+      "additionalProperties": false,
       "description": "CronJobStatus represents the current state of a cron job.",
       "properties": {
         "active": {
@@ -4376,6 +4518,7 @@
       "type": "object"
     },
     "io.k8s.api.batch.v1.Job": {
+      "additionalProperties": false,
       "description": "Job represents the configuration of a single job.",
       "properties": {
         "apiVersion": {
@@ -4415,6 +4558,7 @@
       ]
     },
     "io.k8s.api.batch.v1.JobCondition": {
+      "additionalProperties": false,
       "description": "JobCondition describes current state of a job.",
       "properties": {
         "lastProbeTime": {
@@ -4449,6 +4593,7 @@
       "type": "object"
     },
     "io.k8s.api.batch.v1.JobList": {
+      "additionalProperties": false,
       "description": "JobList is a collection of jobs.",
       "properties": {
         "apiVersion": {
@@ -4490,6 +4635,7 @@
       ]
     },
     "io.k8s.api.batch.v1.JobSpec": {
+      "additionalProperties": false,
       "description": "JobSpec describes how the job execution will look like.",
       "properties": {
         "activeDeadlineSeconds": {
@@ -4562,6 +4708,7 @@
       "type": "object"
     },
     "io.k8s.api.batch.v1.JobStatus": {
+      "additionalProperties": false,
       "description": "JobStatus represents the current state of a Job.",
       "properties": {
         "active": {
@@ -4623,6 +4770,7 @@
       "type": "object"
     },
     "io.k8s.api.batch.v1.JobTemplateSpec": {
+      "additionalProperties": false,
       "description": "JobTemplateSpec describes the data a Job should have when created from a template",
       "properties": {
         "metadata": {
@@ -4637,6 +4785,7 @@
       "type": "object"
     },
     "io.k8s.api.batch.v1.PodFailurePolicy": {
+      "additionalProperties": false,
       "description": "PodFailurePolicy describes how failed pods influence the backoffLimit.",
       "properties": {
         "rules": {
@@ -4654,6 +4803,7 @@
       "type": "object"
     },
     "io.k8s.api.batch.v1.PodFailurePolicyOnExitCodesRequirement": {
+      "additionalProperties": false,
       "description": "PodFailurePolicyOnExitCodesRequirement describes the requirement for handling a failed pod based on its container exit codes. In particular, it lookups the .state.terminated.exitCode for each app container and init container status, represented by the .status.containerStatuses and .status.initContainerStatuses fields in the Pod status, respectively. Containers completed with success (exit code 0) are excluded from the requirement check.",
       "properties": {
         "containerName": {
@@ -4681,6 +4831,7 @@
       "type": "object"
     },
     "io.k8s.api.batch.v1.PodFailurePolicyOnPodConditionsPattern": {
+      "additionalProperties": false,
       "description": "PodFailurePolicyOnPodConditionsPattern describes a pattern for matching an actual pod condition type.",
       "properties": {
         "status": {
@@ -4699,6 +4850,7 @@
       "type": "object"
     },
     "io.k8s.api.batch.v1.PodFailurePolicyRule": {
+      "additionalProperties": false,
       "description": "PodFailurePolicyRule describes how a pod failure is handled when the requirements are met. One of onExitCodes and onPodConditions, but not both, can be used in each rule.",
       "properties": {
         "action": {
@@ -4724,6 +4876,7 @@
       "type": "object"
     },
     "io.k8s.api.batch.v1.UncountedTerminatedPods": {
+      "additionalProperties": false,
       "description": "UncountedTerminatedPods holds UIDs of Pods that have terminated but haven't been accounted in Job status counters.",
       "properties": {
         "failed": {
@@ -4746,6 +4899,7 @@
       "type": "object"
     },
     "io.k8s.api.certificates.v1.CertificateSigningRequest": {
+      "additionalProperties": false,
       "description": "CertificateSigningRequest objects provide a mechanism to obtain x509 certificates by submitting a certificate signing request, and having it asynchronously approved and issued.\n\nKubelets use this API to obtain:\n 1. client certificates to authenticate to kube-apiserver (with the \"kubernetes.io/kube-apiserver-client-kubelet\" signerName).\n 2. serving certificates for TLS endpoints kube-apiserver can connect to securely (with the \"kubernetes.io/kubelet-serving\" signerName).\n\nThis API can be used to request client certificates to authenticate to kube-apiserver (with the \"kubernetes.io/kube-apiserver-client\" signerName), or to obtain certificates from custom non-Kubernetes signers.",
       "properties": {
         "apiVersion": {
@@ -4787,6 +4941,7 @@
       ]
     },
     "io.k8s.api.certificates.v1.CertificateSigningRequestCondition": {
+      "additionalProperties": false,
       "description": "CertificateSigningRequestCondition describes a condition of a CertificateSigningRequest object",
       "properties": {
         "lastTransitionTime": {
@@ -4821,6 +4976,7 @@
       "type": "object"
     },
     "io.k8s.api.certificates.v1.CertificateSigningRequestList": {
+      "additionalProperties": false,
       "description": "CertificateSigningRequestList is a collection of CertificateSigningRequest objects",
       "properties": {
         "apiVersion": {
@@ -4861,6 +5017,7 @@
       ]
     },
     "io.k8s.api.certificates.v1.CertificateSigningRequestSpec": {
+      "additionalProperties": false,
       "description": "CertificateSigningRequestSpec contains the certificate request.",
       "properties": {
         "expirationSeconds": {
@@ -4920,6 +5077,7 @@
       "type": "object"
     },
     "io.k8s.api.certificates.v1.CertificateSigningRequestStatus": {
+      "additionalProperties": false,
       "description": "CertificateSigningRequestStatus contains conditions used to indicate approved/denied/failed status of the request, and the issued certificate.",
       "properties": {
         "certificate": {
@@ -4943,6 +5101,7 @@
       "type": "object"
     },
     "io.k8s.api.certificates.v1alpha1.ClusterTrustBundle": {
+      "additionalProperties": false,
       "description": "ClusterTrustBundle is a cluster-scoped container for X.509 trust anchors (root certificates).\n\nClusterTrustBundle objects are considered to be readable by any authenticated user in the cluster, because they can be mounted by pods using the `clusterTrustBundle` projection.  All service accounts have read access to ClusterTrustBundles by default.  Users who only have namespace-level access to a cluster can read ClusterTrustBundles by impersonating a serviceaccount that they have access to.\n\nIt can be optionally associated with a particular assigner, in which case it contains one valid set of trust anchors for that signer. Signers may have multiple associated ClusterTrustBundles; each is an independent set of trust anchors for that signer. Admission control is used to enforce that only users with permissions on the signer can create or modify the corresponding bundle.",
       "properties": {
         "apiVersion": {
@@ -4981,6 +5140,7 @@
       ]
     },
     "io.k8s.api.certificates.v1alpha1.ClusterTrustBundleList": {
+      "additionalProperties": false,
       "description": "ClusterTrustBundleList is a collection of ClusterTrustBundle objects",
       "properties": {
         "apiVersion": {
@@ -5022,6 +5182,7 @@
       ]
     },
     "io.k8s.api.certificates.v1alpha1.ClusterTrustBundleSpec": {
+      "additionalProperties": false,
       "description": "ClusterTrustBundleSpec contains the signer and trust anchors.",
       "properties": {
         "signerName": {
@@ -5039,6 +5200,7 @@
       "type": "object"
     },
     "io.k8s.api.coordination.v1.Lease": {
+      "additionalProperties": false,
       "description": "Lease defines a lease concept.",
       "properties": {
         "apiVersion": {
@@ -5074,6 +5236,7 @@
       ]
     },
     "io.k8s.api.coordination.v1.LeaseList": {
+      "additionalProperties": false,
       "description": "LeaseList is a list of Lease objects.",
       "properties": {
         "apiVersion": {
@@ -5115,6 +5278,7 @@
       ]
     },
     "io.k8s.api.coordination.v1.LeaseSpec": {
+      "additionalProperties": false,
       "description": "LeaseSpec is a specification of a Lease.",
       "properties": {
         "acquireTime": {
@@ -5143,6 +5307,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.AWSElasticBlockStoreVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Persistent Disk resource in AWS.\n\nAn AWS EBS disk must exist before mounting to a container. The disk must also be in the same AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS volumes support ownership management and SELinux relabeling.",
       "properties": {
         "fsType": {
@@ -5169,6 +5334,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Affinity": {
+      "additionalProperties": false,
       "description": "Affinity is a group of affinity scheduling rules.",
       "properties": {
         "nodeAffinity": {
@@ -5187,6 +5353,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.AttachedVolume": {
+      "additionalProperties": false,
       "description": "AttachedVolume describes a volume attached to a node",
       "properties": {
         "devicePath": {
@@ -5205,6 +5372,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.AzureDiskVolumeSource": {
+      "additionalProperties": false,
       "description": "AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.",
       "properties": {
         "cachingMode": {
@@ -5239,6 +5407,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.AzureFilePersistentVolumeSource": {
+      "additionalProperties": false,
       "description": "AzureFile represents an Azure File Service mount on the host and bind mount to the pod.",
       "properties": {
         "readOnly": {
@@ -5265,6 +5434,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.AzureFileVolumeSource": {
+      "additionalProperties": false,
       "description": "AzureFile represents an Azure File Service mount on the host and bind mount to the pod.",
       "properties": {
         "readOnly": {
@@ -5287,6 +5457,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Binding": {
+      "additionalProperties": false,
       "description": "Binding ties one object to another; for example, a pod is bound to a node by a scheduler. Deprecated in 1.7, please use the bindings subresource of pods instead.",
       "properties": {
         "apiVersion": {
@@ -5325,6 +5496,7 @@
       ]
     },
     "io.k8s.api.core.v1.CSIPersistentVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents storage that is managed by an external CSI volume driver (Beta feature)",
       "properties": {
         "controllerExpandSecretRef": {
@@ -5378,6 +5550,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.CSIVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a source location of a volume to mount, managed by an external CSI driver",
       "properties": {
         "driver": {
@@ -5410,6 +5583,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Capabilities": {
+      "additionalProperties": false,
       "description": "Adds and removes POSIX capabilities from running containers.",
       "properties": {
         "add": {
@@ -5430,6 +5604,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.CephFSPersistentVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.",
       "properties": {
         "monitors": {
@@ -5466,6 +5641,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.CephFSVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.",
       "properties": {
         "monitors": {
@@ -5502,6 +5678,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.CinderPersistentVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.",
       "properties": {
         "fsType": {
@@ -5527,6 +5704,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.CinderVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.",
       "properties": {
         "fsType": {
@@ -5552,6 +5730,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ClaimSource": {
+      "additionalProperties": false,
       "description": "ClaimSource describes a reference to a ResourceClaim.\n\nExactly one of these fields should be set.  Consumers of this type must treat an empty object as if it has an unknown value.",
       "properties": {
         "resourceClaimName": {
@@ -5566,6 +5745,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ClientIPConfig": {
+      "additionalProperties": false,
       "description": "ClientIPConfig represents the configurations of Client IP based session affinity.",
       "properties": {
         "timeoutSeconds": {
@@ -5577,6 +5757,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ClusterTrustBundleProjection": {
+      "additionalProperties": false,
       "description": "ClusterTrustBundleProjection describes how to select a set of ClusterTrustBundle objects and project their contents into the pod filesystem.",
       "properties": {
         "labelSelector": {
@@ -5606,6 +5787,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ComponentCondition": {
+      "additionalProperties": false,
       "description": "Information about the condition of a component.",
       "properties": {
         "error": {
@@ -5632,6 +5814,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ComponentStatus": {
+      "additionalProperties": false,
       "description": "ComponentStatus (and ComponentStatusList) holds the cluster validation info. Deprecated: This API is deprecated in v1.19+",
       "properties": {
         "apiVersion": {
@@ -5672,6 +5855,7 @@
       ]
     },
     "io.k8s.api.core.v1.ComponentStatusList": {
+      "additionalProperties": false,
       "description": "Status of all the conditions for the component as a list of ComponentStatus objects. Deprecated: This API is deprecated in v1.19+",
       "properties": {
         "apiVersion": {
@@ -5713,6 +5897,7 @@
       ]
     },
     "io.k8s.api.core.v1.ConfigMap": {
+      "additionalProperties": false,
       "description": "ConfigMap holds configuration data for pods to consume.",
       "properties": {
         "apiVersion": {
@@ -5763,6 +5948,7 @@
       ]
     },
     "io.k8s.api.core.v1.ConfigMapEnvSource": {
+      "additionalProperties": false,
       "description": "ConfigMapEnvSource selects a ConfigMap to populate the environment variables with.\n\nThe contents of the target ConfigMap's Data field will represent the key-value pairs as environment variables.",
       "properties": {
         "name": {
@@ -5777,6 +5963,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ConfigMapKeySelector": {
+      "additionalProperties": false,
       "description": "Selects a key from a ConfigMap.",
       "properties": {
         "key": {
@@ -5799,6 +5986,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.ConfigMapList": {
+      "additionalProperties": false,
       "description": "ConfigMapList is a resource containing a list of ConfigMap objects.",
       "properties": {
         "apiVersion": {
@@ -5840,6 +6028,7 @@
       ]
     },
     "io.k8s.api.core.v1.ConfigMapNodeConfigSource": {
+      "additionalProperties": false,
       "description": "ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node. This API is deprecated since 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration",
       "properties": {
         "kubeletConfigKey": {
@@ -5871,6 +6060,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ConfigMapProjection": {
+      "additionalProperties": false,
       "description": "Adapts a ConfigMap into a projected volume.\n\nThe contents of the target ConfigMap's Data field will be presented in a projected volume as files using the keys in the Data field as the file names, unless the items element is populated with specific mappings of keys to paths. Note that this is identical to a configmap volume source without the default mode.",
       "properties": {
         "items": {
@@ -5892,6 +6082,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ConfigMapVolumeSource": {
+      "additionalProperties": false,
       "description": "Adapts a ConfigMap into a volume.\n\nThe contents of the target ConfigMap's Data field will be presented in a volume as files using the keys in the Data field as the file names, unless the items element is populated with specific mappings of keys to paths. ConfigMap volumes support ownership management and SELinux relabeling.",
       "properties": {
         "defaultMode": {
@@ -5918,6 +6109,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Container": {
+      "additionalProperties": false,
       "description": "A single application container that you want to run within a pod.",
       "properties": {
         "args": {
@@ -6061,6 +6253,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ContainerImage": {
+      "additionalProperties": false,
       "description": "Describe a container image",
       "properties": {
         "names": {
@@ -6079,6 +6272,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ContainerPort": {
+      "additionalProperties": false,
       "description": "ContainerPort represents a network port in a single container.",
       "properties": {
         "containerPort": {
@@ -6110,6 +6304,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ContainerResizePolicy": {
+      "additionalProperties": false,
       "description": "ContainerResizePolicy represents resource resize policy for the container.",
       "properties": {
         "resourceName": {
@@ -6128,6 +6323,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ContainerState": {
+      "additionalProperties": false,
       "description": "ContainerState holds a possible state of container. Only one of its members may be specified. If none of them is specified, the default one is ContainerStateWaiting.",
       "properties": {
         "running": {
@@ -6146,6 +6342,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ContainerStateRunning": {
+      "additionalProperties": false,
       "description": "ContainerStateRunning is a running state of a container.",
       "properties": {
         "startedAt": {
@@ -6156,6 +6353,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ContainerStateTerminated": {
+      "additionalProperties": false,
       "description": "ContainerStateTerminated is a terminated state of a container.",
       "properties": {
         "containerID": {
@@ -6195,6 +6393,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ContainerStateWaiting": {
+      "additionalProperties": false,
       "description": "ContainerStateWaiting is a waiting state of a container.",
       "properties": {
         "message": {
@@ -6209,6 +6408,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ContainerStatus": {
+      "additionalProperties": false,
       "description": "ContainerStatus contains details for the current status of this container.",
       "properties": {
         "allocatedResources": {
@@ -6270,6 +6470,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.DaemonEndpoint": {
+      "additionalProperties": false,
       "description": "DaemonEndpoint contains information about a single Daemon endpoint.",
       "properties": {
         "Port": {
@@ -6284,6 +6485,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.DownwardAPIProjection": {
+      "additionalProperties": false,
       "description": "Represents downward API info for projecting into a projected volume. Note that this is identical to a downwardAPI volume source without the default mode.",
       "properties": {
         "items": {
@@ -6297,6 +6499,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.DownwardAPIVolumeFile": {
+      "additionalProperties": false,
       "description": "DownwardAPIVolumeFile represents information to create the file containing the pod field",
       "properties": {
         "fieldRef": {
@@ -6323,6 +6526,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.DownwardAPIVolumeSource": {
+      "additionalProperties": false,
       "description": "DownwardAPIVolumeSource represents a volume containing downward API info. Downward API volumes support ownership management and SELinux relabeling.",
       "properties": {
         "defaultMode": {
@@ -6341,6 +6545,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.EmptyDirVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents an empty directory for a pod. Empty directory volumes support ownership management and SELinux relabeling.",
       "properties": {
         "medium": {
@@ -6355,6 +6560,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.EndpointAddress": {
+      "additionalProperties": false,
       "description": "EndpointAddress is a tuple that describes single IP address.",
       "properties": {
         "hostname": {
@@ -6381,6 +6587,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.EndpointPort": {
+      "additionalProperties": false,
       "description": "EndpointPort is a tuple that describes a single port.",
       "properties": {
         "appProtocol": {
@@ -6408,6 +6615,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.EndpointSubset": {
+      "additionalProperties": false,
       "description": "EndpointSubset is a group of addresses with a common set of ports. The expanded set of endpoints is the Cartesian product of Addresses x Ports. For example, given:\n\n\t{\n\t  Addresses: [{\"ip\": \"10.10.1.1\"}, {\"ip\": \"10.10.2.2\"}],\n\t  Ports:     [{\"name\": \"a\", \"port\": 8675}, {\"name\": \"b\", \"port\": 309}]\n\t}\n\nThe resulting set of endpoints can be viewed as:\n\n\ta: [ 10.10.1.1:8675, 10.10.2.2:8675 ],\n\tb: [ 10.10.1.1:309, 10.10.2.2:309 ]",
       "properties": {
         "addresses": {
@@ -6435,6 +6643,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Endpoints": {
+      "additionalProperties": false,
       "description": "Endpoints is a collection of endpoints that implement the actual service. Example:\n\n\t Name: \"mysvc\",\n\t Subsets: [\n\t   {\n\t     Addresses: [{\"ip\": \"10.10.1.1\"}, {\"ip\": \"10.10.2.2\"}],\n\t     Ports: [{\"name\": \"a\", \"port\": 8675}, {\"name\": \"b\", \"port\": 309}]\n\t   },\n\t   {\n\t     Addresses: [{\"ip\": \"10.10.3.3\"}],\n\t     Ports: [{\"name\": \"a\", \"port\": 93}, {\"name\": \"b\", \"port\": 76}]\n\t   },\n\t]",
       "properties": {
         "apiVersion": {
@@ -6473,6 +6682,7 @@
       ]
     },
     "io.k8s.api.core.v1.EndpointsList": {
+      "additionalProperties": false,
       "description": "EndpointsList is a list of endpoints.",
       "properties": {
         "apiVersion": {
@@ -6514,6 +6724,7 @@
       ]
     },
     "io.k8s.api.core.v1.EnvFromSource": {
+      "additionalProperties": false,
       "description": "EnvFromSource represents the source of a set of ConfigMaps",
       "properties": {
         "configMapRef": {
@@ -6532,6 +6743,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.EnvVar": {
+      "additionalProperties": false,
       "description": "EnvVar represents an environment variable present in a Container.",
       "properties": {
         "name": {
@@ -6553,6 +6765,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.EnvVarSource": {
+      "additionalProperties": false,
       "description": "EnvVarSource represents a source for the value of an EnvVar.",
       "properties": {
         "configMapKeyRef": {
@@ -6575,6 +6788,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.EphemeralContainer": {
+      "additionalProperties": false,
       "description": "An EphemeralContainer is a temporary container that you may add to an existing Pod for user-initiated activities such as debugging. Ephemeral containers have no resource or scheduling guarantees, and they will not be restarted when they exit or when a Pod is removed or restarted. The kubelet may evict a Pod if an ephemeral container causes the Pod to exceed its resource allocation.\n\nTo add an ephemeral container, use the ephemeralcontainers subresource of an existing Pod. Ephemeral containers may not be removed or restarted.",
       "properties": {
         "args": {
@@ -6722,6 +6936,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.EphemeralVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents an ephemeral volume that is handled by a normal storage driver.",
       "properties": {
         "volumeClaimTemplate": {
@@ -6732,6 +6947,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Event": {
+      "additionalProperties": false,
       "description": "Event is a report of an event somewhere in the cluster.  Events have a limited retention time and triggers and messages may evolve with time.  Event consumers should not rely on the timing of an event with a given Reason reflecting a consistent underlying trigger, or the continued existence of events with that Reason.  Events should be treated as informative, best-effort, supplemental data.",
       "properties": {
         "action": {
@@ -6824,6 +7040,7 @@
       ]
     },
     "io.k8s.api.core.v1.EventList": {
+      "additionalProperties": false,
       "description": "EventList is a list of events.",
       "properties": {
         "apiVersion": {
@@ -6865,6 +7082,7 @@
       ]
     },
     "io.k8s.api.core.v1.EventSeries": {
+      "additionalProperties": false,
       "description": "EventSeries contain information on series of events, i.e. thing that was/is happening continuously for some time.",
       "properties": {
         "count": {
@@ -6880,6 +7098,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.EventSource": {
+      "additionalProperties": false,
       "description": "EventSource contains information for an event.",
       "properties": {
         "component": {
@@ -6894,6 +7113,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ExecAction": {
+      "additionalProperties": false,
       "description": "ExecAction describes a \"run in container\" action.",
       "properties": {
         "command": {
@@ -6907,6 +7127,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.FCVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.",
       "properties": {
         "fsType": {
@@ -6940,6 +7161,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.FlexPersistentVolumeSource": {
+      "additionalProperties": false,
       "description": "FlexPersistentVolumeSource represents a generic persistent volume resource that is provisioned/attached using an exec based plugin.",
       "properties": {
         "driver": {
@@ -6972,6 +7194,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.FlexVolumeSource": {
+      "additionalProperties": false,
       "description": "FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.",
       "properties": {
         "driver": {
@@ -7004,6 +7227,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.FlockerVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.",
       "properties": {
         "datasetName": {
@@ -7018,6 +7242,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.GCEPersistentDiskVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Persistent Disk resource in Google Compute Engine.\n\nA GCE PD must exist before mounting to a container. The disk must also be in the same GCE project and zone as the kubelet. A GCE PD can only be mounted as read/write once or read-only many times. GCE PDs support ownership management and SELinux relabeling.",
       "properties": {
         "fsType": {
@@ -7044,6 +7269,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.GRPCAction": {
+      "additionalProperties": false,
       "properties": {
         "port": {
           "description": "Port number of the gRPC service. Number must be in the range 1 to 65535.",
@@ -7061,6 +7287,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.GitRepoVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a volume that is populated with the contents of a git repository. Git repo volumes do not support ownership management. Git repo volumes support SELinux relabeling.\n\nDEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.",
       "properties": {
         "directory": {
@@ -7082,6 +7309,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.GlusterfsPersistentVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.",
       "properties": {
         "endpoints": {
@@ -7108,6 +7336,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.GlusterfsVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.",
       "properties": {
         "endpoints": {
@@ -7130,6 +7359,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.HTTPGetAction": {
+      "additionalProperties": false,
       "description": "HTTPGetAction describes an action based on HTTP Get requests.",
       "properties": {
         "host": {
@@ -7162,6 +7392,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.HTTPHeader": {
+      "additionalProperties": false,
       "description": "HTTPHeader describes a custom header to be used in HTTP probes",
       "properties": {
         "name": {
@@ -7180,6 +7411,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.HostAlias": {
+      "additionalProperties": false,
       "description": "HostAlias holds the mapping between IP and hostnames that will be injected as an entry in the pod's hosts file.",
       "properties": {
         "hostnames": {
@@ -7197,6 +7429,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.HostIP": {
+      "additionalProperties": false,
       "description": "HostIP represents a single IP address allocated to the host.",
       "properties": {
         "ip": {
@@ -7207,6 +7440,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.HostPathVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.",
       "properties": {
         "path": {
@@ -7224,6 +7458,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ISCSIPersistentVolumeSource": {
+      "additionalProperties": false,
       "description": "ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.",
       "properties": {
         "chapAuthDiscovery": {
@@ -7283,6 +7518,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ISCSIVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.",
       "properties": {
         "chapAuthDiscovery": {
@@ -7342,6 +7578,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.KeyToPath": {
+      "additionalProperties": false,
       "description": "Maps a string key to a path within a volume.",
       "properties": {
         "key": {
@@ -7365,6 +7602,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Lifecycle": {
+      "additionalProperties": false,
       "description": "Lifecycle describes actions that the management system should take in response to container lifecycle events. For the PostStart and PreStop lifecycle handlers, management of the container blocks until the action is complete, unless the container process fails, in which case the handler is aborted.",
       "properties": {
         "postStart": {
@@ -7379,6 +7617,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.LifecycleHandler": {
+      "additionalProperties": false,
       "description": "LifecycleHandler defines a specific action that should be taken in a lifecycle hook. One and only one of the fields, except TCPSocket must be specified.",
       "properties": {
         "exec": {
@@ -7401,6 +7640,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.LimitRange": {
+      "additionalProperties": false,
       "description": "LimitRange sets resource usage limits for each kind of resource in a Namespace.",
       "properties": {
         "apiVersion": {
@@ -7436,6 +7676,7 @@
       ]
     },
     "io.k8s.api.core.v1.LimitRangeItem": {
+      "additionalProperties": false,
       "description": "LimitRangeItem defines a min/max usage limit for any resource that matches on kind.",
       "properties": {
         "default": {
@@ -7484,6 +7725,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.LimitRangeList": {
+      "additionalProperties": false,
       "description": "LimitRangeList is a list of LimitRange items.",
       "properties": {
         "apiVersion": {
@@ -7525,6 +7767,7 @@
       ]
     },
     "io.k8s.api.core.v1.LimitRangeSpec": {
+      "additionalProperties": false,
       "description": "LimitRangeSpec defines a min/max usage limit for resources that match on kind.",
       "properties": {
         "limits": {
@@ -7541,6 +7784,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.LoadBalancerIngress": {
+      "additionalProperties": false,
       "description": "LoadBalancerIngress represents the status of a load-balancer ingress point: traffic intended for the service should be sent to an ingress point.",
       "properties": {
         "hostname": {
@@ -7567,6 +7811,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.LoadBalancerStatus": {
+      "additionalProperties": false,
       "description": "LoadBalancerStatus represents the status of a load-balancer.",
       "properties": {
         "ingress": {
@@ -7580,6 +7825,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.LocalObjectReference": {
+      "additionalProperties": false,
       "description": "LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.",
       "properties": {
         "name": {
@@ -7591,6 +7837,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.LocalVolumeSource": {
+      "additionalProperties": false,
       "description": "Local represents directly-attached storage with node affinity (Beta feature)",
       "properties": {
         "fsType": {
@@ -7608,6 +7855,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ModifyVolumeStatus": {
+      "additionalProperties": false,
       "description": "ModifyVolumeStatus represents the status object of ControllerModifyVolume operation",
       "properties": {
         "status": {
@@ -7625,6 +7873,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NFSVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.",
       "properties": {
         "path": {
@@ -7647,6 +7896,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Namespace": {
+      "additionalProperties": false,
       "description": "Namespace provides a scope for Names. Use of multiple namespaces is optional.",
       "properties": {
         "apiVersion": {
@@ -7686,6 +7936,7 @@
       ]
     },
     "io.k8s.api.core.v1.NamespaceCondition": {
+      "additionalProperties": false,
       "description": "NamespaceCondition contains details about state of namespace.",
       "properties": {
         "lastTransitionTime": {
@@ -7713,6 +7964,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NamespaceList": {
+      "additionalProperties": false,
       "description": "NamespaceList is a list of Namespaces.",
       "properties": {
         "apiVersion": {
@@ -7754,6 +8006,7 @@
       ]
     },
     "io.k8s.api.core.v1.NamespaceSpec": {
+      "additionalProperties": false,
       "description": "NamespaceSpec describes the attributes on a Namespace.",
       "properties": {
         "finalizers": {
@@ -7767,6 +8020,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NamespaceStatus": {
+      "additionalProperties": false,
       "description": "NamespaceStatus is information about the current status of a Namespace.",
       "properties": {
         "conditions": {
@@ -7786,6 +8040,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Node": {
+      "additionalProperties": false,
       "description": "Node is a worker node in Kubernetes. Each node will have a unique identifier in the cache (i.e. in etcd).",
       "properties": {
         "apiVersion": {
@@ -7825,6 +8080,7 @@
       ]
     },
     "io.k8s.api.core.v1.NodeAddress": {
+      "additionalProperties": false,
       "description": "NodeAddress contains information for the node's address.",
       "properties": {
         "address": {
@@ -7843,6 +8099,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NodeAffinity": {
+      "additionalProperties": false,
       "description": "Node affinity is a group of node affinity scheduling rules.",
       "properties": {
         "preferredDuringSchedulingIgnoredDuringExecution": {
@@ -7860,6 +8117,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NodeCondition": {
+      "additionalProperties": false,
       "description": "NodeCondition contains condition information for a node.",
       "properties": {
         "lastHeartbeatTime": {
@@ -7894,6 +8152,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NodeConfigSource": {
+      "additionalProperties": false,
       "description": "NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil. This API is deprecated since 1.22",
       "properties": {
         "configMap": {
@@ -7904,6 +8163,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NodeConfigStatus": {
+      "additionalProperties": false,
       "description": "NodeConfigStatus describes the status of the config assigned by Node.Spec.ConfigSource.",
       "properties": {
         "active": {
@@ -7926,6 +8186,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NodeDaemonEndpoints": {
+      "additionalProperties": false,
       "description": "NodeDaemonEndpoints lists ports opened by daemons running on the Node.",
       "properties": {
         "kubeletEndpoint": {
@@ -7936,6 +8197,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NodeList": {
+      "additionalProperties": false,
       "description": "NodeList is the whole list of all Nodes which have been registered with master.",
       "properties": {
         "apiVersion": {
@@ -7977,6 +8239,7 @@
       ]
     },
     "io.k8s.api.core.v1.NodeSelector": {
+      "additionalProperties": false,
       "description": "A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.",
       "properties": {
         "nodeSelectorTerms": {
@@ -7994,6 +8257,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.NodeSelectorRequirement": {
+      "additionalProperties": false,
       "description": "A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.",
       "properties": {
         "key": {
@@ -8019,6 +8283,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NodeSelectorTerm": {
+      "additionalProperties": false,
       "description": "A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.",
       "properties": {
         "matchExpressions": {
@@ -8040,6 +8305,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.NodeSpec": {
+      "additionalProperties": false,
       "description": "NodeSpec describes the attributes that a node is created with.",
       "properties": {
         "configSource": {
@@ -8081,6 +8347,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NodeStatus": {
+      "additionalProperties": false,
       "description": "NodeStatus is information about the current status of a node.",
       "properties": {
         "addresses": {
@@ -8156,6 +8423,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.NodeSystemInfo": {
+      "additionalProperties": false,
       "description": "NodeSystemInfo is a set of ids/uuids to uniquely identify the node.",
       "properties": {
         "architecture": {
@@ -8214,6 +8482,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ObjectFieldSelector": {
+      "additionalProperties": false,
       "description": "ObjectFieldSelector selects an APIVersioned field of an object.",
       "properties": {
         "apiVersion": {
@@ -8232,6 +8501,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.ObjectReference": {
+      "additionalProperties": false,
       "description": "ObjectReference contains enough information to let you inspect or modify the referred object.",
       "properties": {
         "apiVersion": {
@@ -8267,6 +8537,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.PersistentVolume": {
+      "additionalProperties": false,
       "description": "PersistentVolume (PV) is a storage resource provisioned by an administrator. It is analogous to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes",
       "properties": {
         "apiVersion": {
@@ -8306,6 +8577,7 @@
       ]
     },
     "io.k8s.api.core.v1.PersistentVolumeClaim": {
+      "additionalProperties": false,
       "description": "PersistentVolumeClaim is a user's request for and claim to a persistent volume",
       "properties": {
         "apiVersion": {
@@ -8345,6 +8617,7 @@
       ]
     },
     "io.k8s.api.core.v1.PersistentVolumeClaimCondition": {
+      "additionalProperties": false,
       "description": "PersistentVolumeClaimCondition contains details about state of pvc",
       "properties": {
         "lastProbeTime": {
@@ -8377,6 +8650,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PersistentVolumeClaimList": {
+      "additionalProperties": false,
       "description": "PersistentVolumeClaimList is a list of PersistentVolumeClaim items.",
       "properties": {
         "apiVersion": {
@@ -8418,6 +8692,7 @@
       ]
     },
     "io.k8s.api.core.v1.PersistentVolumeClaimSpec": {
+      "additionalProperties": false,
       "description": "PersistentVolumeClaimSpec describes the common attributes of storage devices and allows a Source for provider-specific attributes",
       "properties": {
         "accessModes": {
@@ -8463,6 +8738,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PersistentVolumeClaimStatus": {
+      "additionalProperties": false,
       "description": "PersistentVolumeClaimStatus is the current status of a persistent volume claim.",
       "properties": {
         "accessModes": {
@@ -8519,6 +8795,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PersistentVolumeClaimTemplate": {
+      "additionalProperties": false,
       "description": "PersistentVolumeClaimTemplate is used to produce PersistentVolumeClaim objects as part of an EphemeralVolumeSource.",
       "properties": {
         "metadata": {
@@ -8536,6 +8813,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PersistentVolumeClaimVolumeSource": {
+      "additionalProperties": false,
       "description": "PersistentVolumeClaimVolumeSource references the user's PVC in the same namespace. This volume finds the bound PV and mounts that volume for the pod. A PersistentVolumeClaimVolumeSource is, essentially, a wrapper around another type of volume that is owned by someone else (the system).",
       "properties": {
         "claimName": {
@@ -8553,6 +8831,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PersistentVolumeList": {
+      "additionalProperties": false,
       "description": "PersistentVolumeList is a list of PersistentVolume items.",
       "properties": {
         "apiVersion": {
@@ -8594,6 +8873,7 @@
       ]
     },
     "io.k8s.api.core.v1.PersistentVolumeSpec": {
+      "additionalProperties": false,
       "description": "PersistentVolumeSpec is the specification of a persistent volume.",
       "properties": {
         "accessModes": {
@@ -8734,6 +9014,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PersistentVolumeStatus": {
+      "additionalProperties": false,
       "description": "PersistentVolumeStatus is the current status of a persistent volume.",
       "properties": {
         "lastPhaseTransitionTime": {
@@ -8756,6 +9037,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PhotonPersistentDiskVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Photon Controller persistent disk resource.",
       "properties": {
         "fsType": {
@@ -8773,6 +9055,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Pod": {
+      "additionalProperties": false,
       "description": "Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.",
       "properties": {
         "apiVersion": {
@@ -8812,6 +9095,7 @@
       ]
     },
     "io.k8s.api.core.v1.PodAffinity": {
+      "additionalProperties": false,
       "description": "Pod affinity is a group of inter pod affinity scheduling rules.",
       "properties": {
         "preferredDuringSchedulingIgnoredDuringExecution": {
@@ -8832,6 +9116,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodAffinityTerm": {
+      "additionalProperties": false,
       "description": "Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key <topologyKey> matches that of any node on which a pod of the set of pods is running",
       "properties": {
         "labelSelector": {
@@ -8876,6 +9161,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodAntiAffinity": {
+      "additionalProperties": false,
       "description": "Pod anti affinity is a group of inter pod anti affinity scheduling rules.",
       "properties": {
         "preferredDuringSchedulingIgnoredDuringExecution": {
@@ -8896,6 +9182,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodCondition": {
+      "additionalProperties": false,
       "description": "PodCondition contains details for the current condition of this pod.",
       "properties": {
         "lastProbeTime": {
@@ -8930,6 +9217,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodDNSConfig": {
+      "additionalProperties": false,
       "description": "PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.",
       "properties": {
         "nameservers": {
@@ -8957,6 +9245,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodDNSConfigOption": {
+      "additionalProperties": false,
       "description": "PodDNSConfigOption defines DNS resolver options of a pod.",
       "properties": {
         "name": {
@@ -8970,6 +9259,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodIP": {
+      "additionalProperties": false,
       "description": "PodIP represents a single IP address allocated to the pod.",
       "properties": {
         "ip": {
@@ -8980,6 +9270,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodList": {
+      "additionalProperties": false,
       "description": "PodList is a list of Pods.",
       "properties": {
         "apiVersion": {
@@ -9021,6 +9312,7 @@
       ]
     },
     "io.k8s.api.core.v1.PodOS": {
+      "additionalProperties": false,
       "description": "PodOS defines the OS parameters of a pod.",
       "properties": {
         "name": {
@@ -9034,6 +9326,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodReadinessGate": {
+      "additionalProperties": false,
       "description": "PodReadinessGate contains the reference to a pod condition",
       "properties": {
         "conditionType": {
@@ -9047,6 +9340,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodResourceClaim": {
+      "additionalProperties": false,
       "description": "PodResourceClaim references exactly one ResourceClaim through a ClaimSource. It adds a name to it that uniquely identifies the ResourceClaim inside the Pod. Containers that need access to the ResourceClaim reference it with this name.",
       "properties": {
         "name": {
@@ -9064,6 +9358,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodResourceClaimStatus": {
+      "additionalProperties": false,
       "description": "PodResourceClaimStatus is stored in the PodStatus for each PodResourceClaim which references a ResourceClaimTemplate. It stores the generated name for the corresponding ResourceClaim.",
       "properties": {
         "name": {
@@ -9081,6 +9376,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodSchedulingGate": {
+      "additionalProperties": false,
       "description": "PodSchedulingGate is associated to a Pod to guard its scheduling.",
       "properties": {
         "name": {
@@ -9094,6 +9390,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodSecurityContext": {
+      "additionalProperties": false,
       "description": "PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.",
       "properties": {
         "fsGroup": {
@@ -9150,6 +9447,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodSpec": {
+      "additionalProperties": false,
       "description": "PodSpec is a description of a pod.",
       "properties": {
         "activeDeadlineSeconds": {
@@ -9389,6 +9687,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodStatus": {
+      "additionalProperties": false,
       "description": "PodStatus represents information about the status of a pod. Status may trail the actual state of a system, especially if the node that hosts the pod cannot contact the control plane.",
       "properties": {
         "conditions": {
@@ -9493,6 +9792,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PodTemplate": {
+      "additionalProperties": false,
       "description": "PodTemplate describes a template for creating copies of a predefined pod.",
       "properties": {
         "apiVersion": {
@@ -9528,6 +9828,7 @@
       ]
     },
     "io.k8s.api.core.v1.PodTemplateList": {
+      "additionalProperties": false,
       "description": "PodTemplateList is a list of PodTemplates.",
       "properties": {
         "apiVersion": {
@@ -9569,6 +9870,7 @@
       ]
     },
     "io.k8s.api.core.v1.PodTemplateSpec": {
+      "additionalProperties": false,
       "description": "PodTemplateSpec describes the data a pod should have when created from a template",
       "properties": {
         "metadata": {
@@ -9583,6 +9885,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PortStatus": {
+      "additionalProperties": false,
       "properties": {
         "error": {
           "description": "Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use\n  CamelCase names\n- cloud provider specific error values must have names that comply with the\n  format foo.example.com/CamelCase.",
@@ -9605,6 +9908,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PortworxVolumeSource": {
+      "additionalProperties": false,
       "description": "PortworxVolumeSource represents a Portworx volume resource.",
       "properties": {
         "fsType": {
@@ -9626,6 +9930,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.PreferredSchedulingTerm": {
+      "additionalProperties": false,
       "description": "An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).",
       "properties": {
         "preference": {
@@ -9645,6 +9950,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Probe": {
+      "additionalProperties": false,
       "description": "Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.",
       "properties": {
         "exec": {
@@ -9697,6 +10003,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ProjectedVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a projected volume source",
       "properties": {
         "defaultMode": {
@@ -9715,6 +10022,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.QuobyteVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.",
       "properties": {
         "group": {
@@ -9749,6 +10057,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.RBDPersistentVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.",
       "properties": {
         "fsType": {
@@ -9794,6 +10103,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.RBDVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.",
       "properties": {
         "fsType": {
@@ -9839,6 +10149,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ReplicationController": {
+      "additionalProperties": false,
       "description": "ReplicationController represents the configuration of a replication controller.",
       "properties": {
         "apiVersion": {
@@ -9878,6 +10189,7 @@
       ]
     },
     "io.k8s.api.core.v1.ReplicationControllerCondition": {
+      "additionalProperties": false,
       "description": "ReplicationControllerCondition describes the state of a replication controller at a certain point.",
       "properties": {
         "lastTransitionTime": {
@@ -9908,6 +10220,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ReplicationControllerList": {
+      "additionalProperties": false,
       "description": "ReplicationControllerList is a collection of replication controllers.",
       "properties": {
         "apiVersion": {
@@ -9949,6 +10262,7 @@
       ]
     },
     "io.k8s.api.core.v1.ReplicationControllerSpec": {
+      "additionalProperties": false,
       "description": "ReplicationControllerSpec is the specification of a replication controller.",
       "properties": {
         "minReadySeconds": {
@@ -9977,6 +10291,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ReplicationControllerStatus": {
+      "additionalProperties": false,
       "description": "ReplicationControllerStatus represents the current status of a replication controller.",
       "properties": {
         "availableReplicas": {
@@ -10020,6 +10335,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ResourceClaim": {
+      "additionalProperties": false,
       "description": "ResourceClaim references one entry in PodSpec.ResourceClaims.",
       "properties": {
         "name": {
@@ -10033,6 +10349,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ResourceFieldSelector": {
+      "additionalProperties": false,
       "description": "ResourceFieldSelector represents container resources (cpu, memory) and their output format",
       "properties": {
         "containerName": {
@@ -10055,6 +10372,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.ResourceQuota": {
+      "additionalProperties": false,
       "description": "ResourceQuota sets aggregate quota restrictions enforced per namespace",
       "properties": {
         "apiVersion": {
@@ -10094,6 +10412,7 @@
       ]
     },
     "io.k8s.api.core.v1.ResourceQuotaList": {
+      "additionalProperties": false,
       "description": "ResourceQuotaList is a list of ResourceQuota items.",
       "properties": {
         "apiVersion": {
@@ -10135,6 +10454,7 @@
       ]
     },
     "io.k8s.api.core.v1.ResourceQuotaSpec": {
+      "additionalProperties": false,
       "description": "ResourceQuotaSpec defines the desired hard limits to enforce for Quota.",
       "properties": {
         "hard": {
@@ -10159,6 +10479,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ResourceQuotaStatus": {
+      "additionalProperties": false,
       "description": "ResourceQuotaStatus defines the enforced hard limits and observed use.",
       "properties": {
         "hard": {
@@ -10179,6 +10500,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ResourceRequirements": {
+      "additionalProperties": false,
       "description": "ResourceRequirements describes the compute resource requirements.",
       "properties": {
         "claims": {
@@ -10210,6 +10532,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.SELinuxOptions": {
+      "additionalProperties": false,
       "description": "SELinuxOptions are the labels to be applied to the container",
       "properties": {
         "level": {
@@ -10232,6 +10555,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ScaleIOPersistentVolumeSource": {
+      "additionalProperties": false,
       "description": "ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume",
       "properties": {
         "fsType": {
@@ -10283,6 +10607,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ScaleIOVolumeSource": {
+      "additionalProperties": false,
       "description": "ScaleIOVolumeSource represents a persistent ScaleIO volume",
       "properties": {
         "fsType": {
@@ -10334,6 +10659,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ScopeSelector": {
+      "additionalProperties": false,
       "description": "A scope selector represents the AND of the selectors represented by the scoped-resource selector requirements.",
       "properties": {
         "matchExpressions": {
@@ -10348,6 +10674,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.ScopedResourceSelectorRequirement": {
+      "additionalProperties": false,
       "description": "A scoped-resource selector requirement is a selector that contains values, a scope name, and an operator that relates the scope name and values.",
       "properties": {
         "operator": {
@@ -10373,6 +10700,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.SeccompProfile": {
+      "additionalProperties": false,
       "description": "SeccompProfile defines a pod/container's seccomp profile settings. Only one profile source may be set.",
       "properties": {
         "localhostProfile": {
@@ -10398,6 +10726,7 @@
       ]
     },
     "io.k8s.api.core.v1.Secret": {
+      "additionalProperties": false,
       "description": "Secret holds secret data of a certain type. The total bytes of the values in the Data field must be less than MaxSecretSize bytes.",
       "properties": {
         "apiVersion": {
@@ -10452,6 +10781,7 @@
       ]
     },
     "io.k8s.api.core.v1.SecretEnvSource": {
+      "additionalProperties": false,
       "description": "SecretEnvSource selects a Secret to populate the environment variables with.\n\nThe contents of the target Secret's Data field will represent the key-value pairs as environment variables.",
       "properties": {
         "name": {
@@ -10466,6 +10796,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.SecretKeySelector": {
+      "additionalProperties": false,
       "description": "SecretKeySelector selects a key of a Secret.",
       "properties": {
         "key": {
@@ -10488,6 +10819,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.SecretList": {
+      "additionalProperties": false,
       "description": "SecretList is a list of Secret.",
       "properties": {
         "apiVersion": {
@@ -10529,6 +10861,7 @@
       ]
     },
     "io.k8s.api.core.v1.SecretProjection": {
+      "additionalProperties": false,
       "description": "Adapts a secret into a projected volume.\n\nThe contents of the target Secret's Data field will be presented in a projected volume as files using the keys in the Data field as the file names. Note that this is identical to a secret volume source without the default mode.",
       "properties": {
         "items": {
@@ -10550,6 +10883,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.SecretReference": {
+      "additionalProperties": false,
       "description": "SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace",
       "properties": {
         "name": {
@@ -10565,6 +10899,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.SecretVolumeSource": {
+      "additionalProperties": false,
       "description": "Adapts a Secret into a volume.\n\nThe contents of the target Secret's Data field will be presented in a volume as files using the keys in the Data field as the file names. Secret volumes support ownership management and SELinux relabeling.",
       "properties": {
         "defaultMode": {
@@ -10591,6 +10926,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.SecurityContext": {
+      "additionalProperties": false,
       "description": "SecurityContext holds security configuration that will be applied to a container. Some fields are present in both SecurityContext and PodSecurityContext.  When both are set, the values in SecurityContext take precedence.",
       "properties": {
         "allowPrivilegeEscalation": {
@@ -10643,6 +10979,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Service": {
+      "additionalProperties": false,
       "description": "Service is a named abstraction of software service (for example, mysql) consisting of local port (for example 3306) that the proxy listens on, and the selector that determines which pods will answer requests sent through the proxy.",
       "properties": {
         "apiVersion": {
@@ -10682,6 +11019,7 @@
       ]
     },
     "io.k8s.api.core.v1.ServiceAccount": {
+      "additionalProperties": false,
       "description": "ServiceAccount binds together: * a name, understood by users, and perhaps by peripheral systems, for an identity * a principal that can be authenticated and authorized * a set of secrets",
       "properties": {
         "apiVersion": {
@@ -10733,6 +11071,7 @@
       ]
     },
     "io.k8s.api.core.v1.ServiceAccountList": {
+      "additionalProperties": false,
       "description": "ServiceAccountList is a list of ServiceAccount objects",
       "properties": {
         "apiVersion": {
@@ -10774,6 +11113,7 @@
       ]
     },
     "io.k8s.api.core.v1.ServiceAccountTokenProjection": {
+      "additionalProperties": false,
       "description": "ServiceAccountTokenProjection represents a projected service account token volume. This projection can be used to insert a service account token into the pods runtime filesystem for use against APIs (Kubernetes API Server or otherwise).",
       "properties": {
         "audience": {
@@ -10796,6 +11136,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ServiceList": {
+      "additionalProperties": false,
       "description": "ServiceList holds a list of services.",
       "properties": {
         "apiVersion": {
@@ -10837,6 +11178,7 @@
       ]
     },
     "io.k8s.api.core.v1.ServicePort": {
+      "additionalProperties": false,
       "description": "ServicePort contains information on service's port.",
       "properties": {
         "appProtocol": {
@@ -10872,6 +11214,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ServiceSpec": {
+      "additionalProperties": false,
       "description": "ServiceSpec describes the attributes that a user creates on a service.",
       "properties": {
         "allocateLoadBalancerNodePorts": {
@@ -10983,6 +11326,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.ServiceStatus": {
+      "additionalProperties": false,
       "description": "ServiceStatus represents the current status of a service.",
       "properties": {
         "conditions": {
@@ -11006,6 +11350,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.SessionAffinityConfig": {
+      "additionalProperties": false,
       "description": "SessionAffinityConfig represents the configurations of session affinity.",
       "properties": {
         "clientIP": {
@@ -11016,6 +11361,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.SleepAction": {
+      "additionalProperties": false,
       "description": "SleepAction describes a \"sleep\" action.",
       "properties": {
         "seconds": {
@@ -11030,6 +11376,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.StorageOSPersistentVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a StorageOS persistent volume resource.",
       "properties": {
         "fsType": {
@@ -11056,6 +11403,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.StorageOSVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a StorageOS persistent volume resource.",
       "properties": {
         "fsType": {
@@ -11082,6 +11430,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Sysctl": {
+      "additionalProperties": false,
       "description": "Sysctl defines a kernel parameter to be set",
       "properties": {
         "name": {
@@ -11100,6 +11449,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.TCPSocketAction": {
+      "additionalProperties": false,
       "description": "TCPSocketAction describes an action based on opening a socket",
       "properties": {
         "host": {
@@ -11117,6 +11467,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Taint": {
+      "additionalProperties": false,
       "description": "The node this Taint is attached to has the \"effect\" on any pod that does not tolerate the Taint.",
       "properties": {
         "effect": {
@@ -11143,6 +11494,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Toleration": {
+      "additionalProperties": false,
       "description": "The pod this Toleration is attached to tolerates any taint that matches the triple <key,value,effect> using the matching operator <operator>.",
       "properties": {
         "effect": {
@@ -11170,6 +11522,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.TopologySelectorLabelRequirement": {
+      "additionalProperties": false,
       "description": "A topology selector requirement is a selector that matches given label. This is an alpha feature and may change in the future.",
       "properties": {
         "key": {
@@ -11191,6 +11544,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.TopologySelectorTerm": {
+      "additionalProperties": false,
       "description": "A topology selector term represents the result of label queries. A null or empty topology selector term matches no objects. The requirements of them are ANDed. It provides a subset of functionality as NodeSelectorTerm. This is an alpha feature and may change in the future.",
       "properties": {
         "matchLabelExpressions": {
@@ -11205,6 +11559,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.TopologySpreadConstraint": {
+      "additionalProperties": false,
       "description": "TopologySpreadConstraint specifies how to spread matching pods among the given topology.",
       "properties": {
         "labelSelector": {
@@ -11254,6 +11609,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.TypedLocalObjectReference": {
+      "additionalProperties": false,
       "description": "TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.",
       "properties": {
         "apiGroup": {
@@ -11277,6 +11633,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.core.v1.TypedObjectReference": {
+      "additionalProperties": false,
       "properties": {
         "apiGroup": {
           "description": "APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.",
@@ -11302,6 +11659,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.Volume": {
+      "additionalProperties": false,
       "description": "Volume represents a named volume in a pod that may be accessed by any container in the pod.",
       "properties": {
         "awsElasticBlockStore": {
@@ -11431,6 +11789,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.VolumeDevice": {
+      "additionalProperties": false,
       "description": "volumeDevice describes a mapping of a raw block device within a container.",
       "properties": {
         "devicePath": {
@@ -11449,6 +11808,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.VolumeMount": {
+      "additionalProperties": false,
       "description": "VolumeMount describes a mounting of a Volume within a container.",
       "properties": {
         "mountPath": {
@@ -11483,6 +11843,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.VolumeNodeAffinity": {
+      "additionalProperties": false,
       "description": "VolumeNodeAffinity defines constraints that limit what nodes this volume can be accessed from.",
       "properties": {
         "required": {
@@ -11493,6 +11854,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.VolumeProjection": {
+      "additionalProperties": false,
       "description": "Projection that may be projected along with other supported volume types",
       "properties": {
         "clusterTrustBundle": {
@@ -11519,6 +11881,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.VolumeResourceRequirements": {
+      "additionalProperties": false,
       "description": "VolumeResourceRequirements describes the storage resource requirements for a volume.",
       "properties": {
         "limits": {
@@ -11539,6 +11902,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.VsphereVirtualDiskVolumeSource": {
+      "additionalProperties": false,
       "description": "Represents a vSphere volume resource.",
       "properties": {
         "fsType": {
@@ -11564,6 +11928,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.WeightedPodAffinityTerm": {
+      "additionalProperties": false,
       "description": "The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)",
       "properties": {
         "podAffinityTerm": {
@@ -11583,6 +11948,7 @@
       "type": "object"
     },
     "io.k8s.api.core.v1.WindowsSecurityContextOptions": {
+      "additionalProperties": false,
       "description": "WindowsSecurityContextOptions contain Windows-specific options and credentials.",
       "properties": {
         "gmsaCredentialSpec": {
@@ -11605,6 +11971,7 @@
       "type": "object"
     },
     "io.k8s.api.discovery.v1.Endpoint": {
+      "additionalProperties": false,
       "description": "Endpoint represents a single logical \"backend\" implementing a service.",
       "properties": {
         "addresses": {
@@ -11653,6 +12020,7 @@
       "type": "object"
     },
     "io.k8s.api.discovery.v1.EndpointConditions": {
+      "additionalProperties": false,
       "description": "EndpointConditions represents the current condition of an endpoint.",
       "properties": {
         "ready": {
@@ -11671,6 +12039,7 @@
       "type": "object"
     },
     "io.k8s.api.discovery.v1.EndpointHints": {
+      "additionalProperties": false,
       "description": "EndpointHints provides hints describing how an endpoint should be consumed.",
       "properties": {
         "forZones": {
@@ -11685,6 +12054,7 @@
       "type": "object"
     },
     "io.k8s.api.discovery.v1.EndpointPort": {
+      "additionalProperties": false,
       "description": "EndpointPort represents a Port used by an EndpointSlice",
       "properties": {
         "appProtocol": {
@@ -11709,6 +12079,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.discovery.v1.EndpointSlice": {
+      "additionalProperties": false,
       "description": "EndpointSlice represents a subset of the endpoints that implement a service. For a given service there may be multiple EndpointSlice objects, selected by labels, which must be joined to produce the full set of endpoints.",
       "properties": {
         "addressType": {
@@ -11764,6 +12135,7 @@
       ]
     },
     "io.k8s.api.discovery.v1.EndpointSliceList": {
+      "additionalProperties": false,
       "description": "EndpointSliceList represents a list of endpoint slices",
       "properties": {
         "apiVersion": {
@@ -11805,6 +12177,7 @@
       ]
     },
     "io.k8s.api.discovery.v1.ForZone": {
+      "additionalProperties": false,
       "description": "ForZone provides information about which zones should consume this endpoint.",
       "properties": {
         "name": {
@@ -11818,6 +12191,7 @@
       "type": "object"
     },
     "io.k8s.api.events.v1.Event": {
+      "additionalProperties": false,
       "description": "Event is a report of an event somewhere in the cluster. It generally denotes some state change in the system. Events have a limited retention time and triggers and messages may evolve with time.  Event consumers should not rely on the timing of an event with a given Reason reflecting a consistent underlying trigger, or the continued existence of events with that Reason.  Events should be treated as informative, best-effort, supplemental data.",
       "properties": {
         "action": {
@@ -11909,6 +12283,7 @@
       ]
     },
     "io.k8s.api.events.v1.EventList": {
+      "additionalProperties": false,
       "description": "EventList is a list of Event objects.",
       "properties": {
         "apiVersion": {
@@ -11950,6 +12325,7 @@
       ]
     },
     "io.k8s.api.events.v1.EventSeries": {
+      "additionalProperties": false,
       "description": "EventSeries contain information on series of events, i.e. thing that was/is happening continuously for some time. How often to update the EventSeries is up to the event reporters. The default event reporter in \"k8s.io/client-go/tools/events/event_broadcaster.go\" shows how this struct is updated on heartbeats and can guide customized reporter implementations.",
       "properties": {
         "count": {
@@ -11969,6 +12345,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.ExemptPriorityLevelConfiguration": {
+      "additionalProperties": false,
       "description": "ExemptPriorityLevelConfiguration describes the configurable aspects of the handling of exempt requests. In the mandatory exempt configuration object the values in the fields here can be modified by authorized users, unlike the rest of the `spec`.",
       "properties": {
         "lendablePercent": {
@@ -11985,6 +12362,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.FlowDistinguisherMethod": {
+      "additionalProperties": false,
       "description": "FlowDistinguisherMethod specifies the method of a flow distinguisher.",
       "properties": {
         "type": {
@@ -11998,6 +12376,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.FlowSchema": {
+      "additionalProperties": false,
       "description": "FlowSchema defines the schema of a group of flows. Note that a flow is made up of a set of inbound API requests with similar attributes and is identified by a pair of strings: the name of the FlowSchema and a \"flow distinguisher\".",
       "properties": {
         "apiVersion": {
@@ -12037,6 +12416,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1.FlowSchemaCondition": {
+      "additionalProperties": false,
       "description": "FlowSchemaCondition describes conditions for a FlowSchema.",
       "properties": {
         "lastTransitionTime": {
@@ -12063,6 +12443,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.FlowSchemaList": {
+      "additionalProperties": false,
       "description": "FlowSchemaList is a list of FlowSchema objects.",
       "properties": {
         "apiVersion": {
@@ -12104,6 +12485,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1.FlowSchemaSpec": {
+      "additionalProperties": false,
       "description": "FlowSchemaSpec describes how the FlowSchema's specification looks like.",
       "properties": {
         "distinguisherMethod": {
@@ -12134,6 +12516,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.FlowSchemaStatus": {
+      "additionalProperties": false,
       "description": "FlowSchemaStatus represents the current state of a FlowSchema.",
       "properties": {
         "conditions": {
@@ -12153,6 +12536,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.GroupSubject": {
+      "additionalProperties": false,
       "description": "GroupSubject holds detailed information for group-kind subject.",
       "properties": {
         "name": {
@@ -12166,6 +12550,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.LimitResponse": {
+      "additionalProperties": false,
       "description": "LimitResponse defines how to handle requests that can not be executed right now.",
       "properties": {
         "queuing": {
@@ -12191,6 +12576,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1.LimitedPriorityLevelConfiguration": {
+      "additionalProperties": false,
       "description": "LimitedPriorityLevelConfiguration specifies how to handle requests that are subject to limits. It addresses two issues:\n  - How are requests for this priority level limited?\n  - What should be done with requests that exceed the limit?",
       "properties": {
         "borrowingLimitPercent": {
@@ -12216,6 +12602,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.NonResourcePolicyRule": {
+      "additionalProperties": false,
       "description": "NonResourcePolicyRule is a predicate that matches non-resource requests according to their verb and the target non-resource URL. A NonResourcePolicyRule matches a request if and only if both (a) at least one member of verbs matches the request and (b) at least one member of nonResourceURLs matches the request.",
       "properties": {
         "nonResourceURLs": {
@@ -12242,6 +12629,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.PolicyRulesWithSubjects": {
+      "additionalProperties": false,
       "description": "PolicyRulesWithSubjects prescribes a test that applies to a request to an apiserver. The test considers the subject making the request, the verb being requested, and the resource to be acted upon. This PolicyRulesWithSubjects matches a request if and only if both (a) at least one member of subjects matches the request and (b) at least one member of resourceRules or nonResourceRules matches the request.",
       "properties": {
         "nonResourceRules": {
@@ -12275,6 +12663,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.PriorityLevelConfiguration": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfiguration represents the configuration of a priority level.",
       "properties": {
         "apiVersion": {
@@ -12314,6 +12703,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1.PriorityLevelConfigurationCondition": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfigurationCondition defines the condition of priority level.",
       "properties": {
         "lastTransitionTime": {
@@ -12340,6 +12730,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.PriorityLevelConfigurationList": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfigurationList is a list of PriorityLevelConfiguration objects.",
       "properties": {
         "apiVersion": {
@@ -12381,6 +12772,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1.PriorityLevelConfigurationReference": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfigurationReference contains information that points to the \"request-priority\" being used.",
       "properties": {
         "name": {
@@ -12394,6 +12786,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.PriorityLevelConfigurationSpec": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfigurationSpec specifies the configuration of a priority level.",
       "properties": {
         "exempt": {
@@ -12424,6 +12817,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1.PriorityLevelConfigurationStatus": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfigurationStatus represents the current state of a \"request-priority\".",
       "properties": {
         "conditions": {
@@ -12443,6 +12837,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.QueuingConfiguration": {
+      "additionalProperties": false,
       "description": "QueuingConfiguration holds the configuration parameters for queuing",
       "properties": {
         "handSize": {
@@ -12464,6 +12859,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.ResourcePolicyRule": {
+      "additionalProperties": false,
       "description": "ResourcePolicyRule is a predicate that matches some resource requests, testing the request's verb and the target resource. A ResourcePolicyRule matches a resource request if and only if: (a) at least one member of verbs matches the request, (b) at least one member of apiGroups matches the request, (c) at least one member of resources matches the request, and (d) either (d1) the request does not specify a namespace (i.e., `Namespace==\"\"`) and clusterScope is true or (d2) the request specifies a namespace and least one member of namespaces matches the request's namespace.",
       "properties": {
         "apiGroups": {
@@ -12511,6 +12907,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.ServiceAccountSubject": {
+      "additionalProperties": false,
       "description": "ServiceAccountSubject holds detailed information for service-account-kind subject.",
       "properties": {
         "name": {
@@ -12529,6 +12926,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1.Subject": {
+      "additionalProperties": false,
       "description": "Subject matches the originator of a request, as identified by the request authentication system. There are three ways of matching an originator; by user, group, or service account.",
       "properties": {
         "group": {
@@ -12564,6 +12962,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1.UserSubject": {
+      "additionalProperties": false,
       "description": "UserSubject holds detailed information for user-kind subject.",
       "properties": {
         "name": {
@@ -12577,6 +12976,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.ExemptPriorityLevelConfiguration": {
+      "additionalProperties": false,
       "description": "ExemptPriorityLevelConfiguration describes the configurable aspects of the handling of exempt requests. In the mandatory exempt configuration object the values in the fields here can be modified by authorized users, unlike the rest of the `spec`.",
       "properties": {
         "lendablePercent": {
@@ -12593,6 +12993,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.FlowDistinguisherMethod": {
+      "additionalProperties": false,
       "description": "FlowDistinguisherMethod specifies the method of a flow distinguisher.",
       "properties": {
         "type": {
@@ -12606,6 +13007,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.FlowSchema": {
+      "additionalProperties": false,
       "description": "FlowSchema defines the schema of a group of flows. Note that a flow is made up of a set of inbound API requests with similar attributes and is identified by a pair of strings: the name of the FlowSchema and a \"flow distinguisher\".",
       "properties": {
         "apiVersion": {
@@ -12645,6 +13047,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1beta3.FlowSchemaCondition": {
+      "additionalProperties": false,
       "description": "FlowSchemaCondition describes conditions for a FlowSchema.",
       "properties": {
         "lastTransitionTime": {
@@ -12671,6 +13074,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.FlowSchemaList": {
+      "additionalProperties": false,
       "description": "FlowSchemaList is a list of FlowSchema objects.",
       "properties": {
         "apiVersion": {
@@ -12712,6 +13116,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1beta3.FlowSchemaSpec": {
+      "additionalProperties": false,
       "description": "FlowSchemaSpec describes how the FlowSchema's specification looks like.",
       "properties": {
         "distinguisherMethod": {
@@ -12742,6 +13147,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.FlowSchemaStatus": {
+      "additionalProperties": false,
       "description": "FlowSchemaStatus represents the current state of a FlowSchema.",
       "properties": {
         "conditions": {
@@ -12761,6 +13167,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.GroupSubject": {
+      "additionalProperties": false,
       "description": "GroupSubject holds detailed information for group-kind subject.",
       "properties": {
         "name": {
@@ -12774,6 +13181,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.LimitResponse": {
+      "additionalProperties": false,
       "description": "LimitResponse defines how to handle requests that can not be executed right now.",
       "properties": {
         "queuing": {
@@ -12799,6 +13207,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1beta3.LimitedPriorityLevelConfiguration": {
+      "additionalProperties": false,
       "description": "LimitedPriorityLevelConfiguration specifies how to handle requests that are subject to limits. It addresses two issues:\n  - How are requests for this priority level limited?\n  - What should be done with requests that exceed the limit?",
       "properties": {
         "borrowingLimitPercent": {
@@ -12824,6 +13233,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.NonResourcePolicyRule": {
+      "additionalProperties": false,
       "description": "NonResourcePolicyRule is a predicate that matches non-resource requests according to their verb and the target non-resource URL. A NonResourcePolicyRule matches a request if and only if both (a) at least one member of verbs matches the request and (b) at least one member of nonResourceURLs matches the request.",
       "properties": {
         "nonResourceURLs": {
@@ -12850,6 +13260,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.PolicyRulesWithSubjects": {
+      "additionalProperties": false,
       "description": "PolicyRulesWithSubjects prescribes a test that applies to a request to an apiserver. The test considers the subject making the request, the verb being requested, and the resource to be acted upon. This PolicyRulesWithSubjects matches a request if and only if both (a) at least one member of subjects matches the request and (b) at least one member of resourceRules or nonResourceRules matches the request.",
       "properties": {
         "nonResourceRules": {
@@ -12883,6 +13294,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfiguration": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfiguration represents the configuration of a priority level.",
       "properties": {
         "apiVersion": {
@@ -12922,6 +13334,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationCondition": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfigurationCondition defines the condition of priority level.",
       "properties": {
         "lastTransitionTime": {
@@ -12948,6 +13361,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationList": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfigurationList is a list of PriorityLevelConfiguration objects.",
       "properties": {
         "apiVersion": {
@@ -12989,6 +13403,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationReference": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfigurationReference contains information that points to the \"request-priority\" being used.",
       "properties": {
         "name": {
@@ -13002,6 +13417,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationSpec": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfigurationSpec specifies the configuration of a priority level.",
       "properties": {
         "exempt": {
@@ -13032,6 +13448,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationStatus": {
+      "additionalProperties": false,
       "description": "PriorityLevelConfigurationStatus represents the current state of a \"request-priority\".",
       "properties": {
         "conditions": {
@@ -13051,6 +13468,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.QueuingConfiguration": {
+      "additionalProperties": false,
       "description": "QueuingConfiguration holds the configuration parameters for queuing",
       "properties": {
         "handSize": {
@@ -13072,6 +13490,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.ResourcePolicyRule": {
+      "additionalProperties": false,
       "description": "ResourcePolicyRule is a predicate that matches some resource requests, testing the request's verb and the target resource. A ResourcePolicyRule matches a resource request if and only if: (a) at least one member of verbs matches the request, (b) at least one member of apiGroups matches the request, (c) at least one member of resources matches the request, and (d) either (d1) the request does not specify a namespace (i.e., `Namespace==\"\"`) and clusterScope is true or (d2) the request specifies a namespace and least one member of namespaces matches the request's namespace.",
       "properties": {
         "apiGroups": {
@@ -13119,6 +13538,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.ServiceAccountSubject": {
+      "additionalProperties": false,
       "description": "ServiceAccountSubject holds detailed information for service-account-kind subject.",
       "properties": {
         "name": {
@@ -13137,6 +13557,7 @@
       "type": "object"
     },
     "io.k8s.api.flowcontrol.v1beta3.Subject": {
+      "additionalProperties": false,
       "description": "Subject matches the originator of a request, as identified by the request authentication system. There are three ways of matching an originator; by user, group, or service account.",
       "properties": {
         "group": {
@@ -13172,6 +13593,7 @@
       ]
     },
     "io.k8s.api.flowcontrol.v1beta3.UserSubject": {
+      "additionalProperties": false,
       "description": "UserSubject holds detailed information for user-kind subject.",
       "properties": {
         "name": {
@@ -13185,6 +13607,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.HTTPIngressPath": {
+      "additionalProperties": false,
       "description": "HTTPIngressPath associates a path with a backend. Incoming urls matching the path are forwarded to the backend.",
       "properties": {
         "backend": {
@@ -13207,6 +13630,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.HTTPIngressRuleValue": {
+      "additionalProperties": false,
       "description": "HTTPIngressRuleValue is a list of http selectors pointing to backends. In the example: http://<host>/<path>?<searchpart> -> backend where where parts of the url correspond to RFC 3986, this resource will be used to match against everything after the last '/' and before the first '?' or '#'.",
       "properties": {
         "paths": {
@@ -13224,6 +13648,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.IPBlock": {
+      "additionalProperties": false,
       "description": "IPBlock describes a particular CIDR (Ex. \"192.168.1.0/24\",\"2001:db8::/64\") that is allowed to the pods matched by a NetworkPolicySpec's podSelector. The except entry describes CIDRs that should not be included within this rule.",
       "properties": {
         "cidr": {
@@ -13244,6 +13669,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.Ingress": {
+      "additionalProperties": false,
       "description": "Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. An Ingress can be configured to give services externally-reachable urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.",
       "properties": {
         "apiVersion": {
@@ -13283,6 +13709,7 @@
       ]
     },
     "io.k8s.api.networking.v1.IngressBackend": {
+      "additionalProperties": false,
       "description": "IngressBackend describes all endpoints for a given service and port.",
       "properties": {
         "resource": {
@@ -13297,6 +13724,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.IngressClass": {
+      "additionalProperties": false,
       "description": "IngressClass represents the class of the Ingress, referenced by the Ingress Spec. The `ingressclass.kubernetes.io/is-default-class` annotation can be used to indicate that an IngressClass should be considered default. When a single IngressClass resource has this annotation set to true, new Ingress resources without a class specified will be assigned this default class.",
       "properties": {
         "apiVersion": {
@@ -13332,6 +13760,7 @@
       ]
     },
     "io.k8s.api.networking.v1.IngressClassList": {
+      "additionalProperties": false,
       "description": "IngressClassList is a collection of IngressClasses.",
       "properties": {
         "apiVersion": {
@@ -13373,6 +13802,7 @@
       ]
     },
     "io.k8s.api.networking.v1.IngressClassParametersReference": {
+      "additionalProperties": false,
       "description": "IngressClassParametersReference identifies an API object. This can be used to specify a cluster or namespace-scoped resource.",
       "properties": {
         "apiGroup": {
@@ -13403,6 +13833,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.IngressClassSpec": {
+      "additionalProperties": false,
       "description": "IngressClassSpec provides information about the class of an Ingress.",
       "properties": {
         "controller": {
@@ -13417,6 +13848,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.IngressList": {
+      "additionalProperties": false,
       "description": "IngressList is a collection of Ingress.",
       "properties": {
         "apiVersion": {
@@ -13458,6 +13890,7 @@
       ]
     },
     "io.k8s.api.networking.v1.IngressLoadBalancerIngress": {
+      "additionalProperties": false,
       "description": "IngressLoadBalancerIngress represents the status of a load-balancer ingress point.",
       "properties": {
         "hostname": {
@@ -13480,6 +13913,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.IngressLoadBalancerStatus": {
+      "additionalProperties": false,
       "description": "IngressLoadBalancerStatus represents the status of a load-balancer.",
       "properties": {
         "ingress": {
@@ -13493,6 +13927,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.IngressPortStatus": {
+      "additionalProperties": false,
       "description": "IngressPortStatus represents the error condition of a service port",
       "properties": {
         "error": {
@@ -13516,6 +13951,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.IngressRule": {
+      "additionalProperties": false,
       "description": "IngressRule represents the rules mapping the paths under a specified host to the related backend services. Incoming requests are first evaluated for a host match, then routed to the backend associated with the matching IngressRuleValue.",
       "properties": {
         "host": {
@@ -13529,6 +13965,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.IngressServiceBackend": {
+      "additionalProperties": false,
       "description": "IngressServiceBackend references a Kubernetes Service as a Backend.",
       "properties": {
         "name": {
@@ -13546,6 +13983,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.IngressSpec": {
+      "additionalProperties": false,
       "description": "IngressSpec describes the Ingress the user wishes to exist.",
       "properties": {
         "defaultBackend": {
@@ -13576,6 +14014,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.IngressStatus": {
+      "additionalProperties": false,
       "description": "IngressStatus describe the current state of the Ingress.",
       "properties": {
         "loadBalancer": {
@@ -13586,6 +14025,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.IngressTLS": {
+      "additionalProperties": false,
       "description": "IngressTLS describes the transport layer security associated with an ingress.",
       "properties": {
         "hosts": {
@@ -13604,6 +14044,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.NetworkPolicy": {
+      "additionalProperties": false,
       "description": "NetworkPolicy describes what network traffic is allowed for a set of Pods",
       "properties": {
         "apiVersion": {
@@ -13639,6 +14080,7 @@
       ]
     },
     "io.k8s.api.networking.v1.NetworkPolicyEgressRule": {
+      "additionalProperties": false,
       "description": "NetworkPolicyEgressRule describes a particular set of traffic that is allowed out of pods matched by a NetworkPolicySpec's podSelector. The traffic must match both ports and to. This type is beta-level in 1.8",
       "properties": {
         "ports": {
@@ -13659,6 +14101,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.NetworkPolicyIngressRule": {
+      "additionalProperties": false,
       "description": "NetworkPolicyIngressRule describes a particular set of traffic that is allowed to the pods matched by a NetworkPolicySpec's podSelector. The traffic must match both ports and from.",
       "properties": {
         "from": {
@@ -13679,6 +14122,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.NetworkPolicyList": {
+      "additionalProperties": false,
       "description": "NetworkPolicyList is a list of NetworkPolicy objects.",
       "properties": {
         "apiVersion": {
@@ -13720,6 +14164,7 @@
       ]
     },
     "io.k8s.api.networking.v1.NetworkPolicyPeer": {
+      "additionalProperties": false,
       "description": "NetworkPolicyPeer describes a peer to allow traffic to/from. Only certain combinations of fields are allowed",
       "properties": {
         "ipBlock": {
@@ -13738,6 +14183,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.NetworkPolicyPort": {
+      "additionalProperties": false,
       "description": "NetworkPolicyPort describes a port to allow traffic on",
       "properties": {
         "endPort": {
@@ -13757,6 +14203,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.NetworkPolicySpec": {
+      "additionalProperties": false,
       "description": "NetworkPolicySpec provides the specification of a NetworkPolicy",
       "properties": {
         "egress": {
@@ -13791,6 +14238,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1.ServiceBackendPort": {
+      "additionalProperties": false,
       "description": "ServiceBackendPort is the service port being referenced.",
       "properties": {
         "name": {
@@ -13806,6 +14254,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1alpha1.IPAddress": {
+      "additionalProperties": false,
       "description": "IPAddress represents a single IP of a single IP Family. The object is designed to be used by APIs that operate on IP addresses. The object is used by the Service core API for allocation of IP addresses. An IP address can be represented in different formats, to guarantee the uniqueness of the IP, the name of the object is the IP address in canonical format, four decimal digits separated by dots suppressing leading zeros for IPv4 and the representation defined by RFC 5952 for IPv6. Valid: 192.168.1.5 or 2001:db8::1 or 2001:db8:aaaa:bbbb:cccc:dddd:eeee:1 Invalid: 10.01.2.3 or 2001:db8:0:0:0::1",
       "properties": {
         "apiVersion": {
@@ -13841,6 +14290,7 @@
       ]
     },
     "io.k8s.api.networking.v1alpha1.IPAddressList": {
+      "additionalProperties": false,
       "description": "IPAddressList contains a list of IPAddress.",
       "properties": {
         "apiVersion": {
@@ -13882,6 +14332,7 @@
       ]
     },
     "io.k8s.api.networking.v1alpha1.IPAddressSpec": {
+      "additionalProperties": false,
       "description": "IPAddressSpec describe the attributes in an IP Address.",
       "properties": {
         "parentRef": {
@@ -13892,6 +14343,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1alpha1.ParentReference": {
+      "additionalProperties": false,
       "description": "ParentReference describes a reference to a parent object.",
       "properties": {
         "group": {
@@ -13914,6 +14366,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1alpha1.ServiceCIDR": {
+      "additionalProperties": false,
       "description": "ServiceCIDR defines a range of IP addresses using CIDR format (e.g. 192.168.0.0/24 or 2001:db2::/64). This range is used to allocate ClusterIPs to Service objects.",
       "properties": {
         "apiVersion": {
@@ -13953,6 +14406,7 @@
       ]
     },
     "io.k8s.api.networking.v1alpha1.ServiceCIDRList": {
+      "additionalProperties": false,
       "description": "ServiceCIDRList contains a list of ServiceCIDR objects.",
       "properties": {
         "apiVersion": {
@@ -13994,6 +14448,7 @@
       ]
     },
     "io.k8s.api.networking.v1alpha1.ServiceCIDRSpec": {
+      "additionalProperties": false,
       "description": "ServiceCIDRSpec define the CIDRs the user wants to use for allocating ClusterIPs for Services.",
       "properties": {
         "cidrs": {
@@ -14007,6 +14462,7 @@
       "type": "object"
     },
     "io.k8s.api.networking.v1alpha1.ServiceCIDRStatus": {
+      "additionalProperties": false,
       "description": "ServiceCIDRStatus describes the current state of the ServiceCIDR.",
       "properties": {
         "conditions": {
@@ -14026,6 +14482,7 @@
       "type": "object"
     },
     "io.k8s.api.node.v1.Overhead": {
+      "additionalProperties": false,
       "description": "Overhead structure represents the resource overhead associated with running a pod.",
       "properties": {
         "podFixed": {
@@ -14039,6 +14496,7 @@
       "type": "object"
     },
     "io.k8s.api.node.v1.RuntimeClass": {
+      "additionalProperties": false,
       "description": "RuntimeClass defines a class of container runtime supported in the cluster. The RuntimeClass is used to determine which container runtime is used to run all containers in a pod. RuntimeClasses are manually defined by a user or cluster provisioner, and referenced in the PodSpec. The Kubelet is responsible for resolving the RuntimeClassName reference before running the pod.  For more details, see https://kubernetes.io/docs/concepts/containers/runtime-class/",
       "properties": {
         "apiVersion": {
@@ -14085,6 +14543,7 @@
       ]
     },
     "io.k8s.api.node.v1.RuntimeClassList": {
+      "additionalProperties": false,
       "description": "RuntimeClassList is a list of RuntimeClass objects.",
       "properties": {
         "apiVersion": {
@@ -14126,6 +14585,7 @@
       ]
     },
     "io.k8s.api.node.v1.Scheduling": {
+      "additionalProperties": false,
       "description": "Scheduling specifies the scheduling constraints for nodes supporting a RuntimeClass.",
       "properties": {
         "nodeSelector": {
@@ -14148,6 +14608,7 @@
       "type": "object"
     },
     "io.k8s.api.policy.v1.Eviction": {
+      "additionalProperties": false,
       "description": "Eviction evicts a pod from its node subject to certain policies and safety constraints. This is a subresource of Pod.  A request to cause such an eviction is created by POSTing to .../pods/<pod name>/evictions.",
       "properties": {
         "apiVersion": {
@@ -14183,6 +14644,7 @@
       ]
     },
     "io.k8s.api.policy.v1.PodDisruptionBudget": {
+      "additionalProperties": false,
       "description": "PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods",
       "properties": {
         "apiVersion": {
@@ -14222,6 +14684,7 @@
       ]
     },
     "io.k8s.api.policy.v1.PodDisruptionBudgetList": {
+      "additionalProperties": false,
       "description": "PodDisruptionBudgetList is a collection of PodDisruptionBudgets.",
       "properties": {
         "apiVersion": {
@@ -14263,6 +14726,7 @@
       ]
     },
     "io.k8s.api.policy.v1.PodDisruptionBudgetSpec": {
+      "additionalProperties": false,
       "description": "PodDisruptionBudgetSpec is a description of a PodDisruptionBudget.",
       "properties": {
         "maxUnavailable": {
@@ -14286,6 +14750,7 @@
       "type": "object"
     },
     "io.k8s.api.policy.v1.PodDisruptionBudgetStatus": {
+      "additionalProperties": false,
       "description": "PodDisruptionBudgetStatus represents information about the status of a PodDisruptionBudget. Status may trail the actual state of a system.",
       "properties": {
         "conditions": {
@@ -14343,6 +14808,7 @@
       "type": "object"
     },
     "io.k8s.api.rbac.v1.AggregationRule": {
+      "additionalProperties": false,
       "description": "AggregationRule describes how to locate ClusterRoles to aggregate into the ClusterRole",
       "properties": {
         "clusterRoleSelectors": {
@@ -14356,6 +14822,7 @@
       "type": "object"
     },
     "io.k8s.api.rbac.v1.ClusterRole": {
+      "additionalProperties": false,
       "description": "ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.",
       "properties": {
         "aggregationRule": {
@@ -14398,6 +14865,7 @@
       ]
     },
     "io.k8s.api.rbac.v1.ClusterRoleBinding": {
+      "additionalProperties": false,
       "description": "ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace, and adds who information via Subject.",
       "properties": {
         "apiVersion": {
@@ -14443,6 +14911,7 @@
       ]
     },
     "io.k8s.api.rbac.v1.ClusterRoleBindingList": {
+      "additionalProperties": false,
       "description": "ClusterRoleBindingList is a collection of ClusterRoleBindings",
       "properties": {
         "apiVersion": {
@@ -14484,6 +14953,7 @@
       ]
     },
     "io.k8s.api.rbac.v1.ClusterRoleList": {
+      "additionalProperties": false,
       "description": "ClusterRoleList is a collection of ClusterRoles",
       "properties": {
         "apiVersion": {
@@ -14525,6 +14995,7 @@
       ]
     },
     "io.k8s.api.rbac.v1.PolicyRule": {
+      "additionalProperties": false,
       "description": "PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.",
       "properties": {
         "apiGroups": {
@@ -14569,6 +15040,7 @@
       "type": "object"
     },
     "io.k8s.api.rbac.v1.Role": {
+      "additionalProperties": false,
       "description": "Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding.",
       "properties": {
         "apiVersion": {
@@ -14607,6 +15079,7 @@
       ]
     },
     "io.k8s.api.rbac.v1.RoleBinding": {
+      "additionalProperties": false,
       "description": "RoleBinding references a role, but does not contain it.  It can reference a Role in the same namespace or a ClusterRole in the global namespace. It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given namespace only have effect in that namespace.",
       "properties": {
         "apiVersion": {
@@ -14652,6 +15125,7 @@
       ]
     },
     "io.k8s.api.rbac.v1.RoleBindingList": {
+      "additionalProperties": false,
       "description": "RoleBindingList is a collection of RoleBindings",
       "properties": {
         "apiVersion": {
@@ -14693,6 +15167,7 @@
       ]
     },
     "io.k8s.api.rbac.v1.RoleList": {
+      "additionalProperties": false,
       "description": "RoleList is a collection of Roles",
       "properties": {
         "apiVersion": {
@@ -14734,6 +15209,7 @@
       ]
     },
     "io.k8s.api.rbac.v1.RoleRef": {
+      "additionalProperties": false,
       "description": "RoleRef contains information that points to the role being used",
       "properties": {
         "apiGroup": {
@@ -14758,6 +15234,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.rbac.v1.Subject": {
+      "additionalProperties": false,
       "description": "Subject contains a reference to the object or user identities a role binding applies to.  This can either hold a direct API object reference, or a value for non-objects such as user and group names.",
       "properties": {
         "apiGroup": {
@@ -14785,6 +15262,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.api.resource.v1alpha2.AllocationResult": {
+      "additionalProperties": false,
       "description": "AllocationResult contains attributes of an allocated resource.",
       "properties": {
         "availableOnNodes": {
@@ -14807,6 +15285,7 @@
       "type": "object"
     },
     "io.k8s.api.resource.v1alpha2.PodSchedulingContext": {
+      "additionalProperties": false,
       "description": "PodSchedulingContext objects hold information that is needed to schedule a Pod with ResourceClaims that use \"WaitForFirstConsumer\" allocation mode.\n\nThis is an alpha type and requires enabling the DynamicResourceAllocation feature gate.",
       "properties": {
         "apiVersion": {
@@ -14849,6 +15328,7 @@
       ]
     },
     "io.k8s.api.resource.v1alpha2.PodSchedulingContextList": {
+      "additionalProperties": false,
       "description": "PodSchedulingContextList is a collection of Pod scheduling objects.",
       "properties": {
         "apiVersion": {
@@ -14890,6 +15370,7 @@
       ]
     },
     "io.k8s.api.resource.v1alpha2.PodSchedulingContextSpec": {
+      "additionalProperties": false,
       "description": "PodSchedulingContextSpec describes where resources for the Pod are needed.",
       "properties": {
         "potentialNodes": {
@@ -14908,6 +15389,7 @@
       "type": "object"
     },
     "io.k8s.api.resource.v1alpha2.PodSchedulingContextStatus": {
+      "additionalProperties": false,
       "description": "PodSchedulingContextStatus describes where resources for the Pod can be allocated.",
       "properties": {
         "resourceClaims": {
@@ -14925,6 +15407,7 @@
       "type": "object"
     },
     "io.k8s.api.resource.v1alpha2.ResourceClaim": {
+      "additionalProperties": false,
       "description": "ResourceClaim describes which resources are needed by a resource consumer. Its status tracks whether the resource has been allocated and what the resulting attributes are.\n\nThis is an alpha type and requires enabling the DynamicResourceAllocation feature gate.",
       "properties": {
         "apiVersion": {
@@ -14967,6 +15450,7 @@
       ]
     },
     "io.k8s.api.resource.v1alpha2.ResourceClaimConsumerReference": {
+      "additionalProperties": false,
       "description": "ResourceClaimConsumerReference contains enough information to let you locate the consumer of a ResourceClaim. The user must be a resource in the same namespace as the ResourceClaim.",
       "properties": {
         "apiGroup": {
@@ -14994,6 +15478,7 @@
       "type": "object"
     },
     "io.k8s.api.resource.v1alpha2.ResourceClaimList": {
+      "additionalProperties": false,
       "description": "ResourceClaimList is a collection of claims.",
       "properties": {
         "apiVersion": {
@@ -15035,6 +15520,7 @@
       ]
     },
     "io.k8s.api.resource.v1alpha2.ResourceClaimParametersReference": {
+      "additionalProperties": false,
       "description": "ResourceClaimParametersReference contains enough information to let you locate the parameters for a ResourceClaim. The object must be in the same namespace as the ResourceClaim.",
       "properties": {
         "apiGroup": {
@@ -15057,6 +15543,7 @@
       "type": "object"
     },
     "io.k8s.api.resource.v1alpha2.ResourceClaimSchedulingStatus": {
+      "additionalProperties": false,
       "description": "ResourceClaimSchedulingStatus contains information about one particular ResourceClaim with \"WaitForFirstConsumer\" allocation mode.",
       "properties": {
         "name": {
@@ -15075,6 +15562,7 @@
       "type": "object"
     },
     "io.k8s.api.resource.v1alpha2.ResourceClaimSpec": {
+      "additionalProperties": false,
       "description": "ResourceClaimSpec defines how a resource is to be allocated.",
       "properties": {
         "allocationMode": {
@@ -15096,6 +15584,7 @@
       "type": "object"
     },
     "io.k8s.api.resource.v1alpha2.ResourceClaimStatus": {
+      "additionalProperties": false,
       "description": "ResourceClaimStatus tracks whether the resource has been allocated and what the resulting attributes are.",
       "properties": {
         "allocation": {
@@ -15125,6 +15614,7 @@
       "type": "object"
     },
     "io.k8s.api.resource.v1alpha2.ResourceClaimTemplate": {
+      "additionalProperties": false,
       "description": "ResourceClaimTemplate is used to produce ResourceClaim objects.",
       "properties": {
         "apiVersion": {
@@ -15163,6 +15653,7 @@
       ]
     },
     "io.k8s.api.resource.v1alpha2.ResourceClaimTemplateList": {
+      "additionalProperties": false,
       "description": "ResourceClaimTemplateList is a collection of claim templates.",
       "properties": {
         "apiVersion": {
@@ -15204,6 +15695,7 @@
       ]
     },
     "io.k8s.api.resource.v1alpha2.ResourceClaimTemplateSpec": {
+      "additionalProperties": false,
       "description": "ResourceClaimTemplateSpec contains the metadata and fields for a ResourceClaim.",
       "properties": {
         "metadata": {
@@ -15221,6 +15713,7 @@
       "type": "object"
     },
     "io.k8s.api.resource.v1alpha2.ResourceClass": {
+      "additionalProperties": false,
       "description": "ResourceClass is used by administrators to influence how resources are allocated.\n\nThis is an alpha type and requires enabling the DynamicResourceAllocation feature gate.",
       "properties": {
         "apiVersion": {
@@ -15267,6 +15760,7 @@
       ]
     },
     "io.k8s.api.resource.v1alpha2.ResourceClassList": {
+      "additionalProperties": false,
       "description": "ResourceClassList is a collection of classes.",
       "properties": {
         "apiVersion": {
@@ -15308,6 +15802,7 @@
       ]
     },
     "io.k8s.api.resource.v1alpha2.ResourceClassParametersReference": {
+      "additionalProperties": false,
       "description": "ResourceClassParametersReference contains enough information to let you locate the parameters for a ResourceClass.",
       "properties": {
         "apiGroup": {
@@ -15334,6 +15829,7 @@
       "type": "object"
     },
     "io.k8s.api.resource.v1alpha2.ResourceHandle": {
+      "additionalProperties": false,
       "description": "ResourceHandle holds opaque resource data for processing by a specific kubelet plugin.",
       "properties": {
         "data": {
@@ -15348,6 +15844,7 @@
       "type": "object"
     },
     "io.k8s.api.scheduling.v1.PriorityClass": {
+      "additionalProperties": false,
       "description": "PriorityClass defines mapping from a priority class name to the priority integer value. The value can be any valid integer.",
       "properties": {
         "apiVersion": {
@@ -15399,6 +15896,7 @@
       ]
     },
     "io.k8s.api.scheduling.v1.PriorityClassList": {
+      "additionalProperties": false,
       "description": "PriorityClassList is a collection of priority classes.",
       "properties": {
         "apiVersion": {
@@ -15440,6 +15938,7 @@
       ]
     },
     "io.k8s.api.storage.v1.CSIDriver": {
+      "additionalProperties": false,
       "description": "CSIDriver captures information about a Container Storage Interface (CSI) volume driver deployed on the cluster. Kubernetes attach detach controller uses this object to determine whether attach is required. Kubelet uses this object to determine whether pod information needs to be passed on mount. CSIDriver objects are non-namespaced.",
       "properties": {
         "apiVersion": {
@@ -15478,6 +15977,7 @@
       ]
     },
     "io.k8s.api.storage.v1.CSIDriverList": {
+      "additionalProperties": false,
       "description": "CSIDriverList is a collection of CSIDriver objects.",
       "properties": {
         "apiVersion": {
@@ -15519,6 +16019,7 @@
       ]
     },
     "io.k8s.api.storage.v1.CSIDriverSpec": {
+      "additionalProperties": false,
       "description": "CSIDriverSpec is the specification of a CSIDriver.",
       "properties": {
         "attachRequired": {
@@ -15565,6 +16066,7 @@
       "type": "object"
     },
     "io.k8s.api.storage.v1.CSINode": {
+      "additionalProperties": false,
       "description": "CSINode holds information about all CSI drivers installed on a node. CSI drivers do not need to create the CSINode object directly. As long as they use the node-driver-registrar sidecar container, the kubelet will automatically populate the CSINode object for the CSI driver as part of kubelet plugin registration. CSINode has the same name as a node. If the object is missing, it means either there are no CSI Drivers available on the node, or the Kubelet version is low enough that it doesn't create this object. CSINode has an OwnerReference that points to the corresponding node object.",
       "properties": {
         "apiVersion": {
@@ -15603,6 +16105,7 @@
       ]
     },
     "io.k8s.api.storage.v1.CSINodeDriver": {
+      "additionalProperties": false,
       "description": "CSINodeDriver holds information about the specification of one CSI driver installed on a node",
       "properties": {
         "allocatable": {
@@ -15632,6 +16135,7 @@
       "type": "object"
     },
     "io.k8s.api.storage.v1.CSINodeList": {
+      "additionalProperties": false,
       "description": "CSINodeList is a collection of CSINode objects.",
       "properties": {
         "apiVersion": {
@@ -15673,6 +16177,7 @@
       ]
     },
     "io.k8s.api.storage.v1.CSINodeSpec": {
+      "additionalProperties": false,
       "description": "CSINodeSpec holds information about the specification of all CSI drivers installed on a node",
       "properties": {
         "drivers": {
@@ -15691,6 +16196,7 @@
       "type": "object"
     },
     "io.k8s.api.storage.v1.CSIStorageCapacity": {
+      "additionalProperties": false,
       "description": "CSIStorageCapacity stores the result of one CSI GetCapacity call. For a given StorageClass, this describes the available capacity in a particular topology segment.  This can be used when considering where to instantiate new PersistentVolumes.\n\nFor example this can express things like: - StorageClass \"standard\" has \"1234 GiB\" available in \"topology.kubernetes.io/zone=us-east1\" - StorageClass \"localssd\" has \"10 GiB\" available in \"kubernetes.io/hostname=knode-abc123\"\n\nThe following three cases all imply that no capacity is available for a certain combination: - no object exists with suitable topology and storage class name - such an object exists, but the capacity is unset - such an object exists, but the capacity is zero\n\nThe producer of these objects can decide which approach is more suitable.\n\nThey are consumed by the kube-scheduler when a CSI driver opts into capacity-aware scheduling with CSIDriverSpec.StorageCapacity. The scheduler compares the MaximumVolumeSize against the requested size of pending volumes to filter out unsuitable nodes. If MaximumVolumeSize is unset, it falls back to a comparison against the less precise Capacity. If that is also unset, the scheduler assumes that capacity is insufficient and tries some other node.",
       "properties": {
         "apiVersion": {
@@ -15741,6 +16247,7 @@
       ]
     },
     "io.k8s.api.storage.v1.CSIStorageCapacityList": {
+      "additionalProperties": false,
       "description": "CSIStorageCapacityList is a collection of CSIStorageCapacity objects.",
       "properties": {
         "apiVersion": {
@@ -15786,6 +16293,7 @@
       ]
     },
     "io.k8s.api.storage.v1.StorageClass": {
+      "additionalProperties": false,
       "description": "StorageClass describes the parameters for a class of storage for which PersistentVolumes can be dynamically provisioned.\n\nStorageClasses are non-namespaced; the name of the storage class according to etcd is in ObjectMeta.Name.",
       "properties": {
         "allowVolumeExpansion": {
@@ -15858,6 +16366,7 @@
       ]
     },
     "io.k8s.api.storage.v1.StorageClassList": {
+      "additionalProperties": false,
       "description": "StorageClassList is a collection of storage classes.",
       "properties": {
         "apiVersion": {
@@ -15899,6 +16408,7 @@
       ]
     },
     "io.k8s.api.storage.v1.TokenRequest": {
+      "additionalProperties": false,
       "description": "TokenRequest contains parameters of a service account token.",
       "properties": {
         "audience": {
@@ -15917,6 +16427,7 @@
       "type": "object"
     },
     "io.k8s.api.storage.v1.VolumeAttachment": {
+      "additionalProperties": false,
       "description": "VolumeAttachment captures the intent to attach or detach the specified volume to/from the specified node.\n\nVolumeAttachment objects are non-namespaced.",
       "properties": {
         "apiVersion": {
@@ -15959,6 +16470,7 @@
       ]
     },
     "io.k8s.api.storage.v1.VolumeAttachmentList": {
+      "additionalProperties": false,
       "description": "VolumeAttachmentList is a collection of VolumeAttachment objects.",
       "properties": {
         "apiVersion": {
@@ -16000,6 +16512,7 @@
       ]
     },
     "io.k8s.api.storage.v1.VolumeAttachmentSource": {
+      "additionalProperties": false,
       "description": "VolumeAttachmentSource represents a volume that should be attached. Right now only PersistenVolumes can be attached via external attacher, in future we may allow also inline volumes in pods. Exactly one member can be set.",
       "properties": {
         "inlineVolumeSpec": {
@@ -16014,6 +16527,7 @@
       "type": "object"
     },
     "io.k8s.api.storage.v1.VolumeAttachmentSpec": {
+      "additionalProperties": false,
       "description": "VolumeAttachmentSpec is the specification of a VolumeAttachment request.",
       "properties": {
         "attacher": {
@@ -16037,6 +16551,7 @@
       "type": "object"
     },
     "io.k8s.api.storage.v1.VolumeAttachmentStatus": {
+      "additionalProperties": false,
       "description": "VolumeAttachmentStatus is the status of a VolumeAttachment request.",
       "properties": {
         "attachError": {
@@ -16065,6 +16580,7 @@
       "type": "object"
     },
     "io.k8s.api.storage.v1.VolumeError": {
+      "additionalProperties": false,
       "description": "VolumeError captures an error encountered during a volume operation.",
       "properties": {
         "message": {
@@ -16079,6 +16595,7 @@
       "type": "object"
     },
     "io.k8s.api.storage.v1.VolumeNodeResources": {
+      "additionalProperties": false,
       "description": "VolumeNodeResources is a set of resource limits for scheduling of volumes.",
       "properties": {
         "count": {
@@ -16090,6 +16607,7 @@
       "type": "object"
     },
     "io.k8s.api.storage.v1alpha1.VolumeAttributesClass": {
+      "additionalProperties": false,
       "description": "VolumeAttributesClass represents a specification of mutable volume attributes defined by the CSI driver. The class can be specified during dynamic provisioning of PersistentVolumeClaims, and changed in the PersistentVolumeClaim spec after provisioning.",
       "properties": {
         "apiVersion": {
@@ -16135,6 +16653,7 @@
       ]
     },
     "io.k8s.api.storage.v1alpha1.VolumeAttributesClassList": {
+      "additionalProperties": false,
       "description": "VolumeAttributesClassList is a collection of VolumeAttributesClass objects.",
       "properties": {
         "apiVersion": {
@@ -16176,6 +16695,7 @@
       ]
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceColumnDefinition": {
+      "additionalProperties": false,
       "description": "CustomResourceColumnDefinition specifies a column for server side printing.",
       "properties": {
         "description": {
@@ -16212,6 +16732,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceConversion": {
+      "additionalProperties": false,
       "description": "CustomResourceConversion describes how to convert different versions of a CR.",
       "properties": {
         "strategy": {
@@ -16229,6 +16750,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinition": {
+      "additionalProperties": false,
       "description": "CustomResourceDefinition represents a resource that should be exposed on the API server.  Its name MUST be in the format <.spec.name>.<.spec.group>.",
       "properties": {
         "apiVersion": {
@@ -16271,6 +16793,7 @@
       ]
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinitionCondition": {
+      "additionalProperties": false,
       "description": "CustomResourceDefinitionCondition contains details for the current condition of this pod.",
       "properties": {
         "lastTransitionTime": {
@@ -16301,6 +16824,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinitionList": {
+      "additionalProperties": false,
       "description": "CustomResourceDefinitionList is a list of CustomResourceDefinition objects.",
       "properties": {
         "apiVersion": {
@@ -16342,6 +16866,7 @@
       ]
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinitionNames": {
+      "additionalProperties": false,
       "description": "CustomResourceDefinitionNames indicates the names to serve this CustomResourceDefinition",
       "properties": {
         "categories": {
@@ -16382,6 +16907,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinitionSpec": {
+      "additionalProperties": false,
       "description": "CustomResourceDefinitionSpec describes how a user wants their resource to appear",
       "properties": {
         "conversion": {
@@ -16421,6 +16947,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinitionStatus": {
+      "additionalProperties": false,
       "description": "CustomResourceDefinitionStatus indicates the state of the CustomResourceDefinition",
       "properties": {
         "acceptedNames": {
@@ -16449,6 +16976,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinitionVersion": {
+      "additionalProperties": false,
       "description": "CustomResourceDefinitionVersion describes a version for CRD.",
       "properties": {
         "additionalPrinterColumns": {
@@ -16495,6 +17023,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceSubresourceScale": {
+      "additionalProperties": false,
       "description": "CustomResourceSubresourceScale defines how to serve the scale subresource for CustomResources.",
       "properties": {
         "labelSelectorPath": {
@@ -16521,6 +17050,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceSubresources": {
+      "additionalProperties": false,
       "description": "CustomResourceSubresources defines the status and scale subresources for CustomResources.",
       "properties": {
         "scale": {
@@ -16535,6 +17065,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceValidation": {
+      "additionalProperties": false,
       "description": "CustomResourceValidation is a list of validation methods for CustomResources.",
       "properties": {
         "openAPIV3Schema": {
@@ -16545,6 +17076,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.ExternalDocumentation": {
+      "additionalProperties": false,
       "description": "ExternalDocumentation allows referencing an external resource for extended documentation.",
       "properties": {
         "description": {
@@ -16560,6 +17092,7 @@
       "description": "JSON represents any valid JSON value. These types are supported: bool, int64, float64, string, []interface{}, map[string]interface{} and nil."
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.JSONSchemaProps": {
+      "additionalProperties": false,
       "description": "JSONSchemaProps is a JSON-Schema following Specification Draft 4 (http://json-schema.org/).",
       "properties": {
         "$ref": {
@@ -16764,6 +17297,7 @@
       "description": "JSONSchemaPropsOrStringArray represents a JSONSchemaProps or a string array."
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.ServiceReference": {
+      "additionalProperties": false,
       "description": "ServiceReference holds a reference to Service.legacy.k8s.io",
       "properties": {
         "name": {
@@ -16791,6 +17325,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.ValidationRule": {
+      "additionalProperties": false,
       "description": "ValidationRule describes a validation rule written in the CEL expression language.",
       "properties": {
         "fieldPath": {
@@ -16824,6 +17359,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.WebhookClientConfig": {
+      "additionalProperties": false,
       "description": "WebhookClientConfig contains the information to make a TLS connection with the webhook.",
       "properties": {
         "caBundle": {
@@ -16843,6 +17379,7 @@
       "type": "object"
     },
     "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.WebhookConversion": {
+      "additionalProperties": false,
       "description": "WebhookConversion describes how to call a conversion webhook",
       "properties": {
         "clientConfig": {
@@ -16873,6 +17410,7 @@
       ]
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.APIGroup": {
+      "additionalProperties": false,
       "description": "APIGroup contains the name, the supported versions, and the preferred version of a group.",
       "properties": {
         "apiVersion": {
@@ -16926,6 +17464,7 @@
       ]
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.APIGroupList": {
+      "additionalProperties": false,
       "description": "APIGroupList is a list of APIGroup, to allow clients to discover the API at /apis.",
       "properties": {
         "apiVersion": {
@@ -16963,6 +17502,7 @@
       ]
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.APIResource": {
+      "additionalProperties": false,
       "description": "APIResource specifies the name of a resource and whether it is namespaced.",
       "properties": {
         "categories": {
@@ -17025,6 +17565,7 @@
       "type": "object"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.APIResourceList": {
+      "additionalProperties": false,
       "description": "APIResourceList is a list of APIResource, it is used to expose the name of the resources supported in a specific group and version, and if the resource is namespaced.",
       "properties": {
         "apiVersion": {
@@ -17067,6 +17608,7 @@
       ]
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.APIVersions": {
+      "additionalProperties": false,
       "description": "APIVersions lists the versions that are available, to allow clients to discover the API at /api, which is the root path of the legacy v1 API.",
       "properties": {
         "apiVersion": {
@@ -17112,6 +17654,7 @@
       ]
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.Condition": {
+      "additionalProperties": false,
       "description": "Condition contains details for one aspect of the current state of this API Resource.",
       "properties": {
         "lastTransitionTime": {
@@ -17150,6 +17693,7 @@
       "type": "object"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.DeleteOptions": {
+      "additionalProperties": false,
       "description": "DeleteOptions may be provided when deleting an API object.",
       "properties": {
         "apiVersion": {
@@ -17547,6 +18091,7 @@
       "type": "object"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.GroupVersionForDiscovery": {
+      "additionalProperties": false,
       "description": "GroupVersion contains the \"group/version\" and \"version\" string of a version. It is made a struct to keep extensibility.",
       "properties": {
         "groupVersion": {
@@ -17565,6 +18110,7 @@
       "type": "object"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector": {
+      "additionalProperties": false,
       "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.",
       "properties": {
         "matchExpressions": {
@@ -17586,6 +18132,7 @@
       "x-kubernetes-map-type": "atomic"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement": {
+      "additionalProperties": false,
       "description": "A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.",
       "properties": {
         "key": {
@@ -17611,6 +18158,7 @@
       "type": "object"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta": {
+      "additionalProperties": false,
       "description": "ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}.",
       "properties": {
         "continue": {
@@ -17634,6 +18182,7 @@
       "type": "object"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry": {
+      "additionalProperties": false,
       "description": "ManagedFieldsEntry is a workflow-id, a FieldSet and the group version of the resource that the fieldset applies to.",
       "properties": {
         "apiVersion": {
@@ -17673,6 +18222,7 @@
       "type": "string"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta": {
+      "additionalProperties": false,
       "description": "ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.",
       "properties": {
         "annotations": {
@@ -17759,6 +18309,7 @@
       "type": "object"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.OwnerReference": {
+      "additionalProperties": false,
       "description": "OwnerReference contains enough information to let you identify an owning object. An owning object must be in the same namespace as the dependent, or be cluster-scoped, so there is no namespace field.",
       "properties": {
         "apiVersion": {
@@ -17800,6 +18351,7 @@
       "type": "object"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.Preconditions": {
+      "additionalProperties": false,
       "description": "Preconditions must be fulfilled before an operation (update, delete, etc.) is carried out.",
       "properties": {
         "resourceVersion": {
@@ -17814,6 +18366,7 @@
       "type": "object"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR": {
+      "additionalProperties": false,
       "description": "ServerAddressByClientCIDR helps the client to determine the server address that they should use, depending on the clientCIDR that they match.",
       "properties": {
         "clientCIDR": {
@@ -17832,6 +18385,7 @@
       "type": "object"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.Status": {
+      "additionalProperties": false,
       "description": "Status is a return value for calls that don't return other objects.",
       "properties": {
         "apiVersion": {
@@ -17890,6 +18444,7 @@
       ]
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.StatusCause": {
+      "additionalProperties": false,
       "description": "StatusCause provides more information about an api.Status failure, including cases when multiple errors are encountered.",
       "properties": {
         "field": {
@@ -17908,6 +18463,7 @@
       "type": "object"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails": {
+      "additionalProperties": false,
       "description": "StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.",
       "properties": {
         "causes": {
@@ -17947,6 +18503,7 @@
       "type": "string"
     },
     "io.k8s.apimachinery.pkg.apis.meta.v1.WatchEvent": {
+      "additionalProperties": false,
       "description": "Event represents a single event to a watched resource.",
       "properties": {
         "object": {
@@ -18270,6 +18827,7 @@
       ]
     },
     "io.k8s.apimachinery.pkg.version.Info": {
+      "additionalProperties": false,
       "description": "Info contains versioning information. how we'll want to distribute that information.",
       "properties": {
         "buildDate": {
@@ -18314,6 +18872,7 @@
       "type": "object"
     },
     "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIService": {
+      "additionalProperties": false,
       "description": "APIService represents a server for a particular GroupVersion. Name must be \"version.group\".",
       "properties": {
         "apiVersion": {
@@ -18353,6 +18912,7 @@
       ]
     },
     "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIServiceCondition": {
+      "additionalProperties": false,
       "description": "APIServiceCondition describes the state of an APIService at a particular point",
       "properties": {
         "lastTransitionTime": {
@@ -18383,6 +18943,7 @@
       "type": "object"
     },
     "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIServiceList": {
+      "additionalProperties": false,
       "description": "APIServiceList is a list of APIService objects.",
       "properties": {
         "apiVersion": {
@@ -18424,6 +18985,7 @@
       ]
     },
     "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIServiceSpec": {
+      "additionalProperties": false,
       "description": "APIServiceSpec contains information for locating and communicating with a server. Only https is supported, though you are able to disable certificate verification.",
       "properties": {
         "caBundle": {
@@ -18466,6 +19028,7 @@
       "type": "object"
     },
     "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIServiceStatus": {
+      "additionalProperties": false,
       "description": "APIServiceStatus contains derived information about an API server",
       "properties": {
         "conditions": {
@@ -18485,6 +19048,7 @@
       "type": "object"
     },
     "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.ServiceReference": {
+      "additionalProperties": false,
       "description": "ServiceReference holds a reference to Service.legacy.k8s.io",
       "properties": {
         "name": {

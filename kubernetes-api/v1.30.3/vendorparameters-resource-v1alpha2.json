@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "VendorParameters are opaque parameters for one particular driver.",
+  "properties": {
+    "driverName": {
+      "description": "DriverName is the name used by the DRA driver kubelet plugin.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parameters": {
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.30.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.runtime.RawExtension",
+      "description": "Parameters can be arbitrary setup parameters. They are ignored while allocating a claim."
+    }
+  },
+  "type": "object"
+}

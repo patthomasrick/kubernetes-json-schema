@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "API server instances report the versions they can decode and the version they encode objects to when persisting objects in the backend.",
   "properties": {
     "commonEncodingVersion": {

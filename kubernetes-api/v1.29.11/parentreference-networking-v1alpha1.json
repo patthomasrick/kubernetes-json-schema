@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ParentReference describes a reference to a parent object.",
   "properties": {
     "group": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "APIGroupList is a list of APIGroup, to allow clients to discover the API at /apis.",
   "properties": {
     "apiVersion": {

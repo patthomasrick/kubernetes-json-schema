@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ResourceFieldSelector represents container resources (cpu, memory) and their output format",
   "properties": {
     "containerName": {

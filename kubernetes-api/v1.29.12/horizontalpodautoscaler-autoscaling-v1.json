@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "configuration of a horizontal pod autoscaler.",
   "properties": {
     "apiVersion": {

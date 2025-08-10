@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "HostIP represents a single IP address allocated to the host.",
   "properties": {
     "ip": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "LeaseSpec is a specification of a Lease.",
   "properties": {
     "acquireTime": {

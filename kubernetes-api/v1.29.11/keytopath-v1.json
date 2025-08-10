@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Maps a string key to a path within a volume.",
   "properties": {
     "key": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "SuccessPolicy describes when a Job can be declared as succeeded based on the success of some indexes.",
   "properties": {
     "rules": {

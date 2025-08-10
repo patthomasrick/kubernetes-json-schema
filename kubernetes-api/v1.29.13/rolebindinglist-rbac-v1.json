@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "RoleBindingList is a collection of RoleBindings",
   "properties": {
     "apiVersion": {

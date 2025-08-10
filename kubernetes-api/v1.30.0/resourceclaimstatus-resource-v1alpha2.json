@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ResourceClaimStatus tracks whether the resource has been allocated and what the resulting attributes are.",
   "properties": {
     "allocation": {

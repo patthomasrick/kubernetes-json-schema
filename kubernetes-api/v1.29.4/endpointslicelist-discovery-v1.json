@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "EndpointSliceList represents a list of endpoint slices",
   "properties": {
     "apiVersion": {

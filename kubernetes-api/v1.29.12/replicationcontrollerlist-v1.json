@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ReplicationControllerList is a collection of replication controllers.",
   "properties": {
     "apiVersion": {

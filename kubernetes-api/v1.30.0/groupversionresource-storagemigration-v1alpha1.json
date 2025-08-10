@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "The names of the group, the version, and the resource.",
   "properties": {
     "group": {

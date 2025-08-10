@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Describes the state of the storageVersion at a certain point.",
   "properties": {
     "lastTransitionTime": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CSINodeSpec holds information about the specification of all CSI drivers installed on a node",
   "properties": {
     "drivers": {

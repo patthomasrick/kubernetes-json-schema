@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Pod affinity is a group of inter pod affinity scheduling rules.",
   "properties": {
     "preferredDuringSchedulingIgnoredDuringExecution": {

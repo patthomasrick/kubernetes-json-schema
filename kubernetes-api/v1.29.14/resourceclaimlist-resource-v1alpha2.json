@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ResourceClaimList is a collection of claims.",
   "properties": {
     "apiVersion": {

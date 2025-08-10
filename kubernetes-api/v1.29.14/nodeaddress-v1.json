@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "NodeAddress contains information for the node's address.",
   "properties": {
     "address": {

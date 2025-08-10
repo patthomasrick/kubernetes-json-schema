@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "TokenRequestStatus is the result of a token request.",
   "properties": {
     "expirationTimestamp": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "FlowSchemaSpec describes how the FlowSchema's specification looks like.",
   "properties": {
     "distinguisherMethod": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "StatefulSetCondition describes the state of a statefulset at a certain point.",
   "properties": {
     "lastTransitionTime": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ResourceHandle holds opaque resource data for processing by a specific kubelet plugin.",
   "properties": {
     "data": {

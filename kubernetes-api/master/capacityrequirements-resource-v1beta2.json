@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CapacityRequirements defines the capacity requirements for a specific device request.",
   "properties": {
     "requests": {

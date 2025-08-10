@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ResourceQuotaList is a list of ResourceQuota items.",
   "properties": {
     "apiVersion": {

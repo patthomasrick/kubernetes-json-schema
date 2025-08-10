@@ -4,7 +4,7 @@ import os
 import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from typing import List
+from typing import Dict, List
 from urllib import request
 
 # Set up default logger
@@ -16,7 +16,7 @@ KUBERNETES_GIT_URL = "https://raw.githubusercontent.com/kubernetes/kubernetes"
 SCHEMA_REF_BASE_URL = "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master"
 DOCKER_IMAGE_TAG = "patthomasrick/openapi2jsonschema:latest"
 EARLIEST_API_VERSION = "v1.29.0"
-LATEST_API_VERSION = "v1.30.0"
+LATEST_API_VERSION = "v2.0.0"
 
 
 def version_compare(v1: str, v2: str) -> int:
@@ -95,6 +95,39 @@ def version_to_path(v: str) -> Path:
     return Path("kubernetes-api")
 
 
+def copy_latest_patch_versions_to_minor(versions: List[str]):
+    minor_version_to_latest_patch: Dict[str, str] = {}
+    patch_version_to_minor_version: Dict[str, str] = {}
+    patch_version_to_path: Dict[str, Path] = {}
+
+    for v in versions:
+        v_path = version_to_path(v) / v
+        if not v_path.exists():
+            continue
+
+        minor_version = ".".join(v.split(".")[:2])
+        patch_version_to_minor_version[v] = minor_version
+        patch_version_to_path[v] = v_path
+        if minor_version not in minor_version_to_latest_patch:
+            minor_version_to_latest_patch[minor_version] = v
+        else:
+            if version_compare(v, minor_version_to_latest_patch[minor_version]) > 0:
+                minor_version_to_latest_patch[minor_version] = v
+
+    logger.info(f"Minor version to latest patch mapping: {minor_version_to_latest_patch}")
+
+    for minor_version, latest_patch in minor_version_to_latest_patch.items():
+        latest_patch_path = patch_version_to_path[latest_patch]
+        minor_version_path = version_to_path(minor_version) / minor_version
+
+        if minor_version_path.exists():
+            subprocess.run(["rm", "-rf", str(minor_version_path)], check=True)
+
+        subprocess.run(["cp", "-r", str(latest_patch_path) + "/", str(minor_version_path) + "/"], check=True)
+
+        logger.info(f"Copied latest patch version {latest_patch} to minor version {minor_version}")
+
+
 def main():
     """Main function to build JSON schemas for Kubernetes versions."""
 
@@ -117,6 +150,11 @@ def main():
             out_path = version_to_path(version)
             if not out_path.exists():
                 out_path.mkdir(parents=True, exist_ok=True)
+
+            out_path_version = out_path / version
+            if out_path_version.exists():
+                logger.warning(f"Output path {out_path_version} already exists. Skipping version {version}.")
+                continue
 
             schema = f"{KUBERNETES_GIT_URL}/{version}/api/openapi-spec/swagger.json"
             # futures.append(
@@ -157,6 +195,7 @@ def main():
                     openapi2jsonschema,
                     "-o",
                     f"{str(out_path)}/{version}",
+                    "--strict",
                     "--expanded",
                     "--kubernetes",
                     "--prefix",
@@ -220,6 +259,10 @@ def main():
                 logger.error(f"Error processing version: {e}")
             else:
                 logger.info("Successfully processed a version.")
+
+    logger.info("All patch versions processed successfully.")
+
+    copy_latest_patch_versions_to_minor([v for v in versions if v not in {"master"}])
 
 
 if __name__ == "__main__":

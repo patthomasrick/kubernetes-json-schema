@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "Projection that may be projected along with other supported volume types",
   "properties": {
     "clusterTrustBundle": {

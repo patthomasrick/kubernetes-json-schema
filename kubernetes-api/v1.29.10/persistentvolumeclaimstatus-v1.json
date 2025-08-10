@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "PersistentVolumeClaimStatus is the current status of a persistent volume claim.",
   "properties": {
     "accessModes": {

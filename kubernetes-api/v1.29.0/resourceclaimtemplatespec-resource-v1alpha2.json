@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ResourceClaimTemplateSpec contains the metadata and fields for a ResourceClaim.",
   "properties": {
     "metadata": {

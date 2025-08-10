@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CSIStorageCapacityList is a collection of CSIStorageCapacity objects.",
   "properties": {
     "apiVersion": {

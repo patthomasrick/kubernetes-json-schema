@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ResourceClaimSpec defines how a resource is to be allocated.",
   "properties": {
     "allocationMode": {

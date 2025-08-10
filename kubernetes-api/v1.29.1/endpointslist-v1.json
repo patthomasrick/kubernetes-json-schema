@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "EndpointsList is a list of endpoints.",
   "properties": {
     "apiVersion": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "StorageVersionMigration represents a migration of stored data to the latest storage version.",
   "properties": {
     "apiVersion": {

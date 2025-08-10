@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "IngressPortStatus represents the error condition of a service port",
   "properties": {
     "error": {

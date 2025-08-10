@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "LimitRange sets resource usage limits for each kind of resource in a Namespace.",
   "properties": {
     "apiVersion": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ResourceQuota sets aggregate quota restrictions enforced per namespace",
   "properties": {
     "apiVersion": {

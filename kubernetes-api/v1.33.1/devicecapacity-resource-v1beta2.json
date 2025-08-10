@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "DeviceCapacity describes a quantity associated with a device.",
+  "properties": {
+    "value": {
+      "$ref": "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api/v1.33.1/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
+      "description": "Value defines how much of a certain device capacity is available."
+    }
+  },
+  "required": [
+    "value"
+  ],
+  "type": "object"
+}

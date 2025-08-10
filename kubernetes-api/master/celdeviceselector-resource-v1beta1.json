@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CELDeviceSelector contains a CEL expression for selecting a device.",
   "properties": {
     "expression": {

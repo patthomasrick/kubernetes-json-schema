@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "IPAddressSpec describe the attributes in an IP Address.",
   "properties": {
     "parentRef": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "CustomResourceDefinitionVersion describes a version for CRD.",
   "properties": {
     "additionalPrinterColumns": {

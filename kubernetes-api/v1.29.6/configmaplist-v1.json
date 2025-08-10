@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "ConfigMapList is a resource containing a list of ConfigMap objects.",
   "properties": {
     "apiVersion": {

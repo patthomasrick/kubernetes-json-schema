@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "A StatefulSetSpec is the specification of a StatefulSet.",
   "properties": {
     "minReadySeconds": {

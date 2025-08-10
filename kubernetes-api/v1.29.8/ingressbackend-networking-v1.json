@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "IngressBackend describes all endpoints for a given service and port.",
   "properties": {
     "resource": {

@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "FlowSchemaList is a list of FlowSchema objects.",
   "properties": {
     "apiVersion": {

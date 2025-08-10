@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
   "description": "VendorParameters are opaque parameters for one particular driver.",
   "properties": {
     "driverName": {
