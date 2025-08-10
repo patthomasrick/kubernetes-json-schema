@@ -12,8 +12,11 @@ logging.basicConfig(level=logging.DEBUG, format="%(asctime)s [%(levelname)s] %(m
 logger = logging.getLogger(__name__)
 
 
+KUBERNETES_GIT_URL = "{KUBERNETES_GIT_URL}"
+SCHEMA_REF_BASE_URL = "https://github.com/patthomasrick/kubernetes-json-schema/raw/refs/heads/master/kubernetes-api"
 DOCKER_IMAGE_TAG = "openapi2jsonschema:latest"
 EARLIEST_API_VERSION = "v1.29.0"
+LATEST_API_VERSION = "v1.30.0"
 
 
 def version_compare(v1: str, v2: str) -> int:
@@ -128,11 +131,15 @@ def main():
     build_openapi2jsonschema_image()
 
     versions = get_kubernetes_api_versions()
-    versions = [v for v in versions if "-" not in v and version_compare(v, EARLIEST_API_VERSION) >= 0]
+    versions = [
+        v
+        for v in versions
+        if "-" not in v
+        and version_compare(v, EARLIEST_API_VERSION) >= 0
+        and version_compare(v, LATEST_API_VERSION) <= 0
+    ]
     versions.sort(key=lambda v: list(map(int, v.strip("v").split("."))))
     logger.info(f"Filtered Kubernetes API versions: {versions}")
-
-    versions = versions[:1]  # For testing
 
     with ThreadPoolExecutor(max_workers=4) as tpe:
         futures = []
@@ -141,8 +148,8 @@ def main():
             if not out_path.exists():
                 out_path.mkdir(parents=True, exist_ok=True)
 
-            schema = f"https://raw.githubusercontent.com/kubernetes/kubernetes/{version}/api/openapi-spec/swagger.json"
-            prefix = f"https://kubernetesjsonschema.dev/{version}/_definitions.json"
+            schema = f"{KUBERNETES_GIT_URL}/{version}/api/openapi-spec/swagger.json"
+            prefix = f"{SCHEMA_REF_BASE_URL}/{str(out_path)}/_definitions.json"
             futures.append(
                 tpe.submit(
                     openapi2jsonschema,
@@ -194,8 +201,8 @@ def main():
             if not out_path.exists():
                 out_path.mkdir(parents=True, exist_ok=True)
 
-            schema = f"https://raw.githubusercontent.com/kubernetes/kubernetes/{version}/api/openapi-spec/swagger.json"
-            prefix = f"https://kubernetesjsonschema.dev/{str(out_path)}/_definitions.json"
+            schema = f"{KUBERNETES_GIT_URL}/{version}/api/openapi-spec/swagger.json"
+            prefix = f"{SCHEMA_REF_BASE_URL}/{str(out_path)}/_definitions.json"
             futures.append(
                 tpe.submit(
                     openapi2jsonschema,
