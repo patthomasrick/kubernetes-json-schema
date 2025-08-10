@@ -26,9 +26,7 @@ jobs:
         run: docker pull patthomasrick/openapi2jsonschema:latest
 
       - name: Run build.py
-        run: |
-          cd kubernetes-json-schema
-          python build.py
+        run: python build.py
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
