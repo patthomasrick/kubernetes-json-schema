@@ -9,8 +9,7 @@
       "type": [
         "string",
         "null"
-      ],
-      "x-kubernetes-list-type": "atomic"
+      ]
     },
     "conditions": {
       "description": "conditions applied to the request. Known conditions are \"Approved\", \"Denied\", and \"Failed\".",
