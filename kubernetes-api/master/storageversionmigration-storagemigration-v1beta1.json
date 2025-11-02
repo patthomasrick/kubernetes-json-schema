@@ -6,7 +6,7 @@
     "apiVersion": {
       "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
       "enum": [
-        "storagemigration.k8s.io/v1alpha1"
+        "storagemigration.k8s.io/v1beta1"
       ],
       "type": [
         "string",
@@ -28,11 +28,11 @@
       "description": "Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
     },
     "spec": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.storagemigration.v1alpha1.StorageVersionMigrationSpec",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.storagemigration.v1beta1.StorageVersionMigrationSpec",
       "description": "Specification of the migration."
     },
     "status": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.storagemigration.v1alpha1.StorageVersionMigrationStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.storagemigration.v1beta1.StorageVersionMigrationStatus",
       "description": "Status of the migration."
     }
   },
@@ -41,7 +41,7 @@
     {
       "group": "storagemigration.k8s.io",
       "kind": "StorageVersionMigration",
-      "version": "v1alpha1"
+      "version": "v1beta1"
     }
   ]
 }
