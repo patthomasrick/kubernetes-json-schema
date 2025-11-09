@@ -6,7 +6,7 @@
     "apiVersion": {
       "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
       "enum": [
-        "certificates.k8s.io/v1alpha1"
+        "certificates.k8s.io/v1beta1"
       ],
       "type": [
         "string",
@@ -28,11 +28,11 @@
       "description": "metadata contains the object metadata."
     },
     "spec": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1alpha1.PodCertificateRequestSpec",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.PodCertificateRequestSpec",
       "description": "spec contains the details about the certificate being requested."
     },
     "status": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1alpha1.PodCertificateRequestStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.PodCertificateRequestStatus",
       "description": "status contains the issued certificate, and a standard set of conditions."
     }
   },
@@ -44,7 +44,7 @@
     {
       "group": "certificates.k8s.io",
       "kind": "PodCertificateRequest",
-      "version": "v1alpha1"
+      "version": "v1beta1"
     }
   ]
 }
