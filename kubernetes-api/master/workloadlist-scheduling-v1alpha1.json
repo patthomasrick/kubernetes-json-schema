@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": false,
-  "description": "PodCertificateRequestList is a collection of PodCertificateRequest objects",
+  "description": "WorkloadList contains a list of Workload resources.",
   "properties": {
     "apiVersion": {
       "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
       "enum": [
-        "certificates.k8s.io/v1alpha1"
+        "scheduling.k8s.io/v1alpha1"
       ],
       "type": [
         "string",
@@ -14,9 +14,9 @@
       ]
     },
     "items": {
-      "description": "items is a collection of PodCertificateRequest objects",
+      "description": "Items is the list of Workloads.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1alpha1.PodCertificateRequest"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.Workload"
       },
       "type": [
         "array",
@@ -26,7 +26,7 @@
     "kind": {
       "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
       "enum": [
-        "PodCertificateRequestList"
+        "WorkloadList"
       ],
       "type": [
         "string",
@@ -35,7 +35,7 @@
     },
     "metadata": {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
-      "description": "metadata contains the list metadata."
+      "description": "Standard list metadata."
     }
   },
   "required": [
@@ -44,8 +44,8 @@
   "type": "object",
   "x-kubernetes-group-version-kind": [
     {
-      "group": "certificates.k8s.io",
-      "kind": "PodCertificateRequestList",
+      "group": "scheduling.k8s.io",
+      "kind": "WorkloadList",
       "version": "v1alpha1"
     }
   ]

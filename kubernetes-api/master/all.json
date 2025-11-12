@@ -523,18 +523,6 @@
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1alpha1.ClusterTrustBundleSpec"
     },
     {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1alpha1.PodCertificateRequest"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1alpha1.PodCertificateRequestList"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1alpha1.PodCertificateRequestSpec"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1alpha1.PodCertificateRequestStatus"
-    },
-    {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.ClusterTrustBundle"
     },
     {
@@ -542,6 +530,18 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.ClusterTrustBundleSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.PodCertificateRequest"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.PodCertificateRequestList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.PodCertificateRequestSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.PodCertificateRequestStatus"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.coordination.v1.Lease"
@@ -1225,6 +1225,9 @@
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.WindowsSecurityContextOptions"
     },
     {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.WorkloadReference"
+    },
+    {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.discovery.v1.Endpoint"
     },
     {
@@ -1642,12 +1645,6 @@
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1.ResourceSliceSpec"
     },
     {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.CELDeviceSelector"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceSelector"
-    },
-    {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceTaint"
     },
     {
@@ -1658,6 +1655,9 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceTaintRuleSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceTaintRuleStatus"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceTaintSelector"
@@ -1919,6 +1919,30 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1.PriorityClassList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.BasicSchedulingPolicy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.GangSchedulingPolicy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.PodGroup"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.PodGroupPolicy"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.TypedLocalObjectReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.Workload"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.WorkloadList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.WorkloadSpec"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.storage.v1.CSIDriver"
