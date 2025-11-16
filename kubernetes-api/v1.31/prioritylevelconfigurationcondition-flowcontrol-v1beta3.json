@@ -4,7 +4,7 @@
   "description": "PriorityLevelConfigurationCondition defines the condition of priority level.",
   "properties": {
     "lastTransitionTime": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.13/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.31.14/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
       "description": "`lastTransitionTime` is the last time the condition transitioned from one status to another."
     },
     "message": {
