@@ -4,7 +4,7 @@
   "description": "Counter describes a quantity associated with a device.",
   "properties": {
     "value": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.5/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
       "description": "Value defines how much of a certain device counter is available."
     }
   },

@@ -18,7 +18,7 @@
       ]
     },
     "timeAdded": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.5/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.33.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
       "description": "TimeAdded represents the time at which the taint was added. Added automatically during create or update if not set."
     },
     "value": {
