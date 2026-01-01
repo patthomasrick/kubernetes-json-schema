@@ -11,7 +11,7 @@ pipeline {
       steps {
         script {
           // Set status to pending at the start
-          setGitHubCommitStatus('Build', 'PENDING', 'Build in progress')
+          setGitHubCommitStatus('Jenkins', 'PENDING', 'Build in progress')
         }
         echo 'Building..'
       }
@@ -19,7 +19,7 @@ pipeline {
     stage('Test') {
       steps {
         script {
-          setGitHubCommitStatus('Test', 'PENDING', 'Running tests')
+          setGitHubCommitStatus('Jenkins', 'PENDING', 'Running tests')
         }
         echo 'Testing..'
       }
@@ -27,7 +27,7 @@ pipeline {
     stage('Deploy') {
       steps {
         script {
-          setGitHubCommitStatus('Deploy', 'PENDING', 'Deploying')
+          setGitHubCommitStatus('Jenkins', 'PENDING', 'Deploying')
         }
         echo 'Deploying....'
       }
