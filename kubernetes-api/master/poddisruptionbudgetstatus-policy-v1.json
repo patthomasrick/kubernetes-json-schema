@@ -70,11 +70,5 @@
       ]
     }
   },
-  "required": [
-    "disruptionsAllowed",
-    "currentHealthy",
-    "desiredHealthy",
-    "expectedPods"
-  ],
   "type": "object"
 }
