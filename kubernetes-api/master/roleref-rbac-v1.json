@@ -26,7 +26,6 @@
     }
   },
   "required": [
-    "apiGroup",
     "kind",
     "name"
   ],

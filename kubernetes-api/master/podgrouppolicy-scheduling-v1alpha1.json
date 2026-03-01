@@ -12,5 +12,13 @@
       "description": "Gang specifies that the pods in this group should be scheduled using all-or-nothing semantics."
     }
   },
-  "type": "object"
+  "type": "object",
+  "x-kubernetes-unions": [
+    {
+      "fields-to-discriminateBy": {
+        "basic": "Basic",
+        "gang": "Gang"
+      }
+    }
+  ]
 }
