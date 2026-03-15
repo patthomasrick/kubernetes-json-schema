@@ -11086,6 +11086,24 @@
       ],
       "type": "object"
     },
+    "io.k8s.api.core.v1.PodSchedulingGroup": {
+      "additionalProperties": false,
+      "description": "PodSchedulingGroup identifies the runtime scheduling group instance that a Pod belongs to. The scheduler uses this information to apply workload-aware scheduling semantics. Exactly one field must be specified.",
+      "properties": {
+        "podGroupName": {
+          "description": "PodGroupName specifies the name of the standalone PodGroup object that represents the runtime instance of this group. Must be a DNS subdomain.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "x-kubernetes-unions": [
+        {
+          "fields-to-discriminateBy": {
+            "podGroupName": "PodGroupName"
+          }
+        }
+      ]
+    },
     "io.k8s.api.core.v1.PodSecurityContext": {
       "additionalProperties": false,
       "description": "PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.",
@@ -11238,7 +11256,7 @@
           "type": "boolean"
         },
         "hostUsers": {
-          "description": "Use the host's user namespace. Optional: Default to true. If set to true or not present, the pod will be run in the host user namespace, useful for when the pod needs a feature only available to the host user namespace, such as loading a kernel module with CAP_SYS_MODULE. When set to false, a new userns is created for the pod. Setting false is useful for mitigating container breakout vulnerabilities even allowing users to run their containers as root without actually having root privileges on the host. This field is alpha-level and is only honored by servers that enable the UserNamespacesSupport feature.",
+          "description": "Use the host's user namespace. Optional: Default to true. If set to true or not present, the pod will be run in the host user namespace, useful for when the pod needs a feature only available to the host user namespace, such as loading a kernel module with CAP_SYS_MODULE. When set to false, a new userns is created for the pod. Setting false is useful for mitigating container breakout vulnerabilities even allowing users to run their containers as root without actually having root privileges on the host.",
           "type": "boolean"
         },
         "hostname": {
@@ -11361,6 +11379,10 @@
           "x-kubernetes-patch-merge-key": "name",
           "x-kubernetes-patch-strategy": "merge"
         },
+        "schedulingGroup": {
+          "$ref": "#/definitions/io.k8s.api.core.v1.PodSchedulingGroup",
+          "description": "SchedulingGroup provides a reference to the immediate scheduling runtime grouping object that this Pod belongs to. This field is used by the scheduler to identify the group and apply the correct group scheduling policies. The association with a group also impacts other lifecycle aspects of a Pod that are relevant in a wider context of scheduling like preemption, resource attachment, etc. If not specified, the Pod is treated as a single unit in all of these aspects. The group object referenced by this field may not exist at the time the Pod is created. This field is immutable, but a group object with the same name may be recreated with different policies. Doing this during pod scheduling may result in the placement not conforming to the expected policies."
+        },
         "securityContext": {
           "$ref": "#/definitions/io.k8s.api.core.v1.PodSecurityContext",
           "description": "SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field."
@@ -11424,10 +11446,6 @@
           "x-kubernetes-list-type": "map",
           "x-kubernetes-patch-merge-key": "name",
           "x-kubernetes-patch-strategy": "merge,retainKeys"
-        },
-        "workloadRef": {
-          "$ref": "#/definitions/io.k8s.api.core.v1.WorkloadReference",
-          "description": "WorkloadRef provides a reference to the Workload object that this Pod belongs to. This field is used by the scheduler to identify the PodGroup and apply the correct group scheduling policies. The Workload object referenced by this field may not exist at the time the Pod is created. This field is immutable, but a Workload object with the same name may be recreated with different policies. Doing this during pod scheduling may result in the placement not conforming to the expected policies."
         }
       },
       "required": [
@@ -12169,6 +12187,10 @@
       "properties": {
         "health": {
           "description": "Health of the resource. can be one of:\n - Healthy: operates as normal\n - Unhealthy: reported unhealthy. We consider this a temporary health issue\n              since we do not have a mechanism today to distinguish\n              temporary and permanent issues.\n - Unknown: The status cannot be determined.\n            For example, Device Plugin got unregistered and hasn't been re-registered since.\n\nIn future we may want to introduce the PermanentlyUnhealthy Status.",
+          "type": "string"
+        },
+        "message": {
+          "description": "Message provides human-readable context for Health (e.g. \"ECC error count exceeded threshold\"). This field is populated by the kubelet when ResourceHealthStatusMessage is enabled if the DRA plugin returns a message, and is null otherwise.",
           "type": "string"
         },
         "resourceID": {
@@ -13880,29 +13902,6 @@
           "type": "string"
         }
       },
-      "type": "object"
-    },
-    "io.k8s.api.core.v1.WorkloadReference": {
-      "additionalProperties": false,
-      "description": "WorkloadReference identifies the Workload object and PodGroup membership that a Pod belongs to. The scheduler uses this information to apply workload-aware scheduling semantics.",
-      "properties": {
-        "name": {
-          "description": "Name defines the name of the Workload object this Pod belongs to. Workload must be in the same namespace as the Pod. If it doesn't match any existing Workload, the Pod will remain unschedulable until a Workload object is created and observed by the kube-scheduler. It must be a DNS subdomain.",
-          "type": "string"
-        },
-        "podGroup": {
-          "description": "PodGroup is the name of the PodGroup within the Workload that this Pod belongs to. If it doesn't match any existing PodGroup within the Workload, the Pod will remain unschedulable until the Workload object is recreated and observed by the kube-scheduler. It must be a DNS label.",
-          "type": "string"
-        },
-        "podGroupReplicaKey": {
-          "description": "PodGroupReplicaKey specifies the replica key of the PodGroup to which this Pod belongs. It is used to distinguish pods belonging to different replicas of the same pod group. The pod group policy is applied separately to each replica. When set, it must be a DNS label.",
-          "type": "string"
-        }
-      },
-      "required": [
-        "name",
-        "podGroup"
-      ],
       "type": "object"
     },
     "io.k8s.api.discovery.v1.Endpoint": {
@@ -17088,7 +17087,7 @@
           "description": "NodeSelector defines the nodes where the device is available.\n\nMust use exactly one term.\n\nMust only be set if Spec.PerDeviceNodeSelection is set to true. At most one of NodeName, NodeSelector and AllNodes can be set."
         },
         "taints": {
-          "description": "If specified, these are the driver-defined taints.\n\nThe maximum number of taints is 16. If taints are set for any device in a ResourceSlice, then the maximum number of allowed devices per ResourceSlice is 64 instead of 128.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "If specified, these are the driver-defined taints.\n\nThe maximum number of taints is 16. If taints are set for any device in a ResourceSlice, then the maximum number of allowed devices per ResourceSlice is 64 instead of 128.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1.DeviceTaint"
           },
@@ -17347,7 +17346,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "extendedResourceName": {
-          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.\n\nThis is an alpha field.",
+          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.\n\nThis is a beta field.",
           "type": "string"
         },
         "selectors": {
@@ -17437,7 +17436,7 @@
       "description": "DeviceRequestAllocationResult contains the allocation result for one request.",
       "properties": {
         "adminAccess": {
-          "description": "AdminAccess indicates that this device was allocated for administrative access. See the corresponding request field for a definition of mode.\n\nThis is an beta field and requires enabling the DRAAdminAccess feature gate. Admin access is disabled if this field is unset or set to false, otherwise it is enabled.",
+          "description": "AdminAccess indicates that this device was allocated for administrative access. See the corresponding request field for a definition of mode.\n\nAdmin access is disabled if this field is unset or set to false, otherwise it is enabled.",
           "type": "boolean"
         },
         "bindingConditions": {
@@ -17484,7 +17483,7 @@
           "type": "string"
         },
         "tolerations": {
-          "description": "A copy of all tolerations specified in the request at the time when the device got allocated.\n\nThe maximum number of tolerations is 16.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "A copy of all tolerations specified in the request at the time when the device got allocated.\n\nThe maximum number of tolerations is 16.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1.DeviceToleration"
           },
@@ -17545,7 +17544,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "tolerations": {
-          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1.DeviceToleration"
           },
@@ -17573,7 +17572,7 @@
         },
         "timeAdded": {
           "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
-          "description": "TimeAdded represents the time at which the taint was added. Added automatically during create or update if not set."
+          "description": "TimeAdded represents the time at which the taint was added or (only in a DeviceTaintRule) the effect was modified. Added automatically during create or update if not set.\n\nIn addition, in a DeviceTaintRule a value provided during an update gets replaced with the current time if the provided value is the same as the old one and the new effect is different. Changing the key and/or value while keeping the effect unchanged is possible and does not update the time stamp because the eviction which uses it is either already started (NoExecute) or not started yet (NoEffect, NoSchedule)."
         },
         "value": {
           "description": "The taint value corresponding to the taint key. Must be a label value.",
@@ -17619,7 +17618,7 @@
       "description": "ExactDeviceRequest is a request for one or more identical devices.",
       "properties": {
         "adminAccess": {
-          "description": "AdminAccess indicates that this is a claim for administrative access to the device(s). Claims with AdminAccess are expected to be used for monitoring or other management services for a device.  They ignore all ordinary claims to the device with respect to access modes and any resource allocations.\n\nThis is an beta field and requires enabling the DRAAdminAccess feature gate. Admin access is disabled if this field is unset or set to false, otherwise it is enabled.",
+          "description": "AdminAccess indicates that this is a claim for administrative access to the device(s). Claims with AdminAccess are expected to be used for monitoring or other management services for a device.  They ignore all ordinary claims to the device with respect to access modes and any resource allocations.\n\nAdmin access is disabled if this field is unset or set to false, otherwise it is enabled.",
           "type": "boolean"
         },
         "allocationMode": {
@@ -17648,7 +17647,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "tolerations": {
-          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1.DeviceToleration"
           },
@@ -17666,11 +17665,11 @@
       "description": "NetworkDeviceData provides network-related details for the allocated device. This information may be filled by drivers or other components to configure or identify the device within a network context.",
       "properties": {
         "hardwareAddress": {
-          "description": "HardwareAddress represents the hardware address (e.g. MAC Address) of the device's network interface.\n\nMust not be longer than 128 characters.",
+          "description": "HardwareAddress represents the hardware address (e.g. MAC Address) of the device's network interface.\n\nMust not be longer than 128 bytes.",
           "type": "string"
         },
         "interfaceName": {
-          "description": "InterfaceName specifies the name of the network interface associated with the allocated device. This might be the name of a physical or virtual network interface being configured in the pod.\n\nMust not be longer than 256 characters.",
+          "description": "InterfaceName specifies the name of the network interface associated with the allocated device. This might be the name of a physical or virtual network interface being configured in the pod.\n\nMust not be longer than 256 bytes.",
           "type": "string"
         },
         "ips": {
@@ -18136,7 +18135,7 @@
         },
         "timeAdded": {
           "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
-          "description": "TimeAdded represents the time at which the taint was added. Added automatically during create or update if not set."
+          "description": "TimeAdded represents the time at which the taint was added or (only in a DeviceTaintRule) the effect was modified. Added automatically during create or update if not set.\n\nIn addition, in a DeviceTaintRule a value provided during an update gets replaced with the current time if the provided value is the same as the old one and the new effect is different. Changing the key and/or value while keeping the effect unchanged is possible and does not update the time stamp because the eviction which uses it is either already started (NoExecute) or not started yet (NoEffect, NoSchedule)."
         },
         "value": {
           "description": "The taint value corresponding to the taint key. Must be a label value.",
@@ -18420,7 +18419,7 @@
           "description": "NodeSelector defines the nodes where the device is available.\n\nMust use exactly one term.\n\nMust only be set if Spec.PerDeviceNodeSelection is set to true. At most one of NodeName, NodeSelector and AllNodes can be set."
         },
         "taints": {
-          "description": "If specified, these are the driver-defined taints.\n\nThe maximum number of taints is 16. If taints are set for any device in a ResourceSlice, then the maximum number of allowed devices per ResourceSlice is 64 instead of 128.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "If specified, these are the driver-defined taints.\n\nThe maximum number of taints is 16. If taints are set for any device in a ResourceSlice, then the maximum number of allowed devices per ResourceSlice is 64 instead of 128.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1beta1.DeviceTaint"
           },
@@ -18803,7 +18802,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "extendedResourceName": {
-          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.\n\nThis is an alpha field.",
+          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.\n\nThis is a beta field.",
           "type": "string"
         },
         "selectors": {
@@ -18908,7 +18907,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "tolerations": {
-          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis field can only be set when deviceClassName is set and no subrequests are specified in the firstAvailable list.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis field can only be set when deviceClassName is set and no subrequests are specified in the firstAvailable list.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1beta1.DeviceToleration"
           },
@@ -18973,7 +18972,7 @@
           "type": "string"
         },
         "tolerations": {
-          "description": "A copy of all tolerations specified in the request at the time when the device got allocated.\n\nThe maximum number of tolerations is 16.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "A copy of all tolerations specified in the request at the time when the device got allocated.\n\nThe maximum number of tolerations is 16.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1beta1.DeviceToleration"
           },
@@ -19034,7 +19033,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "tolerations": {
-          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1beta1.DeviceToleration"
           },
@@ -19062,7 +19061,7 @@
         },
         "timeAdded": {
           "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
-          "description": "TimeAdded represents the time at which the taint was added. Added automatically during create or update if not set."
+          "description": "TimeAdded represents the time at which the taint was added or (only in a DeviceTaintRule) the effect was modified. Added automatically during create or update if not set.\n\nIn addition, in a DeviceTaintRule a value provided during an update gets replaced with the current time if the provided value is the same as the old one and the new effect is different. Changing the key and/or value while keeping the effect unchanged is possible and does not update the time stamp because the eviction which uses it is either already started (NoExecute) or not started yet (NoEffect, NoSchedule)."
         },
         "value": {
           "description": "The taint value corresponding to the taint key. Must be a label value.",
@@ -19108,11 +19107,11 @@
       "description": "NetworkDeviceData provides network-related details for the allocated device. This information may be filled by drivers or other components to configure or identify the device within a network context.",
       "properties": {
         "hardwareAddress": {
-          "description": "HardwareAddress represents the hardware address (e.g. MAC Address) of the device's network interface.\n\nMust not be longer than 128 characters.",
+          "description": "HardwareAddress represents the hardware address (e.g. MAC Address) of the device's network interface.\n\nMust not be longer than 128 bytes.",
           "type": "string"
         },
         "interfaceName": {
-          "description": "InterfaceName specifies the name of the network interface associated with the allocated device. This might be the name of a physical or virtual network interface being configured in the pod.\n\nMust not be longer than 256 characters.",
+          "description": "InterfaceName specifies the name of the network interface associated with the allocated device. This might be the name of a physical or virtual network interface being configured in the pod.\n\nMust not be longer than 256 bytes.",
           "type": "string"
         },
         "ips": {
@@ -19806,7 +19805,7 @@
           "description": "NodeSelector defines the nodes where the device is available.\n\nMust use exactly one term.\n\nMust only be set if Spec.PerDeviceNodeSelection is set to true. At most one of NodeName, NodeSelector and AllNodes can be set."
         },
         "taints": {
-          "description": "If specified, these are the driver-defined taints.\n\nThe maximum number of taints is 16. If taints are set for any device in a ResourceSlice, then the maximum number of allowed devices per ResourceSlice is 64 instead of 128.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "If specified, these are the driver-defined taints.\n\nThe maximum number of taints is 16. If taints are set for any device in a ResourceSlice, then the maximum number of allowed devices per ResourceSlice is 64 instead of 128.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1beta2.DeviceTaint"
           },
@@ -20065,7 +20064,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "extendedResourceName": {
-          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.\n\nThis is an alpha field.",
+          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.\n\nThis is a beta field.",
           "type": "string"
         },
         "selectors": {
@@ -20202,7 +20201,7 @@
           "type": "string"
         },
         "tolerations": {
-          "description": "A copy of all tolerations specified in the request at the time when the device got allocated.\n\nThe maximum number of tolerations is 16.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "A copy of all tolerations specified in the request at the time when the device got allocated.\n\nThe maximum number of tolerations is 16.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1beta2.DeviceToleration"
           },
@@ -20263,7 +20262,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "tolerations": {
-          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1beta2.DeviceToleration"
           },
@@ -20291,7 +20290,7 @@
         },
         "timeAdded": {
           "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
-          "description": "TimeAdded represents the time at which the taint was added. Added automatically during create or update if not set."
+          "description": "TimeAdded represents the time at which the taint was added or (only in a DeviceTaintRule) the effect was modified. Added automatically during create or update if not set.\n\nIn addition, in a DeviceTaintRule a value provided during an update gets replaced with the current time if the provided value is the same as the old one and the new effect is different. Changing the key and/or value while keeping the effect unchanged is possible and does not update the time stamp because the eviction which uses it is either already started (NoExecute) or not started yet (NoEffect, NoSchedule)."
         },
         "value": {
           "description": "The taint value corresponding to the taint key. Must be a label value.",
@@ -20302,6 +20301,148 @@
         "key",
         "effect"
       ],
+      "type": "object"
+    },
+    "io.k8s.api.resource.v1beta2.DeviceTaintRule": {
+      "additionalProperties": false,
+      "description": "DeviceTaintRule adds one taint to all devices which match the selector. This has the same effect as if the taint was specified directly in the ResourceSlice by the DRA driver.",
+      "properties": {
+        "apiVersion": {
+          "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+          "enum": [
+            "resource.k8s.io/v1beta2"
+          ],
+          "type": "string"
+        },
+        "kind": {
+          "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+          "enum": [
+            "DeviceTaintRule"
+          ],
+          "type": "string"
+        },
+        "metadata": {
+          "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+          "description": "Standard object metadata"
+        },
+        "spec": {
+          "$ref": "#/definitions/io.k8s.api.resource.v1beta2.DeviceTaintRuleSpec",
+          "description": "Spec specifies the selector and one taint.\n\nChanging the spec automatically increments the metadata.generation number."
+        },
+        "status": {
+          "$ref": "#/definitions/io.k8s.api.resource.v1beta2.DeviceTaintRuleStatus",
+          "description": "Status provides information about what was requested in the spec."
+        }
+      },
+      "required": [
+        "spec"
+      ],
+      "type": "object",
+      "x-kubernetes-group-version-kind": [
+        {
+          "group": "resource.k8s.io",
+          "kind": "DeviceTaintRule",
+          "version": "v1beta2"
+        }
+      ]
+    },
+    "io.k8s.api.resource.v1beta2.DeviceTaintRuleList": {
+      "additionalProperties": false,
+      "description": "DeviceTaintRuleList is a collection of DeviceTaintRules.",
+      "properties": {
+        "apiVersion": {
+          "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+          "enum": [
+            "resource.k8s.io/v1beta2"
+          ],
+          "type": "string"
+        },
+        "items": {
+          "description": "Items is the list of DeviceTaintRules.",
+          "items": {
+            "$ref": "#/definitions/io.k8s.api.resource.v1beta2.DeviceTaintRule"
+          },
+          "type": "array"
+        },
+        "kind": {
+          "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+          "enum": [
+            "DeviceTaintRuleList"
+          ],
+          "type": "string"
+        },
+        "metadata": {
+          "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
+          "description": "Standard list metadata"
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "type": "object",
+      "x-kubernetes-group-version-kind": [
+        {
+          "group": "resource.k8s.io",
+          "kind": "DeviceTaintRuleList",
+          "version": "v1beta2"
+        }
+      ]
+    },
+    "io.k8s.api.resource.v1beta2.DeviceTaintRuleSpec": {
+      "additionalProperties": false,
+      "description": "DeviceTaintRuleSpec specifies the selector and one taint.",
+      "properties": {
+        "deviceSelector": {
+          "$ref": "#/definitions/io.k8s.api.resource.v1beta2.DeviceTaintSelector",
+          "description": "DeviceSelector defines which device(s) the taint is applied to. All selector criteria must be satisfied for a device to match. The empty selector matches all devices. Without a selector, no devices are matches."
+        },
+        "taint": {
+          "$ref": "#/definitions/io.k8s.api.resource.v1beta2.DeviceTaint",
+          "description": "The taint that gets applied to matching devices."
+        }
+      },
+      "required": [
+        "taint"
+      ],
+      "type": "object"
+    },
+    "io.k8s.api.resource.v1beta2.DeviceTaintRuleStatus": {
+      "additionalProperties": false,
+      "description": "DeviceTaintRuleStatus provides information about an on-going pod eviction.",
+      "properties": {
+        "conditions": {
+          "description": "Conditions provide information about the state of the DeviceTaintRule and the cluster at some point in time, in a machine-readable and human-readable format.\n\nThe following condition is currently defined as part of this API, more may get added: - Type: EvictionInProgress - Status: True if there are currently pods which need to be evicted, False otherwise\n  (includes the effects which don't cause eviction).\n- Reason: not specified, may change - Message: includes information about number of pending pods and already evicted pods\n  in a human-readable format, updated periodically, may change\n\nFor `effect: None`, the condition above gets set once for each change to the spec, with the message containing information about what would happen if the effect was `NoExecute`. This feedback can be used to decide whether changing the effect to `NoExecute` will work as intended. It only gets set once to avoid having to constantly update the status.\n\nMust have 8 or fewer entries.",
+          "items": {
+            "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Condition"
+          },
+          "type": "array",
+          "x-kubernetes-list-map-keys": [
+            "type"
+          ],
+          "x-kubernetes-list-type": "map",
+          "x-kubernetes-patch-merge-key": "type",
+          "x-kubernetes-patch-strategy": "merge"
+        }
+      },
+      "type": "object"
+    },
+    "io.k8s.api.resource.v1beta2.DeviceTaintSelector": {
+      "additionalProperties": false,
+      "description": "DeviceTaintSelector defines which device(s) a DeviceTaintRule applies to. The empty selector matches all devices. Without a selector, no devices are matched.",
+      "properties": {
+        "device": {
+          "description": "If device is set, only devices with that name are selected. This field corresponds to slice.spec.devices[].name.\n\nSetting also driver and pool may be required to avoid ambiguity, but is not required.",
+          "type": "string"
+        },
+        "driver": {
+          "description": "If driver is set, only devices from that driver are selected. This fields corresponds to slice.spec.driver.",
+          "type": "string"
+        },
+        "pool": {
+          "description": "If pool is set, only devices in that pool are selected.\n\nAlso setting the driver name may be useful to avoid ambiguity when different drivers use the same pool name, but this is not required because selecting pools from different drivers may also be useful, for example when drivers with node-local devices use the node name as their pool name.",
+          "type": "string"
+        }
+      },
       "type": "object"
     },
     "io.k8s.api.resource.v1beta2.DeviceToleration": {
@@ -20366,7 +20507,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "tolerations": {
-          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis is an alpha field and requires enabling the DRADeviceTaints feature gate.",
+          "description": "If specified, the request's tolerations.\n\nTolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.\n\nIn addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.\n\nThe maximum number of tolerations is 16.\n\nThis is a beta field and requires enabling the DRADeviceTaints feature gate.",
           "items": {
             "$ref": "#/definitions/io.k8s.api.resource.v1beta2.DeviceToleration"
           },
@@ -20384,11 +20525,11 @@
       "description": "NetworkDeviceData provides network-related details for the allocated device. This information may be filled by drivers or other components to configure or identify the device within a network context.",
       "properties": {
         "hardwareAddress": {
-          "description": "HardwareAddress represents the hardware address (e.g. MAC Address) of the device's network interface.\n\nMust not be longer than 128 characters.",
+          "description": "HardwareAddress represents the hardware address (e.g. MAC Address) of the device's network interface.\n\nMust not be longer than 128 bytes.",
           "type": "string"
         },
         "interfaceName": {
-          "description": "InterfaceName specifies the name of the network interface associated with the allocated device. This might be the name of a physical or virtual network interface being configured in the pod.\n\nMust not be longer than 256 characters.",
+          "description": "InterfaceName specifies the name of the network interface associated with the allocated device. This might be the name of a physical or virtual network interface being configured in the pod.\n\nMust not be longer than 256 bytes.",
           "type": "string"
         },
         "ips": {
@@ -20931,11 +21072,11 @@
         }
       ]
     },
-    "io.k8s.api.scheduling.v1alpha1.BasicSchedulingPolicy": {
+    "io.k8s.api.scheduling.v1alpha2.BasicSchedulingPolicy": {
       "description": "BasicSchedulingPolicy indicates that standard Kubernetes scheduling behavior should be used.",
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha1.GangSchedulingPolicy": {
+    "io.k8s.api.scheduling.v1alpha2.GangSchedulingPolicy": {
       "additionalProperties": false,
       "description": "GangSchedulingPolicy defines the parameters for gang scheduling.",
       "properties": {
@@ -20950,35 +21091,101 @@
       ],
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha1.PodGroup": {
+    "io.k8s.api.scheduling.v1alpha2.PodGroup": {
       "additionalProperties": false,
-      "description": "PodGroup represents a set of pods with a common scheduling policy.",
+      "description": "PodGroup represents a runtime instance of pods grouped together. PodGroups are created by workload controllers (Job, LWS, JobSet, etc...) from Workload.podGroupTemplates. PodGroup API enablement is toggled by the GenericWorkload feature gate.",
       "properties": {
-        "name": {
-          "description": "Name is a unique identifier for the PodGroup within the Workload. It must be a DNS label. This field is immutable.",
+        "apiVersion": {
+          "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+          "enum": [
+            "scheduling.k8s.io/v1alpha2"
+          ],
           "type": "string"
         },
-        "policy": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha1.PodGroupPolicy",
-          "description": "Policy defines the scheduling policy for this PodGroup."
+        "kind": {
+          "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+          "enum": [
+            "PodGroup"
+          ],
+          "type": "string"
+        },
+        "metadata": {
+          "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+          "description": "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
+        },
+        "spec": {
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSpec",
+          "description": "Spec defines the desired state of the PodGroup."
+        },
+        "status": {
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupStatus",
+          "description": "Status represents the current observed state of the PodGroup."
         }
       },
       "required": [
-        "name",
-        "policy"
+        "spec"
       ],
-      "type": "object"
+      "type": "object",
+      "x-kubernetes-group-version-kind": [
+        {
+          "group": "scheduling.k8s.io",
+          "kind": "PodGroup",
+          "version": "v1alpha2"
+        }
+      ]
     },
-    "io.k8s.api.scheduling.v1alpha1.PodGroupPolicy": {
+    "io.k8s.api.scheduling.v1alpha2.PodGroupList": {
       "additionalProperties": false,
-      "description": "PodGroupPolicy defines the scheduling configuration for a PodGroup.",
+      "description": "PodGroupList contains a list of PodGroup resources.",
+      "properties": {
+        "apiVersion": {
+          "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+          "enum": [
+            "scheduling.k8s.io/v1alpha2"
+          ],
+          "type": "string"
+        },
+        "items": {
+          "description": "Items is the list of PodGroups.",
+          "items": {
+            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroup"
+          },
+          "type": "array"
+        },
+        "kind": {
+          "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+          "enum": [
+            "PodGroupList"
+          ],
+          "type": "string"
+        },
+        "metadata": {
+          "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
+          "description": "Standard list metadata."
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "type": "object",
+      "x-kubernetes-group-version-kind": [
+        {
+          "group": "scheduling.k8s.io",
+          "kind": "PodGroupList",
+          "version": "v1alpha2"
+        }
+      ]
+    },
+    "io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingPolicy": {
+      "additionalProperties": false,
+      "description": "PodGroupSchedulingPolicy defines the scheduling configuration for a PodGroup. Exactly one policy must be set.",
       "properties": {
         "basic": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha1.BasicSchedulingPolicy",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.BasicSchedulingPolicy",
           "description": "Basic specifies that the pods in this group should be scheduled using standard Kubernetes scheduling behavior."
         },
         "gang": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha1.GangSchedulingPolicy",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.GangSchedulingPolicy",
           "description": "Gang specifies that the pods in this group should be scheduled using all-or-nothing semantics."
         }
       },
@@ -20992,7 +21199,82 @@
         }
       ]
     },
-    "io.k8s.api.scheduling.v1alpha1.TypedLocalObjectReference": {
+    "io.k8s.api.scheduling.v1alpha2.PodGroupSpec": {
+      "additionalProperties": false,
+      "description": "PodGroupSpec defines the desired state of a PodGroup.",
+      "properties": {
+        "podGroupTemplateRef": {
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupTemplateReference",
+          "description": "PodGroupTemplateRef references an optional PodGroup template within other object (e.g. Workload) that was used to create the PodGroup. This field is immutable."
+        },
+        "schedulingPolicy": {
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingPolicy",
+          "description": "SchedulingPolicy defines the scheduling policy for this instance of the PodGroup. Controllers are expected to fill this field by copying it from a PodGroupTemplate. This field is immutable."
+        }
+      },
+      "required": [
+        "schedulingPolicy"
+      ],
+      "type": "object"
+    },
+    "io.k8s.api.scheduling.v1alpha2.PodGroupStatus": {
+      "additionalProperties": false,
+      "description": "PodGroupStatus represents information about the status of a pod group.",
+      "properties": {
+        "conditions": {
+          "description": "Conditions represent the latest observations of the PodGroup's state.\n\nKnown condition types: - \"PodGroupScheduled\": Indicates whether the scheduling requirement has been satisfied. - \"DisruptionTarget\": Indicates whether the PodGroup is about to be terminated\n  due to disruption such as preemption.\n\nKnown reasons for the PodGroupScheduled condition: - \"Unschedulable\": The PodGroup cannot be scheduled due to resource constraints,\n  affinity/anti-affinity rules, or insufficient capacity for the gang.\n- \"SchedulerError\": The PodGroup cannot be scheduled due to some internal error\n  that happened during scheduling, for example due to nodeAffinity parsing errors.\n\nKnown reasons for the DisruptionTarget condition: - \"PreemptionByScheduler\": The PodGroup was preempted by the scheduler to make room for\n  higher-priority PodGroups or Pods.",
+          "items": {
+            "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Condition"
+          },
+          "type": "array",
+          "x-kubernetes-list-map-keys": [
+            "type"
+          ],
+          "x-kubernetes-list-type": "map",
+          "x-kubernetes-patch-merge-key": "type",
+          "x-kubernetes-patch-strategy": "merge"
+        }
+      },
+      "type": "object"
+    },
+    "io.k8s.api.scheduling.v1alpha2.PodGroupTemplate": {
+      "additionalProperties": false,
+      "description": "PodGroupTemplate represents a template for a set of pods with a scheduling policy.",
+      "properties": {
+        "name": {
+          "description": "Name is a unique identifier for the PodGroupTemplate within the Workload. It must be a DNS label. This field is immutable.",
+          "type": "string"
+        },
+        "schedulingPolicy": {
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingPolicy",
+          "description": "SchedulingPolicy defines the scheduling policy for this PodGroupTemplate."
+        }
+      },
+      "required": [
+        "name",
+        "schedulingPolicy"
+      ],
+      "type": "object"
+    },
+    "io.k8s.api.scheduling.v1alpha2.PodGroupTemplateReference": {
+      "additionalProperties": false,
+      "description": "PodGroupTemplateReference references a PodGroup template defined in some object (e.g. Workload). Exactly one reference must be set.",
+      "properties": {
+        "workload": {
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.WorkloadPodGroupTemplateReference",
+          "description": "Workload references the PodGroupTemplate within the Workload object that was used to create the PodGroup."
+        }
+      },
+      "type": "object",
+      "x-kubernetes-unions": [
+        {
+          "fields-to-discriminateBy": {
+            "workload": "Workload"
+          }
+        }
+      ]
+    },
+    "io.k8s.api.scheduling.v1alpha2.TypedLocalObjectReference": {
       "additionalProperties": false,
       "description": "TypedLocalObjectReference allows to reference typed object inside the same namespace.",
       "properties": {
@@ -21015,14 +21297,14 @@
       ],
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha1.Workload": {
+    "io.k8s.api.scheduling.v1alpha2.Workload": {
       "additionalProperties": false,
-      "description": "Workload allows for expressing scheduling constraints that should be used when managing lifecycle of workloads from scheduling perspective, including scheduling, preemption, eviction and other phases.",
+      "description": "Workload allows for expressing scheduling constraints that should be used when managing the lifecycle of workloads from the scheduling perspective, including scheduling, preemption, eviction and other phases. Workload API enablement is toggled by the GenericWorkload feature gate.",
       "properties": {
         "apiVersion": {
           "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
           "enum": [
-            "scheduling.k8s.io/v1alpha1"
+            "scheduling.k8s.io/v1alpha2"
           ],
           "type": "string"
         },
@@ -21035,10 +21317,10 @@
         },
         "metadata": {
           "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
-          "description": "Standard object's metadata. Name must be a DNS subdomain."
+          "description": "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
         },
         "spec": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha1.WorkloadSpec",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.WorkloadSpec",
           "description": "Spec defines the desired behavior of a Workload."
         }
       },
@@ -21050,25 +21332,25 @@
         {
           "group": "scheduling.k8s.io",
           "kind": "Workload",
-          "version": "v1alpha1"
+          "version": "v1alpha2"
         }
       ]
     },
-    "io.k8s.api.scheduling.v1alpha1.WorkloadList": {
+    "io.k8s.api.scheduling.v1alpha2.WorkloadList": {
       "additionalProperties": false,
       "description": "WorkloadList contains a list of Workload resources.",
       "properties": {
         "apiVersion": {
           "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
           "enum": [
-            "scheduling.k8s.io/v1alpha1"
+            "scheduling.k8s.io/v1alpha2"
           ],
           "type": "string"
         },
         "items": {
           "description": "Items is the list of Workloads.",
           "items": {
-            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha1.Workload"
+            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.Workload"
           },
           "type": "array"
         },
@@ -21092,22 +21374,41 @@
         {
           "group": "scheduling.k8s.io",
           "kind": "WorkloadList",
-          "version": "v1alpha1"
+          "version": "v1alpha2"
         }
       ]
     },
-    "io.k8s.api.scheduling.v1alpha1.WorkloadSpec": {
+    "io.k8s.api.scheduling.v1alpha2.WorkloadPodGroupTemplateReference": {
+      "additionalProperties": false,
+      "description": "WorkloadPodGroupTemplateReference references the PodGroupTemplate within the Workload object.",
+      "properties": {
+        "podGroupTemplateName": {
+          "description": "PodGroupTemplateName defines the PodGroupTemplate name within the Workload object.",
+          "type": "string"
+        },
+        "workloadName": {
+          "description": "WorkloadName defines the name of the Workload object.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "workloadName",
+        "podGroupTemplateName"
+      ],
+      "type": "object"
+    },
+    "io.k8s.api.scheduling.v1alpha2.WorkloadSpec": {
       "additionalProperties": false,
       "description": "WorkloadSpec defines the desired state of a Workload.",
       "properties": {
         "controllerRef": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha1.TypedLocalObjectReference",
-          "description": "ControllerRef is an optional reference to the controlling object, such as a Deployment or Job. This field is intended for use by tools like CLIs to provide a link back to the original workload definition. When set, it cannot be changed."
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.TypedLocalObjectReference",
+          "description": "ControllerRef is an optional reference to the controlling object, such as a Deployment or Job. This field is intended for use by tools like CLIs to provide a link back to the original workload definition. This field is immutable."
         },
-        "podGroups": {
-          "description": "PodGroups is the list of pod groups that make up the Workload. The maximum number of pod groups is 8. This field is immutable.",
+        "podGroupTemplates": {
+          "description": "PodGroupTemplates is the list of templates that make up the Workload. The maximum number of templates is 8. This field is immutable.",
           "items": {
-            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha1.PodGroup"
+            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupTemplate"
           },
           "type": "array",
           "x-kubernetes-list-map-keys": [
@@ -21117,7 +21418,7 @@
         }
       },
       "required": [
-        "podGroups"
+        "podGroupTemplates"
       ],
       "type": "object"
     },
@@ -21221,6 +21522,10 @@
         },
         "podInfoOnMount": {
           "description": "podInfoOnMount indicates this CSI volume driver requires additional pod information (like podName, podUID, etc.) during mount operations, if set to true. If set to false, pod information will not be passed on mount. Default is false.\n\nThe CSI driver specifies podInfoOnMount as part of driver deployment. If true, Kubelet will pass pod information as VolumeContext in the CSI NodePublishVolume() calls. The CSI driver is responsible for parsing and validating the information passed in as VolumeContext.\n\nThe following VolumeContext will be passed if podInfoOnMount is set to true. This list might grow, but the prefix will be used. \"csi.storage.k8s.io/pod.name\": pod.Name \"csi.storage.k8s.io/pod.namespace\": pod.Namespace \"csi.storage.k8s.io/pod.uid\": string(pod.UID) \"csi.storage.k8s.io/ephemeral\": \"true\" if the volume is an ephemeral inline volume\n                                defined by a CSIVolumeSource, otherwise \"false\"\n\n\"csi.storage.k8s.io/ephemeral\" is a new feature in Kubernetes 1.16. It is only required for drivers which support both the \"Persistent\" and \"Ephemeral\" VolumeLifecycleMode. Other drivers can leave pod info disabled and/or ignore this field. As Kubernetes 1.15 doesn't support this field, drivers can only support one mode when deployed on such a cluster and the deployment determines which mode that is, for example via a command line parameter of the driver.\n\nThis field was immutable in Kubernetes < 1.29 and now is mutable.",
+          "type": "boolean"
+        },
+        "preventPodSchedulingIfMissing": {
+          "description": "PreventPodSchedulingIfMissing indicates that the CSI driver wants to prevent pod scheduling if the CSI driver on the node is missing.\n\nEnabling this option will prevent the scheduler (or any other component which embeds default scheduler such as cluster-autoscaler) from scheduling pods to nodes where CSI driver is not installed.\n\nFor components(such as cluster-autoscaler) that embed the scheduler and run pod placement simulations using scheduler plugins, they MUST be aware of CSI driver registration information via CSINode object. They must create simulated CSINode objects in addition to Node objects during scheduling simulation, otherwise if PreventPodSchedulingIfMissing is enabled globally for CSIDriver object, any newly created node may be rejected by the scheduler because of missing CSI driver information from the node.\n\nThis is an alpha feature and requires the VolumeLimitScaling feature gate to be enabled. Default is \"false\".",
           "type": "boolean"
         },
         "requiresRepublish": {
@@ -23213,7 +23518,7 @@
             "resource.k8s.io/v1beta1",
             "resource.k8s.io/v1beta2",
             "scheduling.k8s.io/v1",
-            "scheduling.k8s.io/v1alpha1",
+            "scheduling.k8s.io/v1alpha2",
             "scheduling.k8s.io/v1beta1",
             "storage.k8s.io/v1",
             "storage.k8s.io/v1alpha1",
@@ -23534,7 +23839,7 @@
         {
           "group": "scheduling.k8s.io",
           "kind": "DeleteOptions",
-          "version": "v1alpha1"
+          "version": "v1alpha2"
         },
         {
           "group": "scheduling.k8s.io",
@@ -24317,7 +24622,7 @@
         {
           "group": "scheduling.k8s.io",
           "kind": "WatchEvent",
-          "version": "v1alpha1"
+          "version": "v1alpha2"
         },
         {
           "group": "scheduling.k8s.io",
