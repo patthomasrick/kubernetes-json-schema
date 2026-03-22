@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "PodGroupTemplate represents a template for a set of pods with a scheduling policy.",
+  "properties": {
+    "name": {
+      "description": "Name is a unique identifier for the PodGroupTemplate within the Workload. It must be a DNS label. This field is immutable.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schedulingConstraints": {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingConstraints",
+      "description": "SchedulingConstraints defines optional scheduling constraints (e.g. topology) for this PodGroupTemplate. This field is only available when the TopologyAwareWorkloadScheduling feature gate is enabled."
+    },
+    "schedulingPolicy": {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingPolicy",
+      "description": "SchedulingPolicy defines the scheduling policy for this PodGroupTemplate."
+    }
+  },
+  "required": [
+    "name",
+    "schedulingPolicy"
+  ],
+  "type": "object"
+}

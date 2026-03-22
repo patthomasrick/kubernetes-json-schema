@@ -901,6 +901,9 @@
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.NodeAffinity"
     },
     {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.NodeAllocatableResourceClaimStatus"
+    },
+    {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.NodeCondition"
     },
     {
@@ -1034,6 +1037,9 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.PodSchedulingGate"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.PodSchedulingGroup"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.PodSecurityContext"
@@ -1256,9 +1262,6 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.WindowsSecurityContextOptions"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.WorkloadReference"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.discovery.v1.Endpoint"
@@ -1639,6 +1642,9 @@
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1.NetworkDeviceData"
     },
     {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1.NodeAllocatableResourceMapping"
+    },
+    {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1.OpaqueDeviceConfiguration"
     },
     {
@@ -1694,6 +1700,21 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceTaintSelector"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.PoolStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.ResourcePoolStatusRequest"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.ResourcePoolStatusRequestList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.ResourcePoolStatusRequestSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.ResourcePoolStatusRequestStatus"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.AllocatedDeviceStatus"
@@ -1781,6 +1802,9 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.NetworkDeviceData"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.NodeAllocatableResourceMapping"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.OpaqueDeviceConfiguration"
@@ -1900,6 +1924,21 @@
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.DeviceTaint"
     },
     {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.DeviceTaintRule"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.DeviceTaintRuleList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.DeviceTaintRuleSpec"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.DeviceTaintRuleStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.DeviceTaintSelector"
+    },
+    {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.DeviceToleration"
     },
     {
@@ -1907,6 +1946,9 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.NetworkDeviceData"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.NodeAllocatableResourceMapping"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.OpaqueDeviceConfiguration"
@@ -1954,28 +1996,52 @@
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1.PriorityClassList"
     },
     {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.BasicSchedulingPolicy"
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.BasicSchedulingPolicy"
     },
     {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.GangSchedulingPolicy"
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.GangSchedulingPolicy"
     },
     {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.PodGroup"
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroup"
     },
     {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.PodGroupPolicy"
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupList"
     },
     {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.TypedLocalObjectReference"
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingConstraints"
     },
     {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.Workload"
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingPolicy"
     },
     {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.WorkloadList"
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSpec"
     },
     {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.WorkloadSpec"
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupTemplate"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupTemplateReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.TopologyConstraint"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.TypedLocalObjectReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.Workload"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.WorkloadList"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.WorkloadPodGroupTemplateReference"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.WorkloadSpec"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.storage.v1.CSIDriver"
@@ -2195,6 +2261,9 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ShardInfo"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Status"
