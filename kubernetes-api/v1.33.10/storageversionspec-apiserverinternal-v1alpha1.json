@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "StorageVersionSpec is an empty spec.",
+  "type": "object"
+}
