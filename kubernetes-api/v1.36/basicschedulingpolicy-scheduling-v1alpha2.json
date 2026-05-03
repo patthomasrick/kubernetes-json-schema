@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "BasicSchedulingPolicy indicates that standard Kubernetes scheduling behavior should be used.",
+  "type": "object"
+}
