@@ -36,6 +36,9 @@
       "description": "Most recently observed status of the Deployment."
     }
   },
+  "required": [
+    "spec"
+  ],
   "type": "object",
   "x-kubernetes-group-version-kind": [
     {
