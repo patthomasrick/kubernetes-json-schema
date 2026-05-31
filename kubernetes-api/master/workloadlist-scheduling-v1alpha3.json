@@ -6,7 +6,7 @@
     "apiVersion": {
       "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
       "enum": [
-        "scheduling.k8s.io/v1alpha2"
+        "scheduling.k8s.io/v1alpha3"
       ],
       "type": [
         "string",
@@ -16,7 +16,7 @@
     "items": {
       "description": "Items is the list of Workloads.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.Workload"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha3.Workload"
       },
       "type": [
         "array",
@@ -46,7 +46,7 @@
     {
       "group": "scheduling.k8s.io",
       "kind": "WorkloadList",
-      "version": "v1alpha2"
+      "version": "v1alpha3"
     }
   ]
 }

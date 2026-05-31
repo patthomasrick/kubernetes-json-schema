@@ -22,7 +22,7 @@
     "resourceClaimStatuses": {
       "description": "Status of resource claims.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupResourceClaimStatus"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupResourceClaimStatus"
       },
       "type": [
         "array",
