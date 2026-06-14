@@ -2321,7 +2321,7 @@
         }
       },
       "required": [
-        "revision"
+        "data"
       ],
       "type": "object",
       "x-kubernetes-group-version-kind": [
@@ -2405,6 +2405,9 @@
           "description": "The current status of this daemon set. This data may be out of date by some window of time. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
         }
       },
+      "required": [
+        "spec"
+      ],
       "type": "object",
       "x-kubernetes-group-version-kind": [
         {
@@ -2439,10 +2442,6 @@
           "type": "string"
         }
       },
-      "required": [
-        "type",
-        "status"
-      ],
       "type": "object"
     },
     "io.k8s.api.apps.v1.DaemonSetList": {
@@ -2637,6 +2636,9 @@
           "description": "Most recently observed status of the Deployment."
         }
       },
+      "required": [
+        "spec"
+      ],
       "type": "object",
       "x-kubernetes-group-version-kind": [
         {
@@ -2675,10 +2677,6 @@
           "type": "string"
         }
       },
-      "required": [
-        "type",
-        "status"
-      ],
       "type": "object"
     },
     "io.k8s.api.apps.v1.DeploymentList": {
@@ -2877,6 +2875,9 @@
           "description": "Status is the most recently observed status of the ReplicaSet. This data may be out of date by some window of time. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
         }
       },
+      "required": [
+        "spec"
+      ],
       "type": "object",
       "x-kubernetes-group-version-kind": [
         {
@@ -2911,10 +2912,6 @@
           "type": "string"
         }
       },
-      "required": [
-        "type",
-        "status"
-      ],
       "type": "object"
     },
     "io.k8s.api.apps.v1.ReplicaSetList": {
@@ -3117,6 +3114,9 @@
           "description": "Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time."
         }
       },
+      "required": [
+        "spec"
+      ],
       "type": "object",
       "x-kubernetes-group-version-kind": [
         {
@@ -3151,10 +3151,6 @@
           "type": "string"
         }
       },
-      "required": [
-        "type",
-        "status"
-      ],
       "type": "object"
     },
     "io.k8s.api.apps.v1.StatefulSetList": {
@@ -4152,7 +4148,7 @@
         },
         "metadata": {
           "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
-          "description": "Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
+          "description": "metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
         },
         "spec": {
           "$ref": "#/definitions/io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerSpec",
@@ -4233,7 +4229,7 @@
         },
         "scaleTargetRef": {
           "$ref": "#/definitions/io.k8s.api.autoscaling.v1.CrossVersionObjectReference",
-          "description": "reference to scaled resource; horizontal pod autoscaler will learn the current resource consumption and will set the desired number of pods by using its Scale subresource."
+          "description": "scaleTargetRef is the reference to scaled resource; horizontal pod autoscaler will learn the current resource consumption and will set the desired number of pods by using its Scale subresource."
         },
         "targetCPUUtilizationPercentage": {
           "description": "targetCPUUtilizationPercentage is the target average CPU utilization (represented as a percentage of requested CPU) over all the pods; if not specified the default autoscaling policy will be used.",
@@ -4302,7 +4298,7 @@
         },
         "metadata": {
           "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
-          "description": "Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata."
+          "description": "metadata is the standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata."
         },
         "spec": {
           "$ref": "#/definitions/io.k8s.api.autoscaling.v1.ScaleSpec",
@@ -4586,6 +4582,11 @@
           "description": "message is a human-readable explanation containing details about the transition",
           "type": "string"
         },
+        "observedGeneration": {
+          "description": "observedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.",
+          "format": "int64",
+          "type": "integer"
+        },
         "reason": {
           "description": "reason is the reason for the condition's last transition.",
           "type": "string"
@@ -4792,7 +4793,7 @@
       "properties": {
         "containerResource": {
           "$ref": "#/definitions/io.k8s.api.autoscaling.v2.ContainerResourceMetricStatus",
-          "description": "container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the \"pods\" source."
+          "description": "containerResource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the \"pods\" source."
         },
         "external": {
           "$ref": "#/definitions/io.k8s.api.autoscaling.v2.ExternalMetricStatus",
@@ -4852,7 +4853,7 @@
       "description": "MetricValueStatus holds the current value for a metric",
       "properties": {
         "averageUtilization": {
-          "description": "currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.",
+          "description": "averageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.",
           "format": "int32",
           "type": "integer"
         },
@@ -4901,7 +4902,7 @@
         },
         "describedObject": {
           "$ref": "#/definitions/io.k8s.api.autoscaling.v2.CrossVersionObjectReference",
-          "description": "DescribedObject specifies the descriptions of a object,such as kind,name apiVersion"
+          "description": "describedObject specifies the descriptions of a object,such as kind,name apiVersion"
         },
         "metric": {
           "$ref": "#/definitions/io.k8s.api.autoscaling.v2.MetricIdentifier",
@@ -7132,7 +7133,7 @@
             "format": "byte",
             "type": "string"
           },
-          "description": "BinaryData contains the binary data. Each key must consist of alphanumeric characters, '-', '_' or '.'. BinaryData can contain byte sequences that are not in the UTF-8 range. The keys stored in BinaryData must not overlap with the ones in the Data field, this is enforced during validation process. Using this field will require 1.10+ apiserver and kubelet.",
+          "description": "BinaryData contains the binary data. Each key must consist of alphanumeric characters, '-', '_' or '.'. BinaryData can contain byte sequences that are not in the UTF-8 range. The keys stored in BinaryData must not overlap with the ones in the Data field, this is enforced during validation process. Using this field will require 1.10+ apiserver and kubelet. Note: BinaryData keys are not currently propagated to container env vars via ConfigMapKeyRef or ConfigMapRef env sources; only Data keys are used.",
           "type": "object"
         },
         "data": {
@@ -7169,7 +7170,7 @@
     },
     "io.k8s.api.core.v1.ConfigMapEnvSource": {
       "additionalProperties": false,
-      "description": "ConfigMapEnvSource selects a ConfigMap to populate the environment variables with.\n\nThe contents of the target ConfigMap's Data field will represent the key-value pairs as environment variables.",
+      "description": "ConfigMapEnvSource selects a ConfigMap to populate the environment variables with.\n\nThe contents of the target ConfigMap's Data field will represent the key-value pairs as environment variables. Keys in the BinaryData field are not currently propagated to container env vars.",
       "properties": {
         "name": {
           "description": "Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names",
@@ -7187,7 +7188,7 @@
       "description": "Selects a key from a ConfigMap.",
       "properties": {
         "key": {
-          "description": "The key to select.",
+          "description": "The key to select from the ConfigMap's Data field. Keys in the BinaryData field are not currently propagated to container env vars.",
           "type": "string"
         },
         "name": {
@@ -17421,7 +17422,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "extendedResourceName": {
-          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.\n\nThis is a beta field.",
+          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.",
           "type": "string"
         },
         "selectors": {
@@ -19123,7 +19124,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "extendedResourceName": {
-          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.\n\nThis is a beta field.",
+          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.",
           "type": "string"
         },
         "selectors": {
@@ -20428,7 +20429,7 @@
           "x-kubernetes-list-type": "atomic"
         },
         "extendedResourceName": {
-          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.\n\nThis is a beta field.",
+          "description": "ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.",
           "type": "string"
         },
         "selectors": {
@@ -21442,11 +21443,38 @@
         }
       ]
     },
-    "io.k8s.api.scheduling.v1alpha2.BasicSchedulingPolicy": {
+    "io.k8s.api.scheduling.v1alpha3.AllDisruptionMode": {
+      "description": "AllDisruptionMode specifies that children can only be disrupted together.",
+      "type": "object"
+    },
+    "io.k8s.api.scheduling.v1alpha3.BasicSchedulingPolicy": {
       "description": "BasicSchedulingPolicy indicates that standard Kubernetes scheduling behavior should be used.",
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha2.GangSchedulingPolicy": {
+    "io.k8s.api.scheduling.v1alpha3.DisruptionMode": {
+      "additionalProperties": false,
+      "description": "DisruptionMode defines how individual entities within a group can be disrupted. Exactly one mode can be set.",
+      "properties": {
+        "all": {
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.AllDisruptionMode",
+          "description": "All specifies that all children can only be disrupted together."
+        },
+        "single": {
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.SingleDisruptionMode",
+          "description": "Single specifies that children can be disrupted independently from each other."
+        }
+      },
+      "type": "object",
+      "x-kubernetes-unions": [
+        {
+          "fields-to-discriminateBy": {
+            "all": "All",
+            "single": "Single"
+          }
+        }
+      ]
+    },
+    "io.k8s.api.scheduling.v1alpha3.GangSchedulingPolicy": {
       "additionalProperties": false,
       "description": "GangSchedulingPolicy defines the parameters for gang scheduling.",
       "properties": {
@@ -21461,14 +21489,14 @@
       ],
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha2.PodGroup": {
+    "io.k8s.api.scheduling.v1alpha3.PodGroup": {
       "additionalProperties": false,
       "description": "PodGroup represents a runtime instance of pods grouped together. PodGroups are created by workload controllers (Job, LWS, JobSet, etc...) from Workload.podGroupTemplates. PodGroup API enablement is toggled by the GenericWorkload feature gate.",
       "properties": {
         "apiVersion": {
           "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
           "enum": [
-            "scheduling.k8s.io/v1alpha2"
+            "scheduling.k8s.io/v1alpha3"
           ],
           "type": "string"
         },
@@ -21484,11 +21512,11 @@
           "description": "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
         },
         "spec": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSpec",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupSpec",
           "description": "Spec defines the desired state of the PodGroup."
         },
         "status": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupStatus",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupStatus",
           "description": "Status represents the current observed state of the PodGroup."
         }
       },
@@ -21500,25 +21528,25 @@
         {
           "group": "scheduling.k8s.io",
           "kind": "PodGroup",
-          "version": "v1alpha2"
+          "version": "v1alpha3"
         }
       ]
     },
-    "io.k8s.api.scheduling.v1alpha2.PodGroupList": {
+    "io.k8s.api.scheduling.v1alpha3.PodGroupList": {
       "additionalProperties": false,
       "description": "PodGroupList contains a list of PodGroup resources.",
       "properties": {
         "apiVersion": {
           "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
           "enum": [
-            "scheduling.k8s.io/v1alpha2"
+            "scheduling.k8s.io/v1alpha3"
           ],
           "type": "string"
         },
         "items": {
           "description": "Items is the list of PodGroups.",
           "items": {
-            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroup"
+            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroup"
           },
           "type": "array"
         },
@@ -21542,11 +21570,11 @@
         {
           "group": "scheduling.k8s.io",
           "kind": "PodGroupList",
-          "version": "v1alpha2"
+          "version": "v1alpha3"
         }
       ]
     },
-    "io.k8s.api.scheduling.v1alpha2.PodGroupResourceClaim": {
+    "io.k8s.api.scheduling.v1alpha3.PodGroupResourceClaim": {
       "additionalProperties": false,
       "description": "PodGroupResourceClaim references exactly one ResourceClaim, either directly or by naming a ResourceClaimTemplate which is then turned into a ResourceClaim for the PodGroup.\n\nIt adds a name to it that uniquely identifies the ResourceClaim inside the PodGroup. Pods that need access to the ResourceClaim define a matching reference in its own Spec.ResourceClaims. The Pod's claim must match all fields of the PodGroup's claim exactly.",
       "properties": {
@@ -21568,7 +21596,7 @@
       ],
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha2.PodGroupResourceClaimStatus": {
+    "io.k8s.api.scheduling.v1alpha3.PodGroupResourceClaimStatus": {
       "additionalProperties": false,
       "description": "PodGroupResourceClaimStatus is stored in the PodGroupStatus for each PodGroupResourceClaim which references a ResourceClaimTemplate. It stores the generated name for the corresponding ResourceClaim.",
       "properties": {
@@ -21586,14 +21614,14 @@
       ],
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingConstraints": {
+    "io.k8s.api.scheduling.v1alpha3.PodGroupSchedulingConstraints": {
       "additionalProperties": false,
       "description": "PodGroupSchedulingConstraints defines scheduling constraints (e.g. topology) for a PodGroup.",
       "properties": {
         "topology": {
           "description": "Topology defines the topology constraints for the pod group. Currently only a single topology constraint can be specified. This may change in the future.",
           "items": {
-            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.TopologyConstraint"
+            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.TopologyConstraint"
           },
           "type": "array",
           "x-kubernetes-list-type": "atomic"
@@ -21601,16 +21629,16 @@
       },
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingPolicy": {
+    "io.k8s.api.scheduling.v1alpha3.PodGroupSchedulingPolicy": {
       "additionalProperties": false,
       "description": "PodGroupSchedulingPolicy defines the scheduling configuration for a PodGroup. Exactly one policy must be set.",
       "properties": {
         "basic": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.BasicSchedulingPolicy",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.BasicSchedulingPolicy",
           "description": "Basic specifies that the pods in this group should be scheduled using standard Kubernetes scheduling behavior."
         },
         "gang": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.GangSchedulingPolicy",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.GangSchedulingPolicy",
           "description": "Gang specifies that the pods in this group should be scheduled using all-or-nothing semantics."
         }
       },
@@ -21624,16 +21652,16 @@
         }
       ]
     },
-    "io.k8s.api.scheduling.v1alpha2.PodGroupSpec": {
+    "io.k8s.api.scheduling.v1alpha3.PodGroupSpec": {
       "additionalProperties": false,
       "description": "PodGroupSpec defines the desired state of a PodGroup.",
       "properties": {
         "disruptionMode": {
-          "description": "DisruptionMode defines the mode in which a given PodGroup can be disrupted. Controllers are expected to fill this field by copying it from a PodGroupTemplate. One of Pod, PodGroup. Defaults to Pod if unset. This field is immutable. This field is available only when the WorkloadAwarePreemption feature gate is enabled.",
-          "type": "string"
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.DisruptionMode",
+          "description": "DisruptionMode defines the mode in which a given PodGroup can be disrupted. Controllers are expected to fill this field by copying it from a PodGroupTemplate. One of Single, All. Defaults to Single if unset. This field is immutable. This field is available only when the WorkloadAwarePreemption feature gate is enabled."
         },
         "podGroupTemplateRef": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupTemplateReference",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupTemplateReference",
           "description": "PodGroupTemplateRef references an optional PodGroup template within other object (e.g. Workload) that was used to create the PodGroup. This field is immutable."
         },
         "priority": {
@@ -21648,7 +21676,7 @@
         "resourceClaims": {
           "description": "ResourceClaims defines which ResourceClaims may be shared among Pods in the group. Pods consume the devices allocated to a PodGroup's claim by defining a claim in its own Spec.ResourceClaims that matches the PodGroup's claim exactly. The claim must have the same name and refer to the same ResourceClaim or ResourceClaimTemplate.\n\nThis is an alpha-level field and requires that the DRAWorkloadResourceClaims feature gate is enabled.\n\nThis field is immutable.",
           "items": {
-            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupResourceClaim"
+            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupResourceClaim"
           },
           "type": "array",
           "x-kubernetes-list-map-keys": [
@@ -21659,11 +21687,11 @@
           "x-kubernetes-patch-strategy": "merge,retainKeys"
         },
         "schedulingConstraints": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingConstraints",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupSchedulingConstraints",
           "description": "SchedulingConstraints defines optional scheduling constraints (e.g. topology) for this PodGroup. Controllers are expected to fill this field by copying it from a PodGroupTemplate. This field is immutable. This field is only available when the TopologyAwareWorkloadScheduling feature gate is enabled."
         },
         "schedulingPolicy": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingPolicy",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupSchedulingPolicy",
           "description": "SchedulingPolicy defines the scheduling policy for this instance of the PodGroup. Controllers are expected to fill this field by copying it from a PodGroupTemplate. This field is immutable."
         }
       },
@@ -21672,7 +21700,7 @@
       ],
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha2.PodGroupStatus": {
+    "io.k8s.api.scheduling.v1alpha3.PodGroupStatus": {
       "additionalProperties": false,
       "description": "PodGroupStatus represents information about the status of a pod group.",
       "properties": {
@@ -21692,7 +21720,7 @@
         "resourceClaimStatuses": {
           "description": "Status of resource claims.",
           "items": {
-            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupResourceClaimStatus"
+            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupResourceClaimStatus"
           },
           "type": "array",
           "x-kubernetes-list-map-keys": [
@@ -21705,13 +21733,13 @@
       },
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha2.PodGroupTemplate": {
+    "io.k8s.api.scheduling.v1alpha3.PodGroupTemplate": {
       "additionalProperties": false,
       "description": "PodGroupTemplate represents a template for a set of pods with a scheduling policy.",
       "properties": {
         "disruptionMode": {
-          "description": "DisruptionMode defines the mode in which a given PodGroup can be disrupted. One of Pod, PodGroup. This field is available only when the WorkloadAwarePreemption feature gate is enabled.",
-          "type": "string"
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.DisruptionMode",
+          "description": "DisruptionMode defines the mode in which a given PodGroup can be disrupted. One of Single, All. This field is available only when the WorkloadAwarePreemption feature gate is enabled."
         },
         "name": {
           "description": "Name is a unique identifier for the PodGroupTemplate within the Workload. It must be a DNS label. This field is immutable.",
@@ -21729,7 +21757,7 @@
         "resourceClaims": {
           "description": "ResourceClaims defines which ResourceClaims may be shared among Pods in the group. Pods consume the devices allocated to a PodGroup's claim by defining a claim in its own Spec.ResourceClaims that matches the PodGroup's claim exactly. The claim must have the same name and refer to the same ResourceClaim or ResourceClaimTemplate.\n\nThis is an alpha-level field and requires that the DRAWorkloadResourceClaims feature gate is enabled.\n\nThis field is immutable.",
           "items": {
-            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupResourceClaim"
+            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupResourceClaim"
           },
           "type": "array",
           "x-kubernetes-list-map-keys": [
@@ -21740,11 +21768,11 @@
           "x-kubernetes-patch-strategy": "merge,retainKeys"
         },
         "schedulingConstraints": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingConstraints",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupSchedulingConstraints",
           "description": "SchedulingConstraints defines optional scheduling constraints (e.g. topology) for this PodGroupTemplate. This field is only available when the TopologyAwareWorkloadScheduling feature gate is enabled."
         },
         "schedulingPolicy": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupSchedulingPolicy",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupSchedulingPolicy",
           "description": "SchedulingPolicy defines the scheduling policy for this PodGroupTemplate."
         }
       },
@@ -21754,12 +21782,12 @@
       ],
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha2.PodGroupTemplateReference": {
+    "io.k8s.api.scheduling.v1alpha3.PodGroupTemplateReference": {
       "additionalProperties": false,
       "description": "PodGroupTemplateReference references a PodGroup template defined in some object (e.g. Workload). Exactly one reference must be set.",
       "properties": {
         "workload": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.WorkloadPodGroupTemplateReference",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.WorkloadPodGroupTemplateReference",
           "description": "Workload references the PodGroupTemplate within the Workload object that was used to create the PodGroup."
         }
       },
@@ -21772,7 +21800,11 @@
         }
       ]
     },
-    "io.k8s.api.scheduling.v1alpha2.TopologyConstraint": {
+    "io.k8s.api.scheduling.v1alpha3.SingleDisruptionMode": {
+      "description": "SingleDisruptionMode specifies that children can be disrupted independently.",
+      "type": "object"
+    },
+    "io.k8s.api.scheduling.v1alpha3.TopologyConstraint": {
       "additionalProperties": false,
       "description": "TopologyConstraint defines a topology constraint for a PodGroup.",
       "properties": {
@@ -21786,7 +21818,7 @@
       ],
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha2.TypedLocalObjectReference": {
+    "io.k8s.api.scheduling.v1alpha3.TypedLocalObjectReference": {
       "additionalProperties": false,
       "description": "TypedLocalObjectReference allows to reference typed object inside the same namespace.",
       "properties": {
@@ -21809,14 +21841,14 @@
       ],
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha2.Workload": {
+    "io.k8s.api.scheduling.v1alpha3.Workload": {
       "additionalProperties": false,
       "description": "Workload allows for expressing scheduling constraints that should be used when managing the lifecycle of workloads from the scheduling perspective, including scheduling, preemption, eviction and other phases. Workload API enablement is toggled by the GenericWorkload feature gate.",
       "properties": {
         "apiVersion": {
           "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
           "enum": [
-            "scheduling.k8s.io/v1alpha2"
+            "scheduling.k8s.io/v1alpha3"
           ],
           "type": "string"
         },
@@ -21832,7 +21864,7 @@
           "description": "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
         },
         "spec": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.WorkloadSpec",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.WorkloadSpec",
           "description": "Spec defines the desired behavior of a Workload."
         }
       },
@@ -21844,25 +21876,25 @@
         {
           "group": "scheduling.k8s.io",
           "kind": "Workload",
-          "version": "v1alpha2"
+          "version": "v1alpha3"
         }
       ]
     },
-    "io.k8s.api.scheduling.v1alpha2.WorkloadList": {
+    "io.k8s.api.scheduling.v1alpha3.WorkloadList": {
       "additionalProperties": false,
       "description": "WorkloadList contains a list of Workload resources.",
       "properties": {
         "apiVersion": {
           "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
           "enum": [
-            "scheduling.k8s.io/v1alpha2"
+            "scheduling.k8s.io/v1alpha3"
           ],
           "type": "string"
         },
         "items": {
           "description": "Items is the list of Workloads.",
           "items": {
-            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.Workload"
+            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.Workload"
           },
           "type": "array"
         },
@@ -21886,11 +21918,11 @@
         {
           "group": "scheduling.k8s.io",
           "kind": "WorkloadList",
-          "version": "v1alpha2"
+          "version": "v1alpha3"
         }
       ]
     },
-    "io.k8s.api.scheduling.v1alpha2.WorkloadPodGroupTemplateReference": {
+    "io.k8s.api.scheduling.v1alpha3.WorkloadPodGroupTemplateReference": {
       "additionalProperties": false,
       "description": "WorkloadPodGroupTemplateReference references the PodGroupTemplate within the Workload object.",
       "properties": {
@@ -21909,18 +21941,18 @@
       ],
       "type": "object"
     },
-    "io.k8s.api.scheduling.v1alpha2.WorkloadSpec": {
+    "io.k8s.api.scheduling.v1alpha3.WorkloadSpec": {
       "additionalProperties": false,
       "description": "WorkloadSpec defines the desired state of a Workload.",
       "properties": {
         "controllerRef": {
-          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.TypedLocalObjectReference",
+          "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.TypedLocalObjectReference",
           "description": "ControllerRef is an optional reference to the controlling object, such as a Deployment or Job. This field is intended for use by tools like CLIs to provide a link back to the original workload definition. This field is immutable."
         },
         "podGroupTemplates": {
           "description": "PodGroupTemplates is the list of templates that make up the Workload. The maximum number of templates is 8. This field is immutable.",
           "items": {
-            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha2.PodGroupTemplate"
+            "$ref": "#/definitions/io.k8s.api.scheduling.v1alpha3.PodGroupTemplate"
           },
           "type": "array",
           "x-kubernetes-list-map-keys": [
@@ -24030,7 +24062,7 @@
             "resource.k8s.io/v1beta1",
             "resource.k8s.io/v1beta2",
             "scheduling.k8s.io/v1",
-            "scheduling.k8s.io/v1alpha2",
+            "scheduling.k8s.io/v1alpha3",
             "scheduling.k8s.io/v1beta1",
             "storage.k8s.io/v1",
             "storage.k8s.io/v1alpha1",
@@ -24351,7 +24383,7 @@
         {
           "group": "scheduling.k8s.io",
           "kind": "DeleteOptions",
-          "version": "v1alpha2"
+          "version": "v1alpha3"
         },
         {
           "group": "scheduling.k8s.io",
@@ -25152,7 +25184,7 @@
         {
           "group": "scheduling.k8s.io",
           "kind": "WatchEvent",
-          "version": "v1alpha2"
+          "version": "v1alpha3"
         },
         {
           "group": "scheduling.k8s.io",

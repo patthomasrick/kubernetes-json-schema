@@ -40,9 +40,5 @@
       ]
     }
   },
-  "required": [
-    "type",
-    "status"
-  ],
   "type": "object"
 }
