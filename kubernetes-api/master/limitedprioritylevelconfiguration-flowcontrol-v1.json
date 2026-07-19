@@ -32,5 +32,8 @@
       ]
     }
   },
+  "required": [
+    "limitResponse"
+  ],
   "type": "object"
 }
