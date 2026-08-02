@@ -11,7 +11,7 @@
       ]
     },
     "policy": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.6/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.PodGroupPolicy",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.PodGroupPolicy",
       "description": "Policy defines the scheduling policy for this PodGroup."
     }
   },

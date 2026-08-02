@@ -6,7 +6,7 @@
     "paths": {
       "description": "paths is a collection of paths that map requests to backends.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.2/_definitions.json#/definitions/io.k8s.api.networking.v1.HTTPIngressPath"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.networking.v1.HTTPIngressPath"
       },
       "type": [
         "array",

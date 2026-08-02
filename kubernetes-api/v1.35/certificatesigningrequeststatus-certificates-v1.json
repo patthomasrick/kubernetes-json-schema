@@ -14,7 +14,7 @@
     "conditions": {
       "description": "conditions applied to the request. Known conditions are \"Approved\", \"Denied\", and \"Failed\".",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.6/_definitions.json#/definitions/io.k8s.api.certificates.v1.CertificateSigningRequestCondition"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.api.certificates.v1.CertificateSigningRequestCondition"
       },
       "type": [
         "array",
