@@ -19,7 +19,7 @@
       ]
     },
     "time": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.6/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
       "description": "time represents the time the error was encountered."
     }
   },

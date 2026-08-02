@@ -32,7 +32,7 @@
       ]
     },
     "volumeStatus": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.2/_definitions.json#/definitions/io.k8s.api.core.v1.VolumeStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.VolumeStatus",
       "description": "volumeStatus represents volume-type-specific status about the mounted volume."
     }
   },

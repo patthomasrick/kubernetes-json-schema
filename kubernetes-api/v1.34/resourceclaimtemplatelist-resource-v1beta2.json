@@ -16,7 +16,7 @@
     "items": {
       "description": "Items is the list of resource claim templates.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.34.9/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.ResourceClaimTemplate"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.34.10/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.ResourceClaimTemplate"
       },
       "type": [
         "array",
@@ -34,7 +34,7 @@
       ]
     },
     "metadata": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.34.9/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.34.10/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
       "description": "Standard list metadata"
     }
   },

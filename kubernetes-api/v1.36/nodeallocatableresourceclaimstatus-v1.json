@@ -26,7 +26,7 @@
     },
     "resources": {
       "additionalProperties": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.2/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
       },
       "description": "Resources is a map of the node-allocatable resource name to the aggregate quantity allocated to the claim.",
       "type": [
