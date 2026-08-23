@@ -22,7 +22,7 @@
       ]
     },
     "details": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.8/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails",
       "description": "Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type."
     },
     "kind": {
@@ -43,7 +43,7 @@
       ]
     },
     "metadata": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.8/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
       "description": "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"
     },
     "reason": {
