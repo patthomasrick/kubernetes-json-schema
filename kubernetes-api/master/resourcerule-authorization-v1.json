@@ -60,8 +60,5 @@
       "x-kubernetes-list-type": "atomic"
     }
   },
-  "required": [
-    "verbs"
-  ],
   "type": "object"
 }
