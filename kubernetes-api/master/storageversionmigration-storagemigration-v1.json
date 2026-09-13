@@ -36,6 +36,9 @@
       "description": "Status of the migration."
     }
   },
+  "required": [
+    "spec"
+  ],
   "type": "object",
   "x-kubernetes-group-version-kind": [
     {

@@ -36,5 +36,8 @@
       ]
     }
   },
+  "required": [
+    "volumeName"
+  ],
   "type": "object"
 }

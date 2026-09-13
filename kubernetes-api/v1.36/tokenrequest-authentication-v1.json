@@ -24,15 +24,15 @@
       ]
     },
     "metadata": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.4/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "metadata is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
     },
     "spec": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.authentication.v1.TokenRequestSpec",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.4/_definitions.json#/definitions/io.k8s.api.authentication.v1.TokenRequestSpec",
       "description": "spec holds information about the request being evaluated"
     },
     "status": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.authentication.v1.TokenRequestStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.4/_definitions.json#/definitions/io.k8s.api.authentication.v1.TokenRequestStatus",
       "description": "status is filled in by the server and indicates whether the token can be authenticated."
     }
   },

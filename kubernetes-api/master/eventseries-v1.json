@@ -16,5 +16,6 @@
       "description": "Time of the last occurrence observed"
     }
   },
-  "type": "object"
+  "type": "object",
+  "x-kubernetes-map-type": "atomic"
 }
