@@ -6,7 +6,7 @@
     "conditions": {
       "description": "Conditions provide information about the state of the request. A condition with type=Complete or type=Failed will always be set when the status is populated.\n\nKnown condition types: - \"Complete\": True when the request has been processed successfully - \"Failed\": True when the request could not be processed",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Condition"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.4/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Condition"
       },
       "type": [
         "array",
@@ -30,7 +30,7 @@
     "pools": {
       "description": "Pools contains the first `spec.limit` matching pools, sorted by driver then pool name. If `len(pools) < poolCount`, the list was truncated. When omitted, no pools matched the request filters.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.PoolStatus"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.4/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.PoolStatus"
       },
       "type": [
         "array",

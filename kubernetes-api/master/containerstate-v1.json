@@ -5,15 +5,15 @@
   "properties": {
     "running": {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStateRunning",
-      "description": "Details about a running container"
+      "description": "running is details about a running container"
     },
     "terminated": {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStateTerminated",
-      "description": "Details about a terminated container"
+      "description": "terminated is details about a terminated container"
     },
     "waiting": {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStateWaiting",
-      "description": "Details about a waiting container"
+      "description": "waiting is details about a waiting container"
     }
   },
   "type": "object"

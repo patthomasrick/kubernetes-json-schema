@@ -14,7 +14,7 @@
       ]
     },
     "deleteOptions": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.DeleteOptions",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.8/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.DeleteOptions",
       "description": "DeleteOptions may be provided"
     },
     "kind": {
@@ -28,7 +28,7 @@
       ]
     },
     "metadata": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.8/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "ObjectMeta describes the pod that is being evicted."
     }
   },

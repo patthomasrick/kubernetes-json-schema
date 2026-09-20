@@ -5,7 +5,7 @@
   "properties": {
     "value": {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
-      "description": "Value defines how much of a certain device counter is available."
+      "description": "value defines how much of a certain device counter is available."
     }
   },
   "required": [

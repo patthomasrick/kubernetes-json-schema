@@ -4,7 +4,7 @@
   "description": "NodeAllocatableMappedResources describes mapped node allocatable resource allocations.",
   "properties": {
     "name": {
-      "description": "Name is the name of the resource (e.g., cpu, memory).",
+      "description": "name is the name of the resource (e.g., cpu, memory).",
       "type": [
         "string",
         "null"
@@ -12,7 +12,7 @@
     },
     "quantity": {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
-      "description": "Quantity is the total node allocatable resource capacity allocated for the claim. This claim's allocated devices is shared by all the containers referencing the claim. Kubelet adds this value to both requests and limits at the pod-level cgroup, and to limits at the container-level cgroup for each container referencing the claim."
+      "description": "quantity is the total node allocatable resource capacity allocated for the claim. This claim's allocated devices is shared by all the containers referencing the claim. Kubelet adds this value to both requests and limits at the pod-level cgroup, and to limits at the container-level cgroup for each container referencing the claim."
     }
   },
   "required": [

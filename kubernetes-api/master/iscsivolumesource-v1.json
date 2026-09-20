@@ -88,8 +88,7 @@
   },
   "required": [
     "targetPortal",
-    "iqn",
-    "lun"
+    "iqn"
   ],
   "type": "object"
 }

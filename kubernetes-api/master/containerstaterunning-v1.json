@@ -5,7 +5,7 @@
   "properties": {
     "startedAt": {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
-      "description": "Time at which the container was last (re-)started"
+      "description": "startedAt is the time at which the container was last (re-)started"
     }
   },
   "type": "object"
