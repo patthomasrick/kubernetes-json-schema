@@ -24,15 +24,15 @@
       ]
     },
     "metadata": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "metadata is the standard object metadata. The name is <group>.<resource>."
     },
     "spec": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.apiserverinternal.v1alpha1.StorageVersionSpec",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.apiserverinternal.v1alpha1.StorageVersionSpec",
       "description": "spec is an empty spec. It is here to comply with Kubernetes API style."
     },
     "status": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.apiserverinternal.v1alpha1.StorageVersionStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.apiserverinternal.v1alpha1.StorageVersionStatus",
       "description": "status on the version the API server instance can decode from and encode objects to when persisting objects in the backend."
     }
   },

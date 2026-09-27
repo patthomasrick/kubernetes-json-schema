@@ -5,7 +5,7 @@
   "properties": {
     "devices": {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1.DeviceClaim",
-      "description": "Devices defines how to request devices."
+      "description": "devices defines how to request devices."
     }
   },
   "type": "object"

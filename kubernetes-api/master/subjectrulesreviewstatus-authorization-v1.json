@@ -40,10 +40,5 @@
       "x-kubernetes-list-type": "atomic"
     }
   },
-  "required": [
-    "resourceRules",
-    "nonResourceRules",
-    "incomplete"
-  ],
   "type": "object"
 }

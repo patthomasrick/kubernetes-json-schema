@@ -8,5 +8,8 @@
       "description": "required specifies hard node constraints that must be met."
     }
   },
+  "required": [
+    "required"
+  ],
   "type": "object"
 }

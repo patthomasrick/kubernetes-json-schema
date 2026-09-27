@@ -4,7 +4,7 @@
   "description": "Adds and removes POSIX capabilities from running containers.",
   "properties": {
     "add": {
-      "description": "Added capabilities",
+      "description": "add lists the capabilities to add to the container.",
       "items": {
         "type": [
           "string",
@@ -18,7 +18,7 @@
       "x-kubernetes-list-type": "atomic"
     },
     "drop": {
-      "description": "Removed capabilities",
+      "description": "drop lists the capabilities to remove from the container.",
       "items": {
         "type": [
           "string",
