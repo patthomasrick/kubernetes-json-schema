@@ -6,7 +6,7 @@
     "conditions": {
       "description": "The latest available observations of the migration's current state.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Condition"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.9/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Condition"
       },
       "type": [
         "array",

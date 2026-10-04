@@ -67,7 +67,7 @@
       ]
     },
     "swap": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSwapStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.core.v1.NodeSwapStatus",
       "description": "Swap Info reported by the node."
     },
     "systemUUID": {

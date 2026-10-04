@@ -24,15 +24,15 @@
       ]
     },
     "metadata": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.9/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "Standard object metadata"
     },
     "spec": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceTaintRuleSpec",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.9/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceTaintRuleSpec",
       "description": "Spec specifies the selector and one taint.\n\nChanging the spec automatically increments the metadata.generation number."
     },
     "status": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceTaintRuleStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.9/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.DeviceTaintRuleStatus",
       "description": "Status provides information about what was requested in the spec."
     }
   },

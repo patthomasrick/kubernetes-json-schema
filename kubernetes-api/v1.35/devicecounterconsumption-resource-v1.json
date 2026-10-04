@@ -12,7 +12,7 @@
     },
     "counters": {
       "additionalProperties": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.api.resource.v1.Counter"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.9/_definitions.json#/definitions/io.k8s.api.resource.v1.Counter"
       },
       "description": "Counters defines the counters that will be consumed by the device.\n\nThe maximum number of counters is 32.",
       "type": [

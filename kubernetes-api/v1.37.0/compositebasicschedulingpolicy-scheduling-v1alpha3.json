@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "CompositeBasicSchedulingPolicy indicates that the groups belonging to the composite group should be scheduled independently.",
+  "type": "object"
+}
