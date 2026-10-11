@@ -12,9 +12,5 @@
       "description": "metric identifies the target metric by name and selector"
     }
   },
-  "required": [
-    "metric",
-    "current"
-  ],
   "type": "object"
 }

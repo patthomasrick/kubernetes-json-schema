@@ -334,6 +334,18 @@
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.authentication.v1.UserInfo"
     },
     {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.AuthorizationOptions"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.Condition"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.ConditionsAwareDecision"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.ConditionsMap"
+    },
+    {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.FieldSelectorAttributes"
     },
     {
@@ -341,6 +353,9 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.NamedConditionsAwareDecision"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.NonResourceAttributes"
@@ -377,6 +392,9 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.SubjectRulesReviewStatus"
+    },
+    {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.authorization.v1.UnconditionalDecision"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.autoscaling.v1.CrossVersionObjectReference"
@@ -1805,144 +1823,6 @@
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.ShareableSummaryStatus"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.AllocatedDeviceStatus"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.AllocationResult"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.BasicDevice"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.CELDeviceSelector"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.CapacityRequestPolicy"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.CapacityRequestPolicyRange"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.CapacityRequirements"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.Counter"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.CounterSet"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.Device"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceAllocationConfiguration"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceAllocationResult"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceAttribute"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceCapacity"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceClaim"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceClaimConfiguration"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceClass"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceClassConfiguration"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceClassList"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceClassSpec"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceConstraint"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceCounterConsumption"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceDerivedAttribute"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceRequest"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceRequestAllocationResult"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceSelector"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceSubRequest"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceTaint"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.DeviceToleration"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.NetworkDeviceData"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.NodeAllocatableMapping"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.NodeAllocatableOverhead"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.NodeAllocatableResource"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.OpaqueDeviceConfiguration"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourceClaim"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourceClaimConsumerReference"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourceClaimList"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourceClaimSpec"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourceClaimStatus"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourceClaimTemplate"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourceClaimTemplateList"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourceClaimTemplateSpec"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourcePool"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourceSlice"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourceSliceList"
-    },
-    {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta1.ResourceSliceSpec"
     },
     {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.AllocatedDeviceStatus"

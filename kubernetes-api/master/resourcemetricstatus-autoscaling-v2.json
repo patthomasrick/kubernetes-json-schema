@@ -15,9 +15,5 @@
       ]
     }
   },
-  "required": [
-    "name",
-    "current"
-  ],
   "type": "object"
 }

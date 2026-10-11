@@ -5,7 +5,7 @@
   "properties": {
     "allocatedResources": {
       "additionalProperties": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
       },
       "description": "AllocatedResources is the total requests allocated for this pod by the node. If pod-level requests are not set, this will be the total requests aggregated across containers in the pod.",
       "type": [
@@ -16,7 +16,7 @@
     "conditions": {
       "description": "Current service state of pod. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.PodCondition"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.core.v1.PodCondition"
       },
       "type": [
         "array",
@@ -32,7 +32,7 @@
     "containerStatuses": {
       "description": "Statuses of containers in this pod. Each container in the pod should have at most one status in this list, and all statuses should be for containers in the pod. However this is not enforced. If a status for a non-existent container is present in the list, or the list has duplicate names, the behavior of various Kubernetes components is not defined and those statuses might be ignored. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStatus"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStatus"
       },
       "type": [
         "array",
@@ -43,7 +43,7 @@
     "ephemeralContainerStatuses": {
       "description": "Statuses for any ephemeral containers that have run in this pod. Each ephemeral container in the pod should have at most one status in this list, and all statuses should be for containers in the pod. However this is not enforced. If a status for a non-existent container is present in the list, or the list has duplicate names, the behavior of various Kubernetes components is not defined and those statuses might be ignored. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStatus"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStatus"
       },
       "type": [
         "array",
@@ -52,7 +52,7 @@
       "x-kubernetes-list-type": "atomic"
     },
     "extendedResourceClaimStatus": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.PodExtendedResourceClaimStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.core.v1.PodExtendedResourceClaimStatus",
       "description": "Status of extended resource claim backed by DRA."
     },
     "hostIP": {
@@ -65,7 +65,7 @@
     "hostIPs": {
       "description": "hostIPs holds the IP addresses allocated to the host. If this field is specified, the first entry must match the hostIP field. This list is empty if the pod has not started yet. A pod can be assigned to a node that has a problem in kubelet which in turns means that HostIPs will not be updated even if there is a node is assigned to this pod.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.HostIP"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.core.v1.HostIP"
       },
       "type": [
         "array",
@@ -78,7 +78,7 @@
     "initContainerStatuses": {
       "description": "Statuses of init containers in this pod. The most recent successful non-restartable init container will have ready = true, the most recently started container will have startTime set. Each init container in the pod should have at most one status in this list, and all statuses should be for containers in the pod. However this is not enforced. If a status for a non-existent container is present in the list, or the list has duplicate names, the behavior of various Kubernetes components is not defined and those statuses might be ignored. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-and-container-status",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStatus"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.core.v1.ContainerStatus"
       },
       "type": [
         "array",
@@ -96,7 +96,7 @@
     "nodeAllocatableResourceClaimStatuses": {
       "description": "NodeAllocatableResourceClaimStatuses contains the status of node-allocatable resources that were allocated for this pod through DRA claims. This includes resources currently reported in v1.Node `status.allocatable` that are not extended resources (see https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#extended-resources). Examples include \"cpu\", \"memory\", \"ephemeral-storage\", and hugepages.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.NodeAllocatableResourceClaimStatus"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.core.v1.NodeAllocatableResourceClaimStatus"
       },
       "type": [
         "array",
@@ -136,7 +136,7 @@
     "podIPs": {
       "description": "podIPs holds the IP addresses allocated to the pod. If this field is specified, the 0th entry must match the podIP field. Pods may be allocated at most 1 value for each of IPv4 and IPv6. This list is empty if no IPs have been allocated yet.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.PodIP"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.core.v1.PodIP"
       },
       "type": [
         "array",
@@ -173,7 +173,7 @@
     "resourceClaimStatuses": {
       "description": "Status of resource claims.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.PodResourceClaimStatus"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.core.v1.PodResourceClaimStatus"
       },
       "type": [
         "array",
@@ -187,11 +187,11 @@
       "x-kubernetes-patch-strategy": "merge,retainKeys"
     },
     "resources": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.api.core.v1.ResourceRequirements",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.api.core.v1.ResourceRequirements",
       "description": "Resources represents the compute resource requests and limits that have been applied at the pod level if pod-level requests or limits are set in PodSpec.Resources"
     },
     "startTime": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.3/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.36.5/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time",
       "description": "RFC 3339 date and time at which the object was acknowledged by the Kubelet. This is before the Kubelet pulled the container image(s) for the pod."
     }
   },

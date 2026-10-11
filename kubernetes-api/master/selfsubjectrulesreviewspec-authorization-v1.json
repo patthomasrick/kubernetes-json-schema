@@ -11,5 +11,8 @@
       ]
     }
   },
+  "required": [
+    "namespace"
+  ],
   "type": "object"
 }

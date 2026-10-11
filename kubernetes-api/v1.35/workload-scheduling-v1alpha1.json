@@ -24,11 +24,11 @@
       ]
     },
     "metadata": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.9/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "Standard object's metadata. Name must be a DNS subdomain."
     },
     "spec": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.WorkloadSpec",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.9/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha1.WorkloadSpec",
       "description": "Spec defines the desired behavior of a Workload."
     }
   },
