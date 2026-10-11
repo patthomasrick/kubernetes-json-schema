@@ -24,15 +24,15 @@
       ]
     },
     "metadata": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.9/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "metadata contains the object metadata."
     },
     "spec": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.PodCertificateRequestSpec",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.9/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.PodCertificateRequestSpec",
       "description": "spec contains the details about the certificate being requested."
     },
     "status": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.7/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.PodCertificateRequestStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.35.9/_definitions.json#/definitions/io.k8s.api.certificates.v1beta1.PodCertificateRequestStatus",
       "description": "status contains the issued certificate, and a standard set of conditions."
     }
   },

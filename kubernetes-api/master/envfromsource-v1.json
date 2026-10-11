@@ -5,10 +5,10 @@
   "properties": {
     "configMapRef": {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.ConfigMapEnvSource",
-      "description": "The ConfigMap to select from"
+      "description": "configMapRef is the ConfigMap to select from"
     },
     "prefix": {
-      "description": "Optional text to prepend to the name of each environment variable. May consist of any printable ASCII characters except '='.",
+      "description": "prefix is the text to prepend to the name of each environment variable. May consist of any printable ASCII characters except '='.",
       "type": [
         "string",
         "null"
@@ -16,7 +16,7 @@
     },
     "secretRef": {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.core.v1.SecretEnvSource",
-      "description": "The Secret to select from"
+      "description": "secretRef is the Secret to select from"
     }
   },
   "type": "object"

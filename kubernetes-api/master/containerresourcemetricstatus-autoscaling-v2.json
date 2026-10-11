@@ -22,10 +22,5 @@
       ]
     }
   },
-  "required": [
-    "name",
-    "current",
-    "container"
-  ],
   "type": "object"
 }

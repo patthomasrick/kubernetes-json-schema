@@ -5,7 +5,7 @@
   "properties": {
     "cel": {
       "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.CELDeviceSelector",
-      "description": "CEL contains a CEL expression for selecting a device."
+      "description": "cel contains a CEL expression for selecting a device."
     }
   },
   "type": "object"

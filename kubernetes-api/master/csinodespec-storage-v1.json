@@ -20,8 +20,5 @@
       "x-kubernetes-patch-strategy": "merge"
     }
   },
-  "required": [
-    "drivers"
-  ],
   "type": "object"
 }

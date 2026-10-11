@@ -40,9 +40,5 @@
       ]
     }
   },
-  "required": [
-    "currentReplicas",
-    "desiredReplicas"
-  ],
   "type": "object"
 }
