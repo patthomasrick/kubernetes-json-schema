@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": false,
-  "description": "EndpointAddress is a tuple that describes single IP address. Deprecated: This API is deprecated in v1.33+.",
+  "description": "EndpointAddress is a tuple that describes single IP address.",
   "properties": {
     "hostname": {
       "description": "The Hostname of this endpoint",
