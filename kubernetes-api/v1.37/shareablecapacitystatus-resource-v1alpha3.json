@@ -4,11 +4,11 @@
   "description": "ShareableCapacityStatus reports aggregate amounts for a single shareable capacity key.",
   "properties": {
     "available": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
       "description": "Available is Total minus Consumed, never negative."
     },
     "consumed": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
       "description": "Consumed is the amount drawn by current allocations."
     },
     "name": {
@@ -19,7 +19,7 @@
       ]
     },
     "total": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity",
       "description": "Total is the sum of this capacity across shareable devices in the pool."
     }
   },

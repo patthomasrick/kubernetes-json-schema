@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "AllDisruptionMode specifies that children can only be disrupted together.",
+  "type": "object"
+}
