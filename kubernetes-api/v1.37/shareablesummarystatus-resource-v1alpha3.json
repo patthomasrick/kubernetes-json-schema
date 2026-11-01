@@ -6,7 +6,7 @@
     "capacity": {
       "description": "Capacity reports aggregate total, consumed, and available amounts per shareable capacity key across the pool.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.ShareableCapacityStatus"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.resource.v1alpha3.ShareableCapacityStatus"
       },
       "type": [
         "array",
