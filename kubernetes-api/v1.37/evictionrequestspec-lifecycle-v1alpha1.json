@@ -18,7 +18,7 @@
       ]
     },
     "target": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.lifecycle.v1alpha1.EvictionRequestTarget",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.lifecycle.v1alpha1.EvictionRequestTarget",
       "description": "target contains a reference to an object (e.g. a pod) that should be evicted. This field is required and immutable."
     }
   },
