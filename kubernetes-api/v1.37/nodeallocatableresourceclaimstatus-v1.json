@@ -20,7 +20,7 @@
     "mapping": {
       "description": "Mapping contains allocations through devices mapped in the device spec's `nodeAllocatableResources[...].mapping` field. This is used by kubelet for pod level and container-level cgroup enforcement.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.core.v1.NodeAllocatableMappedResources"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.core.v1.NodeAllocatableMappedResources"
       },
       "type": [
         "array",
@@ -36,7 +36,7 @@
     "overhead": {
       "description": "Overhead contains allocations through devices mapped in the device spec's `nodeAllocatableResources[...].overhead` field. This is used by kubelet for pod level and container-level cgroup enforcement.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.core.v1.NodeAllocatableOverheadResources"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.core.v1.NodeAllocatableOverheadResources"
       },
       "type": [
         "array",
