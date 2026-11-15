@@ -4,11 +4,11 @@
   "description": "CompositeDisruptionMode defines how individual entities within a composite pod group can be disrupted. Exactly one mode must be set.",
   "properties": {
     "all": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha3.AllCompositeDisruptionMode",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha3.AllCompositeDisruptionMode",
       "description": "all specifies that all children groups can only be disrupted together."
     },
     "single": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha3.SingleCompositeDisruptionMode",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.scheduling.v1alpha3.SingleCompositeDisruptionMode",
       "description": "single specifies that children groups can be disrupted independently from each other."
     }
   },

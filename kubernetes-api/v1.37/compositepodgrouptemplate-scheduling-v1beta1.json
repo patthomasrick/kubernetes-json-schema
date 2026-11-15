@@ -6,7 +6,7 @@
     "compositePodGroupTemplates": {
       "description": "compositePodGroupTemplates is the list of templates for children CompositePodGroups. The maximum number of templates is 8. At least one entry in CompositePodGroupTemplates or PodGroupTemplates must be set.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.scheduling.v1beta1.CompositePodGroupTemplate"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.scheduling.v1beta1.CompositePodGroupTemplate"
       },
       "type": [
         "array",
@@ -18,7 +18,7 @@
       "x-kubernetes-list-type": "map"
     },
     "disruptionMode": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.scheduling.v1beta1.CompositeDisruptionMode",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.scheduling.v1beta1.CompositeDisruptionMode",
       "description": "disruptionMode defines the mode in which a given CompositePodGroup can be disrupted. One of Single, All. This field is immutable."
     },
     "name": {
@@ -31,7 +31,7 @@
     "podGroupTemplates": {
       "description": "podGroupTemplates is the list of templates for children PodGroups. The maximum number of templates is 8. At least one entry in CompositePodGroupTemplates or PodGroupTemplates must be set.",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.scheduling.v1beta1.PodGroupTemplate"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.scheduling.v1beta1.PodGroupTemplate"
       },
       "type": [
         "array",
@@ -65,11 +65,11 @@
       ]
     },
     "schedulingConstraints": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.scheduling.v1beta1.CompositePodGroupSchedulingConstraints",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.scheduling.v1beta1.CompositePodGroupSchedulingConstraints",
       "description": "schedulingConstraints defines optional scheduling constraints (e.g. topology) for this CompositePodGroupTemplate. This field is immutable."
     },
     "schedulingPolicy": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.scheduling.v1beta1.CompositePodGroupSchedulingPolicy",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.scheduling.v1beta1.CompositePodGroupSchedulingPolicy",
       "description": "schedulingPolicy defines the scheduling policy for this template."
     }
   },
