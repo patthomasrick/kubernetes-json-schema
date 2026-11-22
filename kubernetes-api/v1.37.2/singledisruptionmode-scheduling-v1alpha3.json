@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": false,
+  "description": "SingleDisruptionMode specifies that children can be disrupted independently.",
+  "type": "object"
+}

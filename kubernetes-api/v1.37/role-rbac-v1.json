@@ -24,13 +24,13 @@
       ]
     },
     "metadata": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "metadata is the standard object's metadata."
     },
     "rules": {
       "description": "rules holds all the PolicyRules for this Role",
       "items": {
-        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.rbac.v1.PolicyRule"
+        "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.rbac.v1.PolicyRule"
       },
       "type": [
         "array",
