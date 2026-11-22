@@ -21,6 +21,10 @@
         "null"
       ]
     },
+    "extendedResourceRequest": {
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/master/_definitions.json#/definitions/io.k8s.api.resource.v1beta2.ExtendedResourceRequest",
+      "description": "extendedResourceRequest defines how the scheduler populates the device request of each ResourceClaim it synthesizes to satisfy the extended resource of this class.\n\nThis is an alpha field and requires enabling the DRAExtendedResourceCapacity feature gate, which depends on DRAConsumableCapacity."
+    },
     "selectors": {
       "description": "selectors must be satisfied by a device which is claimed via this class.",
       "items": {

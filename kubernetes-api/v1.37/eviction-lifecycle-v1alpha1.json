@@ -24,15 +24,15 @@
       ]
     },
     "metadata": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta",
       "description": "metadata is the standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata. .metadata.name set by the evictionrequest-controller is purely informative and subject to change. .spec.target field should be used to identify the target precisesly.\n\nThe requester and responder names will be used as label keys and added to the labels of the eviction in one of the following formats: 1. acme.io/foo: \"requester\" 2. acme.io/foo: \"responder\" 3. acme.io/foo: \"requester-responder\"\n\nPlease see EvictionParticipantRole for available role label values."
     },
     "spec": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.lifecycle.v1alpha1.EvictionSpec",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.lifecycle.v1alpha1.EvictionSpec",
       "description": "spec defines the eviction specification. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
     },
     "status": {
-      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.1/_definitions.json#/definitions/io.k8s.api.lifecycle.v1alpha1.EvictionStatus",
+      "$ref": "https://patthomasrick.github.io/kubernetes-json-schema/v1.37.2/_definitions.json#/definitions/io.k8s.api.lifecycle.v1alpha1.EvictionStatus",
       "description": "status represents the most recently observed status of the eviction. Populated by responders and evictionrequest-controller. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
     }
   },
